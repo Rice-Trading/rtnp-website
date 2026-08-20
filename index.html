@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RTNP — कैसे इस्तेमाल करें · How to Use</title>
+<meta name="description" content="RTNP मोबाइल ऐप कैसे इस्तेमाल करें — बीटा how-to guide (Hindi + English) with real app screenshots.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0F6E6E">
+<meta property="og:title" content="RTNP — कैसे इस्तेमाल करें · How to Use">
+<meta property="og:description" content="RTNP मोबाइल ऐप — कैसे इस्तेमाल करें (How to Use). Beta guide with real screenshots.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">
+      <span class="mark">RTNP</span>
+      <span class="full">Rice Trade Network · राइस ट्रेड नेटवर्क</span>
+      <span class="badge">बीटा · How-to Guide</span>
+    </div>
+    <h1>RTNP <span class="hl">कैसे इस्तेमाल करें</span></h1>
+    <p class="lede">
+      एक-एक काम, step-by-step। हर screen की असली तस्वीर, आसान हिंदी में समझ, और जो
+      <b>button</b> app में दिखेगा वही यहाँ लिखा है। कोई तकनीकी जानकारी की ज़रूरत नहीं।
+    </p>
+
+    <nav class="toc" aria-label="विषय-सूची">
+      <h2>इस गाइड में · Contents</h2>
+      <ol>
+        <li><a href="#start">शुरुआत — Register &amp; Login</a></li>
+        <li><a href="#home">Home screen समझें</a></li>
+        <li><a href="#party">Parties जोड़ें</a></li>
+        <li><a href="#deal">Deal (सौदा) बनाएँ</a></li>
+        <li><a href="#dispatch">Truck भेजें — Dispatch</a></li>
+        <li><a href="#received">माल पहुँचा — Received weight</a></li>
+        <li><a href="#settle">हिसाब चुकता — Settlement</a></li>
+        <li><a href="#ledger">Ledger &amp; Payments</a></li>
+        <li><a href="#stock">Godown Stock — Inventory</a></li>
+        <li><a href="#team">आपकी टीम &amp; Roles</a></li>
+        <li><a href="#reports">Reports</a></li>
+        <li><a href="#beta">Beta testing — क्या ध्यान रखें</a></li>
+      </ol>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HOW TO READ -->
+  <section id="howto" style="padding-top:34px;">
+    <div class="wrap">
+      <span class="eyebrow">पहले यह पढ़ें</span>
+      <h2 style="margin:8px 0 14px; font-size:1.3rem; font-weight:800;">इस गाइड को कैसे पढ़ें</h2>
+      <div class="callout">
+        <p>App की सारी screens <strong>English में</strong> हैं। इसलिए इस गाइड में <b>समझ हिंदी में</b> है,
+        पर जो <code class="lbl">button या field</code> इस तरह हरे रंग में लिखा है — वही शब्द आपको app में दिखेगा और वहीं दबाना/भरना है।</p>
+        <p><strong>काम का क्रम याद रखें:</strong> Party → Deal → Dispatch → Received → Settlement → Payment।
+        यही एक सौदे की पूरी कहानी है। App खुद हर step को अगले से जोड़ता चलता है — आप बस अपना हिस्सा भरते जाइए।</p>
+      </div>
+
+      <p style="margin:22px 0 4px; font-size:.8rem; letter-spacing:.1em; text-transform:uppercase; font-weight:800; color:var(--ink-faint);">Status के रंग — Dispatch/Settlement में यह दिखते हैं</p>
+      <div class="legend">
+        <span class="pill n">Created</span>
+        <span class="pill b">In Transit</span>
+        <span class="pill g">Received</span>
+        <span class="pill a">Settlement Pending</span>
+        <span class="pill n">Settled</span>
+        <span class="pill a">Draft</span>
+        <span class="pill m">Disputed</span>
+        <span class="pill g">Accepted</span>
+      </div>
+
+      <p style="margin:22px 0 0; font-size:.8rem; letter-spacing:.1em; text-transform:uppercase; font-weight:800; color:var(--ink-faint);">नीचे की पट्टी — हर screen पर यही 5 tabs</p>
+      <div class="navmap">
+        <div class="nav"><div class="ic">🏠</div><div class="nm">Home</div><div class="ds">रोज़ का सार</div></div>
+        <div class="nav"><div class="ic">📄</div><div class="nm">Deals</div><div class="ds">सौदे</div></div>
+        <div class="nav"><div class="ic">🚚</div><div class="nm">Dispatch</div><div class="ds">truck भेजना</div></div>
+        <div class="nav"><div class="ic">📖</div><div class="nm">Ledger</div><div class="ds">खाता-बही</div></div>
+        <div class="nav"><div class="ic">•••</div><div class="nm">More</div><div class="ds">बाकी सब</div></div>
+      </div>
+      <p class="tip"><b>टिप:</b> Parties, Settlements, Godowns, Team, Reports, Settings — ये सब <code class="lbl">More</code> (•••) के अंदर मिलते हैं। इस गाइड की हर तस्वीर असली app की screenshot है।</p>
+    </div>
+  </section>
+
+  <!-- 1. GETTING STARTED -->
+  <section id="start">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-seal num">1</div>
+        <div>
+          <h2>शुरुआत — खाता बनाएँ और लॉग इन करें<span class="en">Register &amp; Login</span></h2>
+          <p class="why">पहली बार सिर्फ़ एक बार करना है। इसके बाद हर बार सीधे mobile नंबर और password से खुल जाएगा।</p>
+        </div>
+      </div>
+
+      <div class="task">
+        <h3>नया business? खाता बनाएँ<span class="en">Register</span></h3>
+        <div class="layout with-shot">
+          <div>
+            <ol class="steps">
+              <li>Login screen पर <code class="lbl">New business? Register →</code> दबाएँ।</li>
+              <li><code class="lbl">Company Name</code> भरें — आपकी फर्म का नाम (जैसे "Raju Rice Traders")।</li>
+              <li><code class="lbl">Company Type</code> चुनें — ज़्यादातर के लिए <b>Trader</b>।</li>
+              <li><code class="lbl">Country</code>, <code class="lbl">State</code>, <code class="lbl">District</code> भरें।</li>
+              <li><code class="lbl">What do you mostly trade?</code> में अपना माल चुनें (धान/चावल आदि)।</li>
+              <li>एक मज़बूत <code class="lbl">Password</code> रखें (कम-से-कम 8 अक्षर) और <code class="lbl">Mobile Number</code> डालें।</li>
+              <li><code class="lbl">SEND OTP &amp; CONTINUE</code> दबाएँ → फ़ोन पर आए <b>OTP</b> को <code class="lbl">VERIFY OTP</code> से पक्का करें।</li>
+            </ol>
+            <div class="app-does"><span class="k">✓ App खुद</span> आपकी company (tenant) बना देता है और आपको <b>Owner</b> बना देता है — पूरा नियंत्रण आपके पास।</div>
+          </div>
+          <figure class="shot"><div class="phone"><img src="images/register.jpeg" alt="Register Your Business screen" width="720" height="1600" loading="lazy" decoding="async"></div>
+            <figcaption>Register Your Business — company की जानकारी</figcaption></figure>
+        </div>
+      </div>
+
+      <div class="task">
+        <h3>रोज़ लॉग इन करें<span class="en">Login</span></h3>
+        <div class="layout with-shot left">
+          <figure class="shot"><div class="phone"><img src="images/login.jpeg" alt="Login screen" width="720" height="1600" loading="lazy" decoding="async"></div>
+            <figcaption>Login — mobile नंबर + password</figcaption></figure>
+          <div>
+            <ol class="steps">
+              <li><code class="lbl">Mobile Number</code> और <code class="lbl">Password</code> भरें, फिर <code class="lbl">LOG IN</code> दबाएँ।</li>
+              <li>Password भूल गए? <code class="lbl">Forgot Password?</code> → OTP से नया password बना लें।</li>
+              <li>किसी दूसरे की company में staff के तौर पर जुड़ना है? <code class="lbl">Joining a team? Enter invite code</code> दबाकर मालिक से मिला <b>invite code</b> डालें।</li>
+            </ol>
+            <div class="tip"><b>ध्यान दें:</b> Login <b>password</b> से होता है, OTP से नहीं। OTP सिर्फ़ पहली बार खाता बनाते या password reset करते समय आता है।</div>
+          </div>
+        </div>
+        <div class="who"><span class="lab">पहली बार सेटअप</span><span class="rolechip">Register = Owner बनते हैं</span><span class="rolechip">Invite code = staff जुड़ते हैं</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. HOME -->
+  <section id="home">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-seal num">2</div>
+        <div>
+          <h2>Home screen — एक नज़र में पूरा दिन<span class="en">Dashboard</span></h2>
+          <p class="why">Login के बाद सबसे पहले यही खुलता है। यहीं से सबसे ज़रूरी आँकड़े और shortcut मिलते हैं।</p>
+        </div>
+      </div>
+      <div class="task">
+        <h3>Home पर क्या-क्या दिखता है</h3>
+        <figure class="shot" style="max-width:300px; margin:6px auto 14px; text-align:center;">
+          <div class="phone"><img src="images/home.jpeg" alt="Home dashboard" width="720" height="1600" loading="lazy" decoding="async"></div>
+          <figcaption>Home — ऊपर Quick Actions, फिर आँकड़े, नीचे Today's Activity</figcaption>
+        </figure>
+        <div class="grid2">
+          <div class="mini"><h4>ऊपर के 4 आँकड़े<span class="en">KPI tiles</span></h4>
+            <ul>
+              <li><b>Receivables</b> — मिलों से कितना लेना बाकी</li>
+              <li><b>Payable</b> — transport/commission में कितना देना</li>
+              <li><b>Pending Trucks</b> — रास्ते में कितने truck</li>
+              <li><b>Pending Settle</b> — कितने हिसाब बाकी</li>
+            </ul>
+            <p style="margin-top:6px;">किसी भी tile को दबाने पर उसकी पूरी सूची खुल जाती है।</p>
+          </div>
+          <div class="mini"><h4>तुरंत काम<span class="en">Quick Actions</span></h4>
+            <ul>
+              <li><code class="lbl">New Deal</code> — नया सौदा</li>
+              <li><code class="lbl">Dispatch</code> — truck भेजना</li>
+              <li><code class="lbl">Payment</code> — पैसा दर्ज करना</li>
+            </ul>
+            <p style="margin-top:6px;"><b>Today's Activity</b> में आज का हर काम दिखता रहता है — आप या आपका staff कुछ भी करे।</p>
+          </div>
+        </div>
+        <div class="tip"><b>नए यूज़र के लिए:</b> Home पर एक <b>Getting Started</b> checklist (“X of 5 done”) दिखती है — पहली party, पहला deal, पहला dispatch… इसे पूरा करते जाइए, फिर <b>Dismiss</b> कर दीजिए। शुरू में एक छोटा <b>tutorial tour</b> भी चलता है; बाद में <code class="lbl">More → Help → Replay Tutorial</code> से दोबारा देख सकते हैं।</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. PARTIES -->
+  <section id="party">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-seal num">3</div>
+        <div>
+          <h2>अपनी Parties जोड़ें<span class="en">Parties · मिल, वेंडर, ब्रोकर, ट्रांसपोर्टर</span></h2>
+          <p class="why">जिनके साथ लेन-देन है उन्हें एक बार जोड़ दें। फिर हर deal, dispatch और payment में सिर्फ़ नाम चुनना पड़ेगा — दोबारा टाइप नहीं।</p>
+        </div>
+      </div>
+
+      <div class="task">
+        <h3>नई party जोड़ें<span class="en">Add Party</span></h3>
+        <div class="layout with-shot">
+          <div>
+            <ol class="steps">
+              <li><code class="lbl">More → Parties</code> खोलें, ऊपर <code class="lbl">+</code> दबाएँ (या deal/dispatch बनाते वक़्त वहीं से नई party जोड़ें)।</li>
+              <li><code class="lbl">Party Type</code> चुनें — <b>Mill · Vendor · Broker · Transporter · Clearance Party · Trader</b>।</li>
+              <li><code class="lbl">Party Name</code> और <code class="lbl">Mobile Number</code> भरें (ज़रूरी)।</li>
+              <li><code class="lbl">District</code>, <code class="lbl">Address</code>, और चाहें तो <code class="lbl">GST Number</code> व <code class="lbl">Notes</code> भरें।</li>
+              <li>ऊपर दाएँ <code class="lbl">Save</code> (या <code class="lbl">SAVE PARTY</code>) दबाएँ।</li>
+            </ol>
+            <div class="app-does"><span class="k">✓ App खुद</span> हर party का अलग <b>खाता (ledger)</b> खोल देता है — आगे का सारा लेन-देन इसी में जुड़ता जाएगा।</div>
+            <div class="tip"><b>आवाज़ से भरें:</b> कई field में <b>🎤 माइक</b> का निशान है — बोलकर भी भर सकते हैं।</div>
+          </div>
+          <figure class="shot"><div class="phone"><img src="images/party-add.jpeg" alt="Add Party screen" width="720" height="1600" loading="lazy" decoding="async"></div>
+            <figcaption>Add Party — पहले Type चुनें</figcaption></figure>
+        </div>
+      </div>
+
+      <div class="task">
+        <h3>Party का पूरा हिसाब देखें<span class="en">Party Profile</span></h3>
+        <div class="layout with-shot left">
+          <figure class="shot"><div class="phone"><img src="images/party-profile.jpeg" alt="Party Profile screen" width="720" height="1600" loading="lazy" decoding="async"></div>
+            <figcaption>Party Profile — Outstanding Balance ऊपर ही</figcaption></figure>
+          <div>
+            <p style="margin:0 0 8px; color:var(--ink-soft);">किसी party पर दबाते ही उसका profile खुलता है — यहाँ एक नज़र में:</p>
+            <ol class="steps">
+              <li><b>Outstanding Balance</b> — इस party का कितना बाकी है (लेना/देना)।</li>
+              <li><code class="lbl">Ledger</code> — पूरा खाता (हर entry, तारीख़ के साथ)।</li>
+              <li><code class="lbl">Record Payment</code> — इसी party के लिए पैसा दर्ज करें।</li>
+              <li><code class="lbl">Edit</code> से नाम/पता/GST बदलें, <b>Bank Accounts</b> जोड़ें।</li>
+            </ol>
+          </div>
+        </div>
+        <div class="who"><span class="lab">कौन कर सकता है</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span><span style="font-size:.8rem;color:var(--ink-faint);">— party जोड़ना/बदलना</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. DEAL -->
+  <section id="deal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-seal num">4</div>
+        <div>
+          <h2>Deal (सौदा) बनाएँ<span class="en">New Deal</span></h2>
+          <p class="why">किससे, कौन-सा माल, किस रेट पर, कितने truck का सौदा हुआ — एक बार दर्ज कर दें। पहला truck निकलते ही रेट lock हो जाता है, बाद में कोई चुपके से नहीं बदल सकता।</p>
+        </div>
+      </div>
+      <div class="task">
+        <h3>नया सौदा दर्ज करें<span class="en">Deals → +</span></h3>
+        <div class="layout with-shot">
+          <div>
+            <ol class="steps">
+              <li><code class="lbl">Deals</code> tab → <code class="lbl">+</code>, फिर <code class="lbl">Deal Type</code> चुनें — <b>Buy</b> (वेंडर से खरीद) या <b>Sell</b> (मिल/seller को बिक्री)।</li>
+              <li><code class="lbl">Select Party</code> — वेंडर/seller खोजें और चुनें।</li>
+              <li><code class="lbl">Commodity</code> चुनें — app नाम अपने-आप पहचान लेता है (“Matched via canonical name”)।</li>
+              <li><code class="lbl">Agreed Rate</code> भरें — ₹ प्रति <b>quintal</b>।</li>
+              <li><code class="lbl">Trucks</code> तय करें — <b>– / +</b> या 1/2/5/10/20 के बटन से।</li>
+              <li>चाहें तो <b>Broker</b> और उसका <b>Commission</b>, तथा <code class="lbl">Freight (भाड़ा) Paid By</code> (हम / सामने वाला) चुनें।</li>
+              <li><code class="lbl">Review Deal →</code> दबाकर पुष्टि करें।</li>
+            </ol>
+            <div class="app-does"><span class="k">✓ App खुद</span> deal को <span class="pill a">Open</span> रखता है और truck भेजते-भेजते उसे <b>Partially Fulfilled → Completed</b> तक बढ़ाता जाता है। Progress (कितना भेजा / कितना बाकी) खुद गिनता है।</div>
+          </div>
+          <figure class="shot"><div class="phone"><img src="images/deal-new.jpeg" alt="New Deal screen" width="720" height="1600" loading="lazy" decoding="async"></div>
+            <figcaption>New Deal — Buy/Sell, rate, trucks</figcaption></figure>
+        </div>
+        <div class="who"><span class="lab">कौन कर सकता है</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span><span class="rolechip">Data Entry</span></div>
+      </div>
+
+      <div class="task">
+        <h3>Deal की progress देखें<span class="en">Deal Detail</span></h3>
+        <div style="display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(180px,1fr));">
+          <figure class="shot" style="text-align:center;">
+            <div class="phone"><img src="images/deal-detail.jpeg" alt="Deal detail screen" width="720" height="1600" loading="lazy" decoding="async"></div>
+            <figcaption>Deal Detail — Rate, Freight, PROGRESS</figcaption>
+          </figure>
+          <figure class="shot" style="text-align:center;">
+            <div class="phone"><img src="images/deal-dispatches.jpeg" alt="Deal dispatches list" width="720" height="1600" loading="lazy" decoding="async"></div>
+            <figcaption>View all → इस deal के सारे truck, status के साथ</figcaption>
+          </figure>
+        </div>
+        <ol class="steps" style="margin-top:14px;">
+          <li>किसी deal पर दबाते ही ऊपर status दिखता है — जैसे <span class="pill a">Partially Fulfilled</span>, साथ में <b>Domestic</b>/<b>Sell</b>।</li>
+          <li><b>PROGRESS</b> — कितना <b>Dispatched</b> / <b>Planned</b> / <b>Pending</b> (quintal) और % पट्टी। <code class="lbl">View all</code> से हर truck देखें।</li>
+          <li><code class="lbl">New Dispatch</code> — यहीं से अगला truck भेजें।</li>
+          <li>सौदा पूरा हो जाए तो <code class="lbl">Close Deal</code> से बंद कर दें।</li>
+        </ol>
+        <div class="tip"><b>याद रखें:</b> पहला truck निकलते ही रेट <b>lock</b> हो जाता है — बदलना हो तो <code class="lbl">Edit</code> (सिर्फ़ Owner/Trade Manager)।</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. DISPATCH -->
+  <section id="dispatch">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-seal num">5</div>
+        <div>
+          <h2>Truck भेजें — Dispatch<span class="en">New Dispatch · Bill of Supply (चालान) अपने-आप</span></h2>
+          <p class="why">माल लोड होते ही dispatch बनाइए। इसी वक़्त <b>Bill of Supply (चालान)</b> का PDF खुद बन जाता है, freight (भाड़ा) का हिसाब खुल जाता है, और deal की progress बढ़ जाती है।</p>
+        </div>
+      </div>
+
+      <div class="task">
+        <h3>नया Dispatch बनाएँ<span class="en">Dispatch → +</span></h3>
+        <div class="task-cols" style="display:grid; gap:18px; grid-template-columns:1fr;">
+          <div style="display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(180px,1fr));">
+            <figure class="shot"><div class="phone"><img src="images/dispatch-create-1.jpeg" alt="New Dispatch part 1" width="720" height="1600" loading="lazy" decoding="async"></div>
+              <figcaption>1 — Source, Destination, Truck Number</figcaption></figure>
+            <figure class="shot"><div class="phone"><img src="images/dispatch-create-2.jpeg" alt="New Dispatch part 2" width="720" height="1600" loading="lazy" decoding="async"></div>
+              <figcaption>2 — Transporter, वजन, Freight (भाड़ा)</figcaption></figure>
+          </div>
+          <div>
+            <ol class="steps">
+              <li><code class="lbl">Source</code> चुनें — <b>Vendor</b> (सीधे वेंडर से) या <b>Godown</b> (अपने गोदाम से)। फिर उससे जुड़ा deal चुनें।</li>
+              <li><code class="lbl">Destination</code> चुनें — <b>Seller</b> (मिल को) या <b>Godown</b> (अपने गोदाम में)।</li>
+              <li><code class="lbl">Truck Number</code> डालें (जैसे BR01AB1234) और <code class="lbl">Date</code> रखें (<b>Today</b> पहले से चुना है)।</li>
+              <li><code class="lbl">Transporter</code> खोजें — <span style="font-style:italic;">यह तभी माँगा जाता है जब भाड़ा आप दे रहे हों।</span></li>
+              <li><code class="lbl">Initial Weight</code> (kg में) और चाहें तो <code class="lbl">Bags</code> भरें।</li>
+              <li><code class="lbl">Agreed Freight (per quintal)</code> और <code class="lbl">Advance Paid</code> भरें (advance कुल भाड़े से ज़्यादा नहीं हो सकता)।</li>
+              <li><code class="lbl">Review Dispatch →</code> दबाकर पुष्टि करें।</li>
+            </ol>
+            <div class="app-does"><span class="k">✓ App खुद</span> <b>Balance Freight</b> (बचा भाड़ा) गिन देता है, <b>Bill of Supply (चालान)</b> का PDF बना देता है, advance की entry ledger में डाल देता है, और deal की progress बढ़ा देता है।</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="task">
+        <h3>Truck रवाना करें और सूची देखें<span class="en">Mark In Transit · Dispatch list</span></h3>
+        <div class="layout with-shot left">
+          <figure class="shot"><div class="phone"><img src="images/dispatch-list.jpeg" alt="Dispatches list" width="720" height="1600" loading="lazy" decoding="async"></div>
+            <figcaption>Dispatches — status और filter</figcaption></figure>
+          <div>
+            <ol class="steps">
+              <li>Dispatch बनने पर status <span class="pill n">Created</span> रहता है। किसी dispatch को खोलकर <code class="lbl">Mark In Transit</code> दबाएँ जब truck चल पड़े → <span class="pill b">In Transit</span>।</li>
+              <li>कभी भी <code class="lbl">Download Bill of Supply</code> से चालान का PDF निकालकर ड्राइवर को दें या WhatsApp कर दें।</li>
+              <li><code class="lbl">Dispatch</code> सूची में ऊपर search और <b>All / In Transit / Received / Settled</b> तथा समय के filter हैं — कोई भी truck तुरंत ढूँढ लें।</li>
+            </ol>
+            <div class="tip"><b>नोट (बीटा):</b> अभी dispatch में <b>ड्राइवर का नाम/नंबर</b> का अलग field नहीं है — सिर्फ़ truck number दर्ज होता है।</div>
+          </div>
+        </div>
+        <div class="who"><span class="lab">कौन कर सकता है</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span><span class="rolechip">Dispatch Clerk</span><span class="rolechip">Data Entry</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. RECEIVED -->
+  <section id="received">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-seal num">6</div>
+        <div>
+          <h2>माल पहुँचा — असली वजन दर्ज करें<span class="en">Record Received Weight</span></h2>
+          <p class="why">दूसरी तरफ़ truck पहुँचने पर वहाँ का असली वजन डालिए। भेजे और पहुँचे वजन का फ़र्क़ (shortage/कमी) app खुद निकाल देता है — गिनती की माथापच्ची ख़त्म।</p>
+        </div>
+      </div>
+      <div class="task">
+        <h3>Received weight भरें</h3>
+        <div class="layout with-shot left">
+          <figure class="shot" style="text-align:center;">
+            <div class="phone"><img src="images/dispatch-detail.jpeg" alt="Dispatch detail with dispatched vs received weight" width="720" height="1600" loading="lazy" decoding="async"></div>
+            <figcaption>Dispatch Detail — DISPATCHED vs RECEIVED, Shortage अपने-आप</figcaption>
+          </figure>
+          <div>
+            <ol class="steps">
+              <li><code class="lbl">Dispatch</code> tab से वह truck खोलें जो <span class="pill b">In Transit</span> है।</li>
+              <li>नीचे <code class="lbl">Record Received Weight</code> दबाएँ।</li>
+              <li>खुलने वाली शीट में <code class="lbl">Weight (KG)</code> डालें, चाहें तो <code class="lbl">Remarks</code>, फिर <code class="lbl">RECORD</code> दबाएँ।</li>
+            </ol>
+            <div class="app-does"><span class="k">✓ App खुद</span> <b>Shortage (कमी)</b> = भेजा वज़न − पहुँचा वज़न, खुद निकालता है। status <span class="pill g">Received</span> हो जाता है। जब तक असली वज़न न भरें, <b>RECEIVED</b> में “Pending / Not recorded” दिखता है।</div>
+          </div>
+        </div>
+        <div class="who"><span class="lab">कौन कर सकता है</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span><span class="rolechip">Dispatch Clerk</span><span class="rolechip">Data Entry</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. SETTLEMENT -->
+  <section id="settle">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-seal num">7</div>
+        <div>
+          <h2>हिसाब चुकता करें — Settlement<span class="en">Create · Dispute · Accept</span></h2>
+          <p class="why">मिल की तरफ़ से कोई दावा (claim) या कटौती (deduction) — नमी, टूटन, तौल, उतराई — हो तो यहाँ जोड़ें। सहमति न हो तो <b>Dispute</b>, बात बने तो <b>Accept</b>। Accept होते ही पक्का बिल बनता है।</p>
+        </div>
+      </div>
+
+      <div class="task">
+        <h3>Settlement बनाएँ और सूची देखें<span class="en">Create Settlement</span></h3>
+        <div class="layout with-shot">
+          <div>
+            <ol class="steps">
+              <li>जो dispatch <span class="pill g">Received</span> है उसे खोलकर <code class="lbl">Create Settlement</code> दबाएँ।</li>
+              <li><code class="lbl">Final Weight</code> और <code class="lbl">Final Rate</code> जाँच लें (रेट बदलें तो <code class="lbl">Rate Change Reason</code> लिखें)।</li>
+              <li><b>CLAIMS</b> में <code class="lbl">Add Claim</code> से दावा जोड़ें — जैसे Moisture, Broken Grain — प्रकार, विवरण, रकम।</li>
+              <li><b>FINANCIAL DEDUCTIONS</b> में <code class="lbl">Add Deduction</code> से कटौती जोड़ें — जैसे Weighing/Unloading charges।</li>
+              <li>नीचे <b>FINAL AMOUNT</b> देखकर <code class="lbl">CREATE SETTLEMENT</code> दबाएँ।</li>
+            </ol>
+          </div>
+          <figure class="shot"><div class="phone"><img src="images/settlement-list.jpeg" alt="Settlements list" width="720" height="1600" loading="lazy" decoding="async"></div>
+            <figcaption>Settlements — All / Draft / Disputed / Accepted</figcaption></figure>
+        </div>
+      </div>
+
+      <div class="task">
+        <h3>Settlement की पूरी जानकारी<span class="en">Settlement Detail</span></h3>
+        <div style="display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(180px,1fr));">
+          <figure class="shot"><div class="phone"><img src="images/settlement-detail-1.jpeg" alt="Settlement detail part 1" width="720" height="1600" loading="lazy" decoding="async"></div>
+            <figcaption>Timeline, Final Weight, Deal Rate vs Final Rate</figcaption></figure>
+          <figure class="shot"><div class="phone"><img src="images/settlement-detail-2.jpeg" alt="Settlement detail part 2" width="720" height="1600" loading="lazy" decoding="async"></div>
+            <figcaption>Claims, Deductions और Financial Summary</figcaption></figure>
+        </div>
+        <ol class="steps" style="margin-top:16px;">
+          <li>ऊपर <b>Round 1 of 3</b> दिखता है — मोल-भाव के लिए तीन दौर तक चल सकता है।</li>
+          <li>Draft में <code class="lbl">Accept</code> से मान लें, या <code class="lbl">Dispute</code> से कारण (कम-से-कम 10 अक्षर) लिखकर एतराज़ करें। सामने वाला <code class="lbl">Revise</code> कर सकता है।</li>
+          <li><b>FINANCIAL SUMMARY</b>: Gross − Claims − Deductions = <b>FINAL AMOUNT</b>। नीचे <b>Vendor Credit</b> और <b>Per-truck Profit/Loss</b> भी दिखता है।</li>
+        </ol>
+        <div class="app-does"><span class="k">✓ App खुद</span> Accept होते ही मिल के ledger में सही रकम चढ़ा देता है, broker का commission जोड़ देता है, और dispatch <span class="pill n">Settled</span> कर देता है।</div>
+        <div class="who"><span class="lab">Accept/Dispute/Revise</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span><span style="font-size:.8rem;color:var(--ink-faint);">— बाकी सिर्फ़ देख सकते हैं</span></div>
+      </div>
+
+      <div class="task">
+        <h3>अपने-आप बनने वाले कागज़<span class="en">Auto-generated PDFs</span></h3>
+        <p style="margin:0; color:var(--ink-soft);">हर सौदे पर ज़रूरी कागज़ app खुद बना देता है — dispatch या settlement की screen से <b>Download</b> करके छापें या WhatsApp पर भेजें:</p>
+        <div class="docs">
+          <div class="doc"><h4>Bill of Supply (चालान)</h4><p>Dispatch बनते ही — माल, बोरे, वज़न, रेट, रकम; ड्राइवर के साथ भेजने के लिए।</p></div>
+          <div class="doc"><h4>Settlement Note</h4><p>प्रस्तावित हिसाब — भेजा/पहुँचा वज़न, shortage, claims और net देय। यह अंतिम बिल नहीं है।</p></div>
+          <div class="doc"><h4>Vendor Bill</h4><p>Accept होने पर अंतिम खरीद बिल — claims व deductions घटाकर <b>Net Payable</b>। (इस बिल पर GST नहीं लगता।)</p></div>
+          <div class="doc"><h4>Inward Advice</h4><p>गोदाम में माल आने की सूचना/पर्ची — dispatch से download।</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. LEDGER -->
+  <section id="ledger">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-seal num">8</div>
+        <div>
+          <h2>Ledger &amp; Payments — खाता-बही और भुगतान<span class="en">Ledger · Record Payment</span></h2>
+          <p class="why">किसका कितना बाकी है — हर वक़्त एक नज़र में। पैसा आए या जाए, बस दर्ज कर दें; हर party का खाता अपने-आप अपडेट रहता है।</p>
+        </div>
+      </div>
+      <div class="task">
+        <h3>बकाया देखें और payment दर्ज करें</h3>
+        <div class="layout with-shot left">
+          <figure class="shot"><div class="phone"><img src="images/ledger.jpeg" alt="Ledger screen" width="720" height="1600" loading="lazy" decoding="async"></div>
+            <figcaption>Ledger — Total Receivable और Total Payable</figcaption></figure>
+          <div>
+            <ol class="steps">
+              <li><code class="lbl">Ledger</code> tab खोलें — ऊपर <b>Total Receivable</b> (लेना) और <b>Total Payable</b> (देना)।</li>
+              <li>नीचे हर party का <b>Outstanding</b>। <b>All / Mills / Vendors / Transporters / Brokers</b> से छाँटें।</li>
+              <li>किसी party पर दबाकर उसका पूरा statement देखें, फिर <code class="lbl">+ Record Payment</code> दबाएँ।</li>
+              <li><code class="lbl">Ledger Party</code>, रकम और <b>payment mode</b> भरें (cheque हो तो Cheque Number/Bank), फिर <code class="lbl">Review Transaction</code>।</li>
+              <li>statement को <code class="lbl">Export as PDF</code> या <code class="lbl">Export as CSV</code> से निकालकर किसी को भेज दें।</li>
+            </ol>
+          </div>
+        </div>
+        <div class="who"><span class="lab">Payment दर्ज करना</span><span class="rolechip">Owner</span><span class="rolechip">Accountant</span><span style="font-size:.8rem;color:var(--ink-faint);">— (Trade Manager जानबूझकर नहीं)</span></div>
+      </div>
+
+      <div class="task">
+        <h3>Statement और Payment form — नज़दीक से<span class="en">Ledger Detail · Record Payment</span></h3>
+        <div style="display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(180px,1fr));">
+          <figure class="shot" style="text-align:center;">
+            <div class="phone"><img src="images/ledger-statement.jpeg" alt="Party ledger statement" width="720" height="1600" loading="lazy" decoding="async"></div>
+            <figcaption>Statement — Date / Reference / Dr / Cr / Balance</figcaption>
+          </figure>
+          <figure class="shot" style="text-align:center;">
+            <div class="phone"><img src="images/record-payment.jpeg" alt="Record Transaction form" width="720" height="1600" loading="lazy" decoding="async"></div>
+            <figcaption>Record Transaction — Money Received / Money Paid</figcaption>
+          </figure>
+        </div>
+        <ol class="steps" style="margin-top:14px;">
+          <li>Statement में हर entry दिखती है — <b>Opening</b>, <b>Total Dr</b> (नाम), <b>Total Cr</b> (जमा), और नीचे बकाया (Payable/Receivable)। ऊपर <code class="lbl">Export</code> और समय के filter हैं।</li>
+          <li>Payment form में <code class="lbl">Ledger Party</code> और <code class="lbl">Amount</code> भरें।</li>
+          <li><code class="lbl">Transaction Type</code> चुनें — <b>Money Received</b> (पैसा आया) या <b>Money Paid</b> (पैसा गया)।</li>
+          <li><code class="lbl">Payment Mode</code> चुनें (Cash / NEFT / RTGS / IMPS / UPI / Cheque), फिर <code class="lbl">Review Transaction →</code>।</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. INVENTORY -->
+  <section id="stock">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-seal num">9</div>
+        <div>
+          <h2>Godown Stock — कहाँ कितना माल<span class="en">Inventory</span></h2>
+          <p class="why">अलग से स्टॉक रजिस्टर रखने की ज़रूरत नहीं। हर खरीद और हर dispatch के साथ गोदाम का हिसाब खुद घटता-बढ़ता रहता है।</p>
+        </div>
+      </div>
+      <div class="task">
+        <h3>स्टॉक देखें और गोदाम जोड़ें<span class="en">Godowns · Godown Inventory</span></h3>
+        <div class="layout with-shot">
+          <div>
+            <ol class="steps">
+              <li>पहले <code class="lbl">More → Godowns</code> से अपने गोदाम जोड़ें — <code class="lbl">Godown Name</code> (जैसे “G1 — Patna”) और <code class="lbl">Location</code>।</li>
+              <li>अब <code class="lbl">More → Godown Inventory</code> खोलें।</li>
+              <li>ऊपर <b>TOTAL ON HAND</b> (कुल स्टॉक, quintal में) और अनाज-वार बँटवारा दिखता है।</li>
+              <li>नीचे हर गोदाम में कौन-सा अनाज कितना — साफ़-साफ़।</li>
+            </ol>
+            <div class="app-does"><span class="k">✓ App खुद</span> हर गोदाम में हर अनाज का स्टॉक dispatch के साथ अपने-आप अपडेट करता है।</div>
+          </div>
+          <figure class="shot"><div class="phone"><img src="images/inventory.jpeg" alt="Inventory screen" width="720" height="1600" loading="lazy" decoding="async"></div>
+            <figcaption>Godown stock on hand — गोदाम-वार</figcaption></figure>
+        </div>
+        <div class="who"><span class="lab">गोदाम संभालना</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span><span class="rolechip">Godown Supervisor</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. TEAM & ROLES -->
+  <section id="team">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-seal num">10</div>
+        <div>
+          <h2>आपकी टीम — कौन क्या कर सकता है<span class="en">Team &amp; Roles</span></h2>
+          <p class="why">हर आदमी को उसके काम भर का access दें। रेट, deal बंद करना और पैसे का ज़िम्मा भरोसे के हाथ में; बाकी सिर्फ़ एंट्री।</p>
+        </div>
+      </div>
+
+      <div class="task">
+        <h3>staff को बुलाएँ<span class="en">Invite Member</span></h3>
+        <div style="display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(180px,1fr));">
+          <figure class="shot" style="text-align:center;">
+            <div class="phone"><img src="images/invite-member.jpeg" alt="Invite Member screen" width="720" height="1600" loading="lazy" decoding="async"></div>
+            <figcaption>Invite Member — number, नाम और Role चुनें</figcaption>
+          </figure>
+          <figure class="shot" style="text-align:center;">
+            <div class="phone"><img src="images/invitation-sent.jpeg" alt="Invitation Sent with invite code" width="720" height="1600" loading="lazy" decoding="async"></div>
+            <figcaption>Invitation Sent — INVITE CODE को Copy करें</figcaption>
+          </figure>
+        </div>
+        <ol class="steps" style="margin-top:14px;">
+          <li><code class="lbl">More → Team Members</code> खोलें, फिर <code class="lbl">Invite Member</code>।</li>
+          <li>उसका <code class="lbl">Mobile Number</code>, <code class="lbl">Full Name</code>, और <code class="lbl">Role</code> चुनकर <code class="lbl">SEND INVITATION</code> दबाएँ।</li>
+          <li>बना हुआ <b>INVITE CODE</b> <code class="lbl">Copy</code> करके उसे भेज दें — यह <b>सिर्फ़ एक बार</b> दिखता है।</li>
+          <li>वह Login screen पर <b>“Joining a team?”</b> से यह code डालकर अपना password बनाकर जुड़ जाएगा।</li>
+        </ol>
+        <div class="who"><span class="lab">टीम संभालना</span><span class="rolechip">सिर्फ़ Owner</span><span style="font-size:.8rem;color:var(--ink-faint);">— role बदलना/हटाना</span></div>
+      </div>
+
+      <div class="task">
+        <h3>6 Roles — किसे क्या access<span class="en">Permission Matrix</span></h3>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>काम</th><th>कौन कर सकता है</th></tr></thead>
+            <tbody>
+              <tr><td>Party जोड़ना/बदलना</td><td>Owner, Trade Manager</td></tr>
+              <tr><td>Deal बनाना</td><td>Owner, Trade Manager, Data Entry</td></tr>
+              <tr><td>Dispatch बनाना/चलाना</td><td>Owner, Trade Manager, Dispatch Clerk, Data Entry</td></tr>
+              <tr><td>Dispatch रद्द करना</td><td>Owner, Trade Manager</td></tr>
+              <tr><td>Settlement — Accept/Dispute/Revise</td><td>Owner, Trade Manager</td></tr>
+              <tr><td>Payment / Freight दर्ज करना</td><td>Owner, Accountant <b>(Trade Manager नहीं)</b></td></tr>
+              <tr><td>गोदाम संभालना</td><td>Owner, Trade Manager, Godown Supervisor</td></tr>
+              <tr><td>Company Profile बदलना</td><td>सिर्फ़ Owner</td></tr>
+              <tr><td>टीम role बदलना/हटाना</td><td>सिर्फ़ Owner</td></tr>
+              <tr><td>Outstanding (truck P/L) Report</td><td>Owner, Trade Manager</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid2">
+          <div class="mini"><h4>मालिक<span class="en">Owner</span></h4><p>पूरा access — आख़िरी फ़ैसला इन्हीं का।</p></div>
+          <div class="mini"><h4>मैनेजर<span class="en">Trade Manager</span></h4><p>रोज़ का सारा व्यापार — पर payment नहीं।</p></div>
+          <div class="mini"><h4>मुनीम<span class="en">Accountant</span></h4><p>पैसे का हिसाब — payment और ledger।</p></div>
+          <div class="mini"><h4>डिस्पैच क्लर्क<span class="en">Dispatch Clerk</span></h4><p>truck का काम — dispatch बनाना/चलाना।</p></div>
+          <div class="mini"><h4>डेटा एंट्री<span class="en">Data Entry</span></h4><p>deal और dispatch दर्ज करना।</p></div>
+          <div class="mini"><h4>गोदाम सुपरवाइज़र<span class="en">Godown Supervisor</span></h4><p>गोदाम और स्टॉक संभालना।</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. REPORTS -->
+  <section id="reports">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-seal num">11</div>
+        <div>
+          <h2>Reports — मुनाफ़ा और रिकॉर्ड<span class="en">Reports</span></h2>
+          <p class="why"><code class="lbl">More → Reports</code> में मिलते हैं।</p>
+        </div>
+      </div>
+      <div class="grid2">
+        <div class="mini"><h4>Outstanding Report<span class="en">Per-truck P/L</span></h4>
+          <p>हर truck का <b>नफ़ा/नुक़सान</b> — बिक्री रकम − वेंडर खरीद − commission − भाड़ा। Vendor → Seller के accepted settlements पर।</p>
+          <div class="who" style="border:0; padding-top:8px; margin-top:8px;"><span class="lab">देख सकते हैं</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span></div>
+        </div>
+        <div class="mini"><h4>Audit Trail<span class="en">पूरा इतिहास</span></h4>
+          <p>app में हुआ हर काम, तारीख़ के साथ। ज़रूरी (Critical) बदलाव अलग से चिह्नित। “किसने क्या किया” का पूरा रिकॉर्ड।</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. BETA -->
+  <section id="beta">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-seal">🧪</div>
+        <div>
+          <h2>Beta testing — क्या ध्यान रखें<span class="en">For Beta Testers</span></h2>
+          <p class="why">यह शुरुआती (beta) version है। आपका इस्तेमाल और सुझाव ही इसे बेहतर बनाएँगे।</p>
+        </div>
+      </div>
+
+      <div class="task">
+        <h3>कैसे test करें — सुझाया रास्ता</h3>
+        <ol class="steps">
+          <li>अपना असली एक-दो सौदा पूरा चलाकर देखें: <b>Party → Deal → Dispatch → Received → Settlement → Payment</b>।</li>
+          <li>हर step पर देखें — क्या हिसाब सही जुड़ा? Ledger और Stock सही बदले? PDF सही बने?</li>
+          <li>अलग-अलग role वाले staff से उनका हिस्सा करवाकर देखें कि access ठीक है।</li>
+          <li>जहाँ कुछ अटके, समझ न आए, या ग़लत लगे — नोट कर लें (नीचे बताए तरीके से)।</li>
+        </ol>
+      </div>
+
+      <div class="task">
+        <h3>दिक़्क़त कैसे बताएँ<span class="en">Report an issue</span></h3>
+        <ol class="steps">
+          <li><b>क्या करने जा रहे थे</b> (कौन-सी screen, कौन-सा button)।</li>
+          <li><b>क्या हुआ</b> बनाम <b>क्या होना चाहिए था</b>।</li>
+          <li>हो सके तो उसी वक़्त का <b>screenshot</b> लें (फ़ोन के दिखते नंबर/पैसे भी शामिल)।</li>
+          <li>कौन-सा <b>role</b> था और <b>कब</b> — ताकि जल्दी पकड़ में आए।</li>
+        </ol>
+      </div>
+
+      <div class="task">
+        <h3>अभी की सीमाएँ — जान लें<span class="en">Known beta limits</span></h3>
+        <ul style="margin:6px 0 0; padding-left:18px; color:var(--ink-soft);">
+          <li><b>Subscription/Upgrade</b> अभी काम नहीं करता — “Upgrade” दिखता है पर चालू नहीं। इसे test न करें।</li>
+          <li>Dispatch में <b>ड्राइवर का नाम/नंबर</b> दर्ज नहीं होता — सिर्फ़ truck number।</li>
+          <li>अलग से <b>notifications inbox</b> नहीं है — सूचनाएँ dispatch की screen पर (“NOTIFICATIONS SENT”) दिखती हैं।</li>
+          <li>Internet न हो तो ऊपर <b>“Offline — showing saved data”</b> दिखता है — तब सिर्फ़ पुराना data पढ़ सकते हैं, नया दर्ज नहीं।</li>
+          <li><b>आवाज़ से भरना</b> (🎤) अभी मुख्य रूप से <b>Add Party</b> पर है।</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="mark">RTNP</span> — Rice Trade Network Platform<br>
+    बिज़नेस आसान, हिसाब साफ़। · How-to Guide (Beta)
+  </div>
+</footer>
+<script src="js/main.js" defer></script>
+</body>
+</html>
