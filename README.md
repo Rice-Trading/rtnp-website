@@ -1,23 +1,35 @@
 # RTNP — How-to Guide (Website)
 
-A static, bilingual (Hindi + English) how-to guide for the **RTNP** mobile app, built for
-beta testers. Plain HTML/CSS/JS — no build step, no framework, no runtime dependencies.
+A static, bilingual (Hindi + English) how-to guide for **RTNP**, built for beta testers.
+Plain HTML/CSS/JS — no build step, no framework, no runtime dependencies.
+
+It now covers **two products** on one page, chosen with a toggle at the top of the hero:
+
+1. **📱 मोबाइल ऐप · Mobile App** — the Flutter field app (default view).
+2. **💻 वेब पोर्टल · Web Portal** — the `rtnp_web` React SPA for office staff.
+
+The chosen view is remembered in `localStorage`, and deep-links work across views: a URL
+ending in `#w-ledger` (a web-guide section) auto-switches to the Web Portal view; `#ledger`
+stays on the Mobile view.
 
 ## Structure
 ```
 rtnp-website/
-├── index.html          # the page (markup only)
+├── index.html          # both guides (markup only) — #view-mobile and #view-web
 ├── css/
-│   └── styles.css      # all styles (theme-aware: light/dark)
+│   └── styles.css      # all styles (theme-aware: light/dark) incl. .seg toggle + .browser frame
 ├── js/
 │   └── main.js         # progressive enhancements (see below)
-├── images/             # 21 real app screenshots (.jpeg)
+├── images/             # 21 real MOBILE app screenshots (.jpeg)
+│   └── web/            # 21 real WEB PORTAL screenshots (.jpeg)
 ├── favicon.svg
 ├── .nojekyll           # tell GitHub Pages to serve files as-is
 └── README.md
 ```
 
-The page works fully **without JavaScript**. `js/main.js` only adds niceties:
+The page works fully **without JavaScript**: the Mobile view shows by default; the toggle
+and view-switching need JS. `js/main.js` adds:
+- **Guide switch** — Mobile app ⇄ Web portal, remembered in `localStorage`, hash-aware.
 - **Theme toggle** — cycles Auto (system) → Light → Dark, remembered in `localStorage`.
 - **Scroll-spy** — highlights the current section in the contents list.
 - **Back-to-top** button (appears after scrolling).
@@ -52,4 +64,9 @@ git push -u origin main
 
 ## Notes
 - All screenshots are real app screens (current teal/cream UI).
-- The **Reports** section is text-only pending a screenshot of *More → Reports → Outstanding Report*.
+- **Mobile** screenshots live in `images/`; **Web portal** screenshots in `images/web/`.
+- Web-portal screenshots were captured from the live `rtnp_web` SPA against the local
+  backend (headless Chrome), and are shown inside a lightweight browser frame; each is a
+  link that opens the full-size image in a new tab.
+- Web-guide section ids are prefixed `w-` (e.g. `#w-deals`) so they never clash with the
+  mobile sections.

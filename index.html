@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RTNP — कैसे इस्तेमाल करें · How to Use</title>
-<meta name="description" content="RTNP मोबाइल ऐप कैसे इस्तेमाल करें — बीटा how-to guide (Hindi + English) with real app screenshots.">
+<title>RTNP — कैसे इस्तेमाल करें · Mobile App + Web Portal</title>
+<meta name="description" content="RTNP कैसे इस्तेमाल करें — मोबाइल ऐप और वेब पोर्टल दोनों की how-to guide (Hindi + English) with real screenshots.">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#0F6E6E">
-<meta property="og:title" content="RTNP — कैसे इस्तेमाल करें · How to Use">
-<meta property="og:description" content="RTNP मोबाइल ऐप — कैसे इस्तेमाल करें (How to Use). Beta guide with real screenshots.">
+<meta property="og:title" content="RTNP — कैसे इस्तेमाल करें · Mobile App + Web Portal">
+<meta property="og:description" content="RTNP मोबाइल ऐप और वेब पोर्टल — कैसे इस्तेमाल करें (How to Use). Beta guide with real screenshots.">
 <meta property="og:type" content="website">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/styles.css">
@@ -23,31 +23,52 @@
     </div>
     <h1>RTNP <span class="hl">कैसे इस्तेमाल करें</span></h1>
     <p class="lede">
-      एक-एक काम, step-by-step। हर screen की असली तस्वीर, आसान हिंदी में समझ, और जो
-      <b>button</b> app में दिखेगा वही यहाँ लिखा है। कोई तकनीकी जानकारी की ज़रूरत नहीं।
+      आसान हिंदी में, step-by-step। जो <b>button या field</b> screen पर दिखेगा वही यहाँ लिखा है,
+      साथ में हर screen की असली तस्वीर। नीचे चुनिए — आप <b>मोबाइल ऐप</b> की गाइड देखना चाहते हैं या
+      <b>वेब पोर्टल</b> (office/computer) की।
     </p>
 
-    <nav class="toc" aria-label="विषय-सूची">
-      <h2>इस गाइड में · Contents</h2>
-      <ol>
-        <li><a href="#start">शुरुआत — Register &amp; Login</a></li>
-        <li><a href="#home">Home screen समझें</a></li>
-        <li><a href="#party">Parties जोड़ें</a></li>
-        <li><a href="#deal">Deal (सौदा) बनाएँ</a></li>
-        <li><a href="#dispatch">Truck भेजें — Dispatch</a></li>
-        <li><a href="#received">माल पहुँचा — Received weight</a></li>
-        <li><a href="#settle">हिसाब चुकता — Settlement</a></li>
-        <li><a href="#ledger">Ledger &amp; Payments</a></li>
-        <li><a href="#stock">Godown Stock — Inventory</a></li>
-        <li><a href="#team">आपकी टीम &amp; Roles</a></li>
-        <li><a href="#reports">Reports</a></li>
-        <li><a href="#beta">Beta testing — क्या ध्यान रखें</a></li>
-      </ol>
-    </nav>
+    <div class="seg" role="tablist" aria-label="कौन-सी गाइड देखें">
+      <button class="seg-btn active" role="tab" aria-selected="true" data-view="mobile">
+        <span class="seg-ic">📱</span> मोबाइल ऐप <span class="seg-en">Mobile App</span>
+      </button>
+      <button class="seg-btn" role="tab" aria-selected="false" data-view="web">
+        <span class="seg-ic">💻</span> वेब पोर्टल <span class="seg-en">Web Portal</span>
+      </button>
+    </div>
   </div>
 </header>
 
 <main>
+
+<!-- ================= MOBILE APP GUIDE ================= -->
+<div id="view-mobile" class="guide-view active" role="tabpanel" aria-label="मोबाइल ऐप गाइड">
+
+  <section class="intro">
+    <div class="wrap">
+      <p class="lede" style="max-width:52ch;">
+        <b>मोबाइल ऐप</b> — रोज़ का व्यापार आपके फ़ोन से। हर screen की असली तस्वीर, आसान हिंदी में समझ,
+        और जो <b>button</b> app में दिखेगा वही यहाँ लिखा है। कोई तकनीकी जानकारी की ज़रूरत नहीं।
+      </p>
+      <nav class="toc" aria-label="विषय-सूची — मोबाइल">
+        <h2>मोबाइल गाइड में · Contents</h2>
+        <ol>
+          <li><a href="#start">शुरुआत — Register &amp; Login</a></li>
+          <li><a href="#home">Home screen समझें</a></li>
+          <li><a href="#party">Parties जोड़ें</a></li>
+          <li><a href="#deal">Deal (सौदा) बनाएँ</a></li>
+          <li><a href="#dispatch">Truck भेजें — Dispatch</a></li>
+          <li><a href="#received">माल पहुँचा — Received weight</a></li>
+          <li><a href="#settle">हिसाब चुकता — Settlement</a></li>
+          <li><a href="#ledger">Ledger &amp; Payments</a></li>
+          <li><a href="#stock">Godown Stock — Inventory</a></li>
+          <li><a href="#team">आपकी टीम &amp; Roles</a></li>
+          <li><a href="#reports">Reports</a></li>
+          <li><a href="#beta">Beta testing — क्या ध्यान रखें</a></li>
+        </ol>
+      </nav>
+    </div>
+  </section>
 
   <!-- HOW TO READ -->
   <section id="howto" style="padding-top:34px;">
@@ -630,6 +651,631 @@
       </div>
     </div>
   </section>
+
+</div><!-- /view-mobile -->
+
+<!-- ================= WEB PORTAL GUIDE ================= -->
+<div id="view-web" class="guide-view" role="tabpanel" aria-label="वेब पोर्टल गाइड" hidden>
+
+  <section class="intro">
+    <div class="wrap">
+      <p class="lede" style="max-width:56ch;">
+        <b>वेब पोर्टल</b> — बड़े काम के लिए कंप्यूटर/लैपटॉप की बड़ी screen पर। यह वही RTNP है, वही data —
+        बस office staff के लिए बना हुआ। आपकी field टीम (गोदाम, dispatch) मोबाइल ऐप पर ही रहती है;
+        office में बैठे लोग यहाँ से एक साथ ज़्यादा देख और कर सकते हैं।
+      </p>
+      <p class="lede" style="max-width:56ch; margin-top:10px;">
+        खोलिए: browser में <code class="lbl">portal का पता</code> टाइप करें और अपने <b>उसी mobile नंबर व password</b>
+        से लॉग इन करें जो मोबाइल ऐप में है। दोनों एक ही खाते से चलते हैं।
+      </p>
+      <nav class="toc" aria-label="विषय-सूची — वेब">
+        <h2>वेब गाइड में · Contents</h2>
+        <ol>
+          <li><a href="#w-howto">पोर्टल की बनावट समझें</a></li>
+          <li><a href="#w-login">लॉग इन करें — Login</a></li>
+          <li><a href="#w-dashboard">Dashboard</a></li>
+          <li><a href="#w-deals">Deals — सौदे</a></li>
+          <li><a href="#w-dispatch">Dispatches — truck</a></li>
+          <li><a href="#w-settle">Settlements — हिसाब</a></li>
+          <li><a href="#w-ledger">Ledger &amp; Payments</a></li>
+          <li><a href="#w-parties">Parties</a></li>
+          <li><a href="#w-stock">Inventory &amp; Commodities</a></li>
+          <li><a href="#w-reports">Reports &amp; Exports</a></li>
+          <li><a href="#w-audit">Audit Trail</a></li>
+          <li><a href="#w-admin">Team &amp; Settings</a></li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- W-HOWTO: ORIENTATION -->
+  <section id="w-howto">
+    <div class="wrap">
+      <span class="eyebrow">पहले यह पढ़ें</span>
+      <h2 style="margin:8px 0 14px; font-size:1.3rem; font-weight:800;">पोर्टल की बनावट — एक बार समझ लें</h2>
+      <div class="callout">
+        <p>पूरे portal में <strong>बाईं ओर एक पट्टी (sidebar)</strong> हमेशा दिखती है — यही आपका मुख्य menu है।
+        ऊपर <strong>top bar</strong> में search, company का नाम और आपका नाम/role रहता है। बीच का बड़ा हिस्सा
+        उस screen का काम दिखाता है जिस पर आप हैं।</p>
+        <p><strong>काम का क्रम वही है:</strong> Party → Deal → Dispatch → Received → Settlement → Payment।
+        पोर्टल हर step को अगले से खुद जोड़ता है — आप बस अपना हिस्सा भरते जाइए।</p>
+      </div>
+
+      <p style="margin:22px 0 6px; font-size:.8rem; letter-spacing:.1em; text-transform:uppercase; font-weight:800; color:var(--ink-faint);">बाईं पट्टी (Sidebar) — यहीं से हर जगह जाएँ</p>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>Menu</th><th>क्या मिलता है</th></tr></thead>
+          <tbody>
+            <tr><td>Dashboard</td><td>पूरे दिन/महीने का सार, ज़रूरी आँकड़े और shortcut</td></tr>
+            <tr><td>Deals</td><td>सारे सौदे — बनाना, देखना, बंद करना</td></tr>
+            <tr><td>Dispatches</td><td>सारे truck — भेजना, रवाना करना, वजन दर्ज</td></tr>
+            <tr><td>Settlements</td><td>हिसाब — claims, dispute, accept</td></tr>
+            <tr><td>Ledger</td><td>हर party का खाता — कौन-कितना बाकी</td></tr>
+            <tr><td>Payments</td><td>पैसा आया/गया दर्ज करना</td></tr>
+            <tr><td>Parties</td><td>मिल, वेंडर, ब्रोकर, ट्रांसपोर्टर</td></tr>
+            <tr><td>Inventory</td><td>गोदाम में कहाँ कितना माल</td></tr>
+            <tr><td>Commodities</td><td>आपके माल (अनाज) की सूची</td></tr>
+            <tr><td>Reports</td><td>per-truck मुनाफ़ा और CSV export</td></tr>
+            <tr><td>Audit Trail</td><td>किसने क्या किया — पूरा इतिहास</td></tr>
+            <tr><td>Team</td><td>staff बुलाना, role देना/बदलना</td></tr>
+            <tr><td>Settings</td><td>company की जानकारी, bank, subscription</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout" style="margin-top:18px; border-left-color:var(--teal);">
+        <p><strong style="color:var(--teal);">मोबाइल से क्या अलग है — जान लें</strong></p>
+        <p>काम वही है, पर बड़ी screen के कुछ फ़ायदे यहीं मिलते हैं:</p>
+        <ul style="margin:8px 0 0; padding-left:18px; color:var(--ink-soft);">
+          <li><b>एक साथ ज़्यादा दिखता है</b> — detail screens में बीच में मुख्य जानकारी और दाईं ओर side-panel (जैसे Freight, Documents, Actions)।</li>
+          <li><b>Excel/CSV export</b> — Ledger और Reports से एक click में <code class="lbl">Export CSV</code>। (मोबाइल में यह सीमित है।)</li>
+          <li><b>Company switcher</b> — top bar में company का नाम; एक से ज़्यादा company हों तो वहीं से बदलें।</li>
+          <li><b>PDF</b> (Bill of Supply आदि) एक नए browser tab में खुलते हैं — वहाँ से छापें या save करें।</li>
+          <li><b>Audit Trail</b> में <code class="lbl">← Prev</code> / <code class="lbl">Next →</code> से पन्ने बदलें।</li>
+          <li><b>ध्यान दें:</b> top bar का बड़ा <code class="lbl">Search deals, trucks, parties…</code> box अभी सिर्फ़ दिखावे का है — असली search हर screen के अपने search box में है।</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- W1: LOGIN -->
+  <section id="w-login">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-seal num">1</div>
+        <div>
+          <h2>लॉग इन करें<span class="en">Login · Sign In</span></h2>
+          <p class="why">वही mobile नंबर और password जो मोबाइल ऐप में है। पहली बार खाता मोबाइल ऐप से बनता है या invite code से जुड़ते हैं।</p>
+        </div>
+      </div>
+      <div class="task">
+        <h3>पोर्टल में घुसें<span class="en">Sign In</span></h3>
+        <ol class="steps">
+          <li>browser में portal का पता खोलें — <code class="lbl">Welcome back</code> वाली screen दिखेगी।</li>
+          <li><code class="lbl">Mobile number</code> (10 अंक) और <code class="lbl">Password</code> भरें।</li>
+          <li>अपने ही कंप्यूटर पर हों तो <code class="lbl">Keep me signed in</code> रहने दें — बार-बार लॉग इन नहीं करना पड़ेगा। साझा/दूसरे कंप्यूटर पर इसे हटा दें।</li>
+          <li><code class="lbl">Sign In</code> दबाएँ। आप सीधे <b>Dashboard</b> पर पहुँच जाएँगे।</li>
+        </ol>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp — Login</span></div>
+            <a href="images/web/login.jpeg" target="_blank" rel="noopener"><img src="images/web/login.jpeg" alt="Web portal login screen" loading="lazy" decoding="async"></a></div>
+          <figcaption>Login — Mobile number + Password, फिर Sign In</figcaption>
+        </figure>
+        <div class="tip"><b>Password भूल गए?</b> <code class="lbl">Forgot password?</code> दबाएँ → <code class="lbl">Send OTP</code> से फ़ोन पर code मँगाएँ → <code class="lbl">OTP</code> और <code class="lbl">New password</code> भरकर <code class="lbl">Reset Password</code>। <b>एक से ज़्यादा company</b> में हैं तो लॉग इन के बाद <code class="lbl">Choose a company</code> दिखेगा — अपनी company चुन लें।</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- W2: DASHBOARD -->
+  <section id="w-dashboard">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-seal num">2</div>
+        <div>
+          <h2>Dashboard — एक नज़र में पूरा कारोबार<span class="en">Dashboard</span></h2>
+          <p class="why">लॉग इन के बाद यही सबसे पहले खुलता है। ज़रूरी आँकड़े, आज की गतिविधि और तुरंत काम के shortcut यहीं हैं।</p>
+        </div>
+      </div>
+      <div class="task">
+        <h3>Dashboard पर क्या-क्या है</h3>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp/dashboard</span></div>
+            <a href="images/web/dashboard.jpeg" target="_blank" rel="noopener"><img src="images/web/dashboard.jpeg" alt="Dashboard with KPI tiles, activity and quick actions" loading="lazy" decoding="async"></a></div>
+          <figcaption>Dashboard — ऊपर 4 आँकड़े, बाएँ Today’s Activity, दाएँ Quick Actions</figcaption>
+        </figure>
+        <div class="grid2">
+          <div class="mini"><h4>ऊपर के 4 आँकड़े<span class="en">KPI tiles</span></h4>
+            <ul>
+              <li><b>Mill Receivables</b> — मिलों से कितना लेना बाकी</li>
+              <li><b>Freight Payable</b> — भाड़े में कितना देना (<code class="lbl">{n} pending</code>)</li>
+              <li><b>Open Deals</b> — कितने सौदे चालू</li>
+              <li><b>Pending Settlements</b> — कितने हिसाब बाकी</li>
+            </ul>
+          </div>
+          <div class="mini"><h4>तुरंत काम<span class="en">Quick Actions</span></h4>
+            <ul>
+              <li><code class="lbl">New Deal</code> — नया सौदा</li>
+              <li><code class="lbl">New Dispatch</code> — truck भेजना</li>
+              <li><code class="lbl">Record Payment</code> — पैसा दर्ज</li>
+              <li><code class="lbl">View Ledger</code> — खाता खोलें</li>
+            </ul>
+          </div>
+        </div>
+        <div class="app-does"><span class="k">✓ App खुद</span> ये आँकड़े थोड़ी-थोड़ी देर में ताज़ा करता रहता है। <b>Today’s Activity</b> में आज का हर काम दिखता है (कुछ न हुआ हो तो <code class="lbl">No activity yet today</code>)। नीचे <b>This Month</b> में महीने का <code class="lbl">Settled</code>, <code class="lbl">Payments</code> और <code class="lbl">Cap used</code>।</div>
+        <div class="tip"><b>Free Plan की सीमा:</b> ऊपर <code class="lbl">Free Plan — X of 100 transactions used</code> की पट्टी दिखती है। <code class="lbl">Upgrade Plan</code> अभी self-service नहीं — यह sales से संपर्क का mail खोलता है।</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- W3: DEALS -->
+  <section id="w-deals">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-seal num">3</div>
+        <div>
+          <h2>Deals — सौदे बनाएँ और देखें<span class="en">Deal Register</span></h2>
+          <p class="why">किससे, कौन-सा माल, किस रेट पर, कितने truck — एक बार दर्ज करें। पहला truck निकलते ही रेट lock हो जाता है।</p>
+        </div>
+      </div>
+
+      <div class="task">
+        <h3>सारे सौदे देखें<span class="en">Deals list</span></h3>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp/deals</span></div>
+            <a href="images/web/deals.jpeg" target="_blank" rel="noopener"><img src="images/web/deals.jpeg" alt="Deal Register list with filters and columns" loading="lazy" decoding="async"></a></div>
+          <figcaption>Deal Register — ऊपर search व filter, नीचे हर सौदा एक पंक्ति में</figcaption>
+        </figure>
+        <ol class="steps">
+          <li>बाईं पट्टी से <code class="lbl">Deals</code> खोलें। ऊपर search box <code class="lbl">Search deals, mills, commodities…</code> से कोई भी सौदा ढूँढें।</li>
+          <li>छाँटने के लिए chips: <code class="lbl">All</code> · <code class="lbl">Open</code> · <code class="lbl">Partially Fulfilled</code> · <code class="lbl">Completed</code> · <code class="lbl">Closed</code>।</li>
+          <li>हर पंक्ति में <b>Deal No.</b>, party/commodity, <b>Direction</b> (Buy/Sell), status, भाड़ा (<code class="lbl">We pay</code>/<code class="lbl">They pay</code>), <b>Rate</b> और <b>Progress</b> (कितने truck भेजे/तय) दिखता है।</li>
+          <li>किसी भी पंक्ति पर click करके उस सौदे की पूरी जानकारी खोलें।</li>
+        </ol>
+      </div>
+
+      <div class="task">
+        <h3>नया सौदा बनाएँ<span class="en">New Deal</span></h3>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp/deals/new</span></div>
+            <a href="images/web/deal-new.jpeg" target="_blank" rel="noopener"><img src="images/web/deal-new.jpeg" alt="New Deal form" loading="lazy" decoding="async"></a></div>
+          <figcaption>New Deal — Buy/Sell, party, commodity, rate, trucks</figcaption>
+        </figure>
+        <ol class="steps">
+          <li>ऊपर दाएँ <code class="lbl">New Deal</code> दबाएँ।</li>
+          <li><code class="lbl">Deal Type</code> चुनें — <b>Buy</b> (वेंडर से खरीद) या <b>Sell</b> (मिल/trader को बिक्री)। फिर <code class="lbl">Deal Date</code> और <code class="lbl">Trade Type</code> (<b>Domestic</b>/<b>Export</b>)।</li>
+          <li><code class="lbl">Freight Paid By</code> — <b>Self</b> (भाड़ा आप देंगे) या <b>Counterparty</b> (सामने वाला)।</li>
+          <li>party चुनें — Buy में <code class="lbl">Vendor (Seller to you)</code>, Sell में <code class="lbl">Buyer (Mill / Trader)</code>।</li>
+          <li><code class="lbl">Commodity</code> खोजकर चुनें, <code class="lbl">Agreed Rate (₹/Quintal)</code> भरें, और <code class="lbl">Planned Trucks</code> तय करें (1/2/5/10/20 के बटन या −/+)।</li>
+          <li>ब्रोकर हो तो <code class="lbl">Add a broker</code> पर टिक करके <code class="lbl">Broker</code>, <code class="lbl">Commission Method</code> व <code class="lbl">Commission Value</code> भरें। चाहें तो <code class="lbl">Notes</code>।</li>
+          <li><code class="lbl">Create Deal</code> दबाएँ — सौदा बन जाएगा और खुल जाएगा।</li>
+        </ol>
+        <div class="who"><span class="lab">कौन बना सकता है</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span><span class="rolechip">Data Entry</span></div>
+      </div>
+
+      <div class="task">
+        <h3>सौदे की progress देखें और बंद करें<span class="en">Deal detail · Close Deal</span></h3>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp/deals/…</span></div>
+            <a href="images/web/deal-detail.jpeg" target="_blank" rel="noopener"><img src="images/web/deal-detail.jpeg" alt="Deal detail with progress and dispatches" loading="lazy" decoding="async"></a></div>
+          <figcaption>Deal detail — Progress, इस सौदे के सारे dispatch, और Activity</figcaption>
+        </figure>
+        <ol class="steps">
+          <li><b>Progress</b> card में <code class="lbl">Dispatched</code> / <code class="lbl">Planned</code> / <code class="lbl">Pending</code> और % पट्टी दिखती है।</li>
+          <li>यहीं से अगला truck भेजने के लिए ऊपर <code class="lbl">New Dispatch</code> दबाएँ।</li>
+          <li>सौदा पूरा हो जाए तो <code class="lbl">Close Deal</code> से बंद करें — <b>यह वापस नहीं खुलता</b>, इसलिए पुष्टि माँगी जाती है।</li>
+        </ol>
+        <div class="who"><span class="lab">बंद करना (Close Deal)</span><span class="rolechip">सिर्फ़ Owner</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- W4: DISPATCHES -->
+  <section id="w-dispatch">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-seal num">4</div>
+        <div>
+          <h2>Dispatches — Truck भेजें और रास्ता देखें<span class="en">Dispatches · Bill of Supply अपने-आप</span></h2>
+          <p class="why">माल लोड होते ही dispatch बनाइए। <b>Bill of Supply (चालान)</b> का PDF खुद बन जाता है, भाड़े का हिसाब खुलता है, और सौदे की progress बढ़ती है।</p>
+        </div>
+      </div>
+
+      <div class="task">
+        <h3>सारे truck देखें<span class="en">Dispatches list</span></h3>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp/dispatches</span></div>
+            <a href="images/web/dispatches.jpeg" target="_blank" rel="noopener"><img src="images/web/dispatches.jpeg" alt="Dispatches list with status filters" loading="lazy" decoding="async"></a></div>
+          <figcaption>Dispatches — status के हिसाब से filter और search</figcaption>
+        </figure>
+        <p style="margin:0 0 6px; color:var(--ink-soft);">search <code class="lbl">Search truck or dispatch no…</code> और chips: <code class="lbl">All</code> · <code class="lbl">Created</code> · <code class="lbl">In Transit</code> · <code class="lbl">Received</code> · <code class="lbl">Settlement Pending</code> · <code class="lbl">Settled</code>।</p>
+      </div>
+
+      <div class="task">
+        <h3>नया Dispatch बनाएँ<span class="en">New Dispatch</span></h3>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp/dispatches/new</span></div>
+            <a href="images/web/dispatch-new.jpeg" target="_blank" rel="noopener"><img src="images/web/dispatch-new.jpeg" alt="New Dispatch form (Vendor to Seller leg)" loading="lazy" decoding="async"></a></div>
+          <figcaption>New Dispatch — Source, Destination, truck, वजन, भाड़ा</figcaption>
+        </figure>
+        <ol class="steps">
+          <li>ऊपर <code class="lbl">New Dispatch</code> दबाएँ।</li>
+          <li><code class="lbl">Source — Buy Deal (Vendor)</code> चुनें (किस खरीद से माल जा रहा है) और <code class="lbl">Destination — Sell Deal (Buyer)</code> (किस बिक्री के लिए)।</li>
+          <li><code class="lbl">Truck Number</code> डालें (जैसे BR01AB1234) और <code class="lbl">Dispatch Date</code> रखें।</li>
+          <li><code class="lbl">Transporter</code> खोजें (भाड़ा आप दे रहे हों तब ज़रूरी)। Export सौदे में <code class="lbl">Clearance Party</code> भी माँगा जाता है।</li>
+          <li><code class="lbl">Weight (KG)</code> और चाहें तो <code class="lbl">Number of Bags</code> भरें।</li>
+          <li><code class="lbl">Agreed Freight (₹/Quintal)</code> और <code class="lbl">Advance Paid (₹)</code> भरें। चाहें तो <code class="lbl">Challan / E-way Number</code> और <code class="lbl">Remarks</code>।</li>
+          <li><code class="lbl">Create Dispatch</code> दबाएँ।</li>
+        </ol>
+        <div class="app-does"><span class="k">✓ App खुद</span> कुल भाड़ा गिन देता है (रेट × quintal), <b>Bill of Supply</b> का PDF बना देता है, advance की entry ledger में डाल देता है, और सौदे की progress बढ़ा देता है।</div>
+        <div class="who"><span class="lab">कौन बना सकता है</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span><span class="rolechip">Dispatch Clerk</span><span class="rolechip">Data Entry</span></div>
+      </div>
+
+      <div class="task">
+        <h3>Truck रवाना, वजन और भाड़ा — Dispatch detail<span class="en">Journey · Weight · Freight · Documents</span></h3>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp/dispatches/…</span></div>
+            <a href="images/web/dispatch-detail.jpeg" target="_blank" rel="noopener"><img src="images/web/dispatch-detail.jpeg" alt="Dispatch detail with journey, weight, freight and documents" loading="lazy" decoding="async"></a></div>
+          <figcaption>Dispatch detail — बीच में Journey/Weight, दाईं ओर Freight, Actions और Documents</figcaption>
+        </figure>
+        <ol class="steps">
+          <li>truck चल पड़े तो <code class="lbl">Mark In Transit</code> दबाएँ → status <span class="pill b">In Transit</span>।</li>
+          <li>माल पहुँचने पर <code class="lbl">Record Received Weight</code> दबाकर <code class="lbl">Received Weight (KG)</code> भरें और <code class="lbl">Save Weight</code>। भेजे और पहुँचे वजन का फ़र्क़ (<b>Shortage</b>) app खुद निकाल देता है।</li>
+          <li>दाईं ओर <b>Freight Contract</b> में <code class="lbl">Agreed Freight</code>, <code class="lbl">Advance Paid</code>, <code class="lbl">Balance</code> दिखता है। बकाया भाड़ा देने के लिए <code class="lbl">Pay Freight</code>।</li>
+          <li><b>Documents</b> से <code class="lbl">Bill of Supply</code> (और पहुँचने पर <code class="lbl">Inward Advice</code>) PDF नए tab में खोलकर छापें/भेजें।</li>
+          <li>ग़लती से बना दिया? <code class="lbl">Cancel Dispatch</code> में कारण लिखकर रद्द करें।</li>
+        </ol>
+        <div class="who"><span class="lab">कौन क्या</span><span class="rolechip">Received weight: Owner / Trade Manager</span><span class="rolechip">Pay Freight: Owner / Accountant</span><span class="rolechip">Cancel: Owner / Trade Manager</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- W5: SETTLEMENTS -->
+  <section id="w-settle">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-seal num">5</div>
+        <div>
+          <h2>Settlements — हिसाब चुकता करें<span class="en">Create · Dispute · Accept</span></h2>
+          <p class="why">मिल की तरफ़ से कोई दावा (claim) या कटौती (deduction) — नमी, टूटन, तौल, उतराई — हो तो जोड़ें। सहमति न हो तो <b>Dispute</b>, बात बने तो <b>Accept</b>। Accept होते ही पक्का बिल बनता है और ledger चढ़ता है।</p>
+        </div>
+      </div>
+
+      <div class="task">
+        <h3>सारे हिसाब देखें<span class="en">Settlements list</span></h3>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp/settlements</span></div>
+            <a href="images/web/settlements.jpeg" target="_blank" rel="noopener"><img src="images/web/settlements.jpeg" alt="Settlements list" loading="lazy" decoding="async"></a></div>
+          <figcaption>Settlements — All / Draft / Disputed / Accepted, हर पंक्ति में Round और Final</figcaption>
+        </figure>
+        <div class="tip"><b>याद रखें:</b> settlement यहाँ से नहीं बनता — यह उस <b>dispatch</b> से बनता है जिसका माल पहुँच चुका (<span class="pill g">Received</span>) है। dispatch खोलकर <code class="lbl">Create Settlement</code> दबाएँ।</div>
+      </div>
+
+      <div class="task">
+        <h3>हिसाब की पूरी जानकारी<span class="en">Settlement detail</span></h3>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp/settlements/…</span></div>
+            <a href="images/web/settlement-detail.jpeg" target="_blank" rel="noopener"><img src="images/web/settlement-detail.jpeg" alt="Settlement detail with claims, deductions and summary" loading="lazy" decoding="async"></a></div>
+          <figcaption>Settlement detail — Claims, Deductions, Vendor side, और दाईं ओर Settlement Summary</figcaption>
+        </figure>
+        <ol class="steps">
+          <li>ऊपर <code class="lbl">Round 1 of 3</code> दिखता है — मोल-भाव तीन दौर तक चल सकता है।</li>
+          <li>बीच में <b>Quality Claims</b> और <b>Deductions</b>; दाईं ओर <b>Settlement Summary</b>: <code class="lbl">Gross Amount</code> − <code class="lbl">Total Claims</code> − <code class="lbl">Deductions</code> = <code class="lbl">Final Amount</code>। नीचे <code class="lbl">Net P/L (per truck)</code> भी।</li>
+          <li>सहमति हो तो <code class="lbl">Accept</code>; न हो तो <code class="lbl">Dispute</code> में कारण (कम-से-कम 10 अक्षर) लिखें। सामने वाला <code class="lbl">Revise</code> कर सकता है।</li>
+          <li><b>Documents</b> से <code class="lbl">Settlement Note</code> और (वेंडर वाले सौदे में) <code class="lbl">Vendor Bill</code> PDF निकालें।</li>
+        </ol>
+        <div class="app-does"><span class="k">✓ App खुद</span> Accept होते ही मिल के ledger में सही रकम चढ़ा देता है, broker का commission जोड़ देता है, वेंडर को खरीद-रेट पर credit करता है, और dispatch <span class="pill n">Settled</span> कर देता है।</div>
+        <div class="who"><span class="lab">Accept / Dispute / Revise</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span><span style="font-size:.8rem;color:var(--ink-faint);">— बाकी सिर्फ़ देख सकते हैं</span></div>
+      </div>
+
+      <div class="task">
+        <h3>Settlement बनाएँ (dispatch से)<span class="en">Create Settlement</span></h3>
+        <ol class="steps">
+          <li>जो dispatch <span class="pill g">Received</span> है उसे खोलकर <code class="lbl">Create Settlement</code> दबाएँ।</li>
+          <li><b>Received at Mill</b> में <code class="lbl">Accepted Qty (Q)</code> और <code class="lbl">Final Rate (₹/Q)</code> जाँचें (रेट बदलें तो <code class="lbl">Rate Change Reason</code> लिखना ज़रूरी)। <code class="lbl">Final Weight (KG)</code> पहले से भरा और बदला नहीं जा सकता।</li>
+          <li><b>Quality Claims</b> में <code class="lbl">Add Claim</code> से दावा जोड़ें (Moisture, Broken Grain आदि)। <b>Financial Deductions</b> में <code class="lbl">Add Deduction</code> से कटौती (Unloading/Weighing charges आदि)।</li>
+          <li>वेंडर वाले सौदे में <code class="lbl">Claim passed to vendor</code> तय करें — पूरा दावा वेंडर पर डालें या कुछ हिस्सा खुद सहें।</li>
+          <li>दाईं ओर <b>Settlement Summary</b> में <b>Final Amount</b> देखकर <code class="lbl">Create Settlement</code> दबाएँ।</li>
+        </ol>
+      </div>
+
+      <div class="task">
+        <h3>अपने-आप बनने वाले कागज़<span class="en">Auto-generated PDFs</span></h3>
+        <div class="docs">
+          <div class="doc"><h4>Bill of Supply (चालान)</h4><p>Dispatch बनते ही — माल, बोरे, वज़न, रेट; ड्राइवर के साथ भेजने के लिए।</p></div>
+          <div class="doc"><h4>Inward Advice</h4><p>माल पहुँचने की पर्ची — dispatch की Documents से।</p></div>
+          <div class="doc"><h4>Settlement Note</h4><p>प्रस्तावित हिसाब — वज़न, shortage, claims और net देय।</p></div>
+          <div class="doc"><h4>Vendor Bill</h4><p>Accept होने पर अंतिम खरीद बिल — claims/deductions घटाकर Net Payable।</p></div>
+        </div>
+        <div class="tip"><b>वेब पर:</b> हर PDF एक <b>नए browser tab</b> में खुलता है — वहाँ से <b>Print</b> या <b>Save/Download</b> कर लें।</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- W6: LEDGER & PAYMENTS -->
+  <section id="w-ledger">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-seal num">6</div>
+        <div>
+          <h2>Ledger &amp; Payments — खाता-बही और भुगतान<span class="en">Ledger · Record Transaction</span></h2>
+          <p class="why">किसका कितना बाकी — हर वक़्त एक नज़र में। बड़ी screen पर बाएँ party की सूची, दाएँ उसका पूरा statement साथ दिखता है।</p>
+        </div>
+      </div>
+
+      <div class="task">
+        <h3>बकाया और statement देखें<span class="en">Ledger</span></h3>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp/ledger</span></div>
+            <a href="images/web/ledger.jpeg" target="_blank" rel="noopener"><img src="images/web/ledger.jpeg" alt="Ledger two-pane: party list and statement" loading="lazy" decoding="async"></a></div>
+          <figcaption>Ledger — बाएँ हर party का बकाया, दाएँ चुनी party का statement</figcaption>
+        </figure>
+        <ol class="steps">
+          <li>बाईं सूची में <code class="lbl">Search parties…</code> से party ढूँढें और चुनें (पहली party अपने-आप खुल जाती है)।</li>
+          <li>दाईं ओर <code class="lbl">Opening</code>, <code class="lbl">Total Dr</code>, <code class="lbl">Total Cr</code>, <code class="lbl">Closing</code> और हर entry (<b>Date / Reference / Debit / Credit / Balance</b>) दिखती है।</li>
+          <li>समय से छाँटें: <code class="lbl">All time</code> · <code class="lbl">This Month</code> · <code class="lbl">Last 3 Months</code>।</li>
+          <li>ऊपर <code class="lbl">Export CSV</code> से यह statement Excel/CSV में निकालकर किसी को भेज दें।</li>
+        </ol>
+      </div>
+
+      <div class="task">
+        <h3>पैसा आया/गया दर्ज करें<span class="en">Record Transaction</span></h3>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp/payments</span></div>
+            <a href="images/web/payments.jpeg" target="_blank" rel="noopener"><img src="images/web/payments.jpeg" alt="Record Transaction form" loading="lazy" decoding="async"></a></div>
+          <figcaption>Record Transaction — Money Received / Money Paid</figcaption>
+        </figure>
+        <ol class="steps">
+          <li>Ledger में ऊपर <code class="lbl">Record Payment</code> दबाएँ (या बाईं पट्टी से <code class="lbl">Payments</code>)।</li>
+          <li><code class="lbl">Transaction Type</code> चुनें — <b>Money Received</b> (पैसा आया) या <b>Money Paid</b> (पैसा गया)।</li>
+          <li><code class="lbl">Ledger Party</code> और <code class="lbl">Amount (₹)</code> भरें, <code class="lbl">Date</code> रखें।</li>
+          <li><code class="lbl">Payment Mode</code> चुनें (Cash / NEFT / RTGS / IMPS / Cheque / UPI / Other)। Cheque हो तो <code class="lbl">Cheque Number</code> और <code class="lbl">Bank Name</code>।</li>
+          <li>चाहें तो <code class="lbl">Reference Number</code> / <code class="lbl">Notes</code>, फिर <code class="lbl">Record Payment</code>।</li>
+        </ol>
+        <div class="who"><span class="lab">Payment दर्ज करना</span><span class="rolechip">Owner</span><span class="rolechip">Accountant</span><span style="font-size:.8rem;color:var(--ink-faint);">— (Trade Manager जानबूझकर नहीं)</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- W7: PARTIES -->
+  <section id="w-parties">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-seal num">7</div>
+        <div>
+          <h2>Parties — मिल, वेंडर, ब्रोकर, ट्रांसपोर्टर<span class="en">Parties</span></h2>
+          <p class="why">जिनके साथ लेन-देन है उन्हें एक बार जोड़ दें। फिर हर deal, dispatch और payment में सिर्फ़ नाम चुनना पड़ेगा।</p>
+        </div>
+      </div>
+
+      <div class="task">
+        <h3>party की सूची<span class="en">Parties list</span></h3>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp/parties</span></div>
+            <a href="images/web/parties.jpeg" target="_blank" rel="noopener"><img src="images/web/parties.jpeg" alt="Parties list" loading="lazy" decoding="async"></a></div>
+          <figcaption>Parties — Type से छाँटें, Outstanding एक नज़र में</figcaption>
+        </figure>
+        <p style="margin:0; color:var(--ink-soft);">chips: <code class="lbl">All</code> · <code class="lbl">Mills</code> · <code class="lbl">Vendors</code> · <code class="lbl">Transporters</code> · <code class="lbl">Brokers</code> · <code class="lbl">Traders</code> · <code class="lbl">Clearance</code>। हर पंक्ति में नाम, type, mobile, location और <b>Outstanding</b>।</p>
+      </div>
+
+      <div class="task">
+        <h3>नई party जोड़ें<span class="en">Add Party</span></h3>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp/parties/new</span></div>
+            <a href="images/web/party-new.jpeg" target="_blank" rel="noopener"><img src="images/web/party-new.jpeg" alt="Add Party form with opening balance" loading="lazy" decoding="async"></a></div>
+          <figcaption>Add Party — Type, नाम, mobile और (चाहें तो) Opening Balance</figcaption>
+        </figure>
+        <ol class="steps">
+          <li>ऊपर <code class="lbl">Add Party</code> दबाएँ।</li>
+          <li><code class="lbl">Party Type</code> चुनें (Rice Mill / Vendor / Broker / Transporter / Clearance Party / Trader), फिर <code class="lbl">Mobile</code> और <code class="lbl">Party Name</code> (ज़रूरी)।</li>
+          <li><code class="lbl">Country</code>/<code class="lbl">State</code>/<code class="lbl">District</code>, <code class="lbl">Address</code>, और चाहें तो <code class="lbl">GST Number</code> व <code class="lbl">Notes</code>।</li>
+          <li>पुराना हिसाब चला आ रहा है? <b>Opening Balance</b> में <code class="lbl">Amount (₹)</code> व <code class="lbl">As on</code> भरें और <code class="lbl">They owe you</code>/<code class="lbl">You owe them</code> चुनें। न हो तो खाली छोड़ दें।</li>
+          <li><code class="lbl">Add Party</code> दबाएँ।</li>
+        </ol>
+        <div class="who"><span class="lab">party जोड़ना/बदलना</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span></div>
+      </div>
+
+      <div class="task">
+        <h3>party का पूरा हिसाब और bank<span class="en">Party detail</span></h3>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp/parties/…</span></div>
+            <a href="images/web/party-detail.jpeg" target="_blank" rel="noopener"><img src="images/web/party-detail.jpeg" alt="Party detail with bank accounts and outstanding" loading="lazy" decoding="async"></a></div>
+          <figcaption>Party detail — Outstanding Balance, Bank Accounts और Status</figcaption>
+        </figure>
+        <ol class="steps">
+          <li>ऊपर से <code class="lbl">View Ledger</code> (पूरा खाता), <code class="lbl">Record Payment</code>, या <code class="lbl">Edit</code>।</li>
+          <li><b>Bank Accounts</b> में <code class="lbl">Add</code> से खाता जोड़ें; किसी को <code class="lbl">Set primary</code> या <code class="lbl">Remove</code> करें।</li>
+          <li>बंद/चालू करने के लिए <code class="lbl">Deactivate Party</code> / <code class="lbl">Reactivate Party</code> — बंद करने पर पुराना ledger सुरक्षित रहता है, बस pickers में नहीं दिखेगी।</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- W8: INVENTORY & COMMODITIES -->
+  <section id="w-stock">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-seal num">8</div>
+        <div>
+          <h2>Inventory &amp; Commodities — स्टॉक और माल<span class="en">Godown stock · Commodity list</span></h2>
+          <p class="why">गोदाम का हिसाब हर खरीद और dispatch के साथ खुद घटता-बढ़ता है। और अपने माल (अनाज) की सूची एक बार सेट कर लें।</p>
+        </div>
+      </div>
+
+      <div class="task">
+        <h3>गोदाम में कहाँ कितना माल<span class="en">Inventory</span></h3>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp/inventory</span></div>
+            <a href="images/web/inventory.jpeg" target="_blank" rel="noopener"><img src="images/web/inventory.jpeg" alt="Inventory godown stock on hand" loading="lazy" decoding="async"></a></div>
+          <figcaption>Inventory — कुल Total on hand और गोदाम-वार, अनाज-वार बँटवारा</figcaption>
+        </figure>
+        <ol class="steps">
+          <li>ऊपर <code class="lbl">Total on hand</code> (कुल स्टॉक, quintal में) और अनाज-वार।</li>
+          <li>नीचे हर गोदाम में कौन-सा अनाज कितना।</li>
+          <li>नया गोदाम जोड़ने के लिए <code class="lbl">Add Godown</code> → <code class="lbl">Name</code> और <code class="lbl">Location</code>।</li>
+        </ol>
+        <div class="who"><span class="lab">गोदाम जोड़ना</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span></div>
+      </div>
+
+      <div class="task">
+        <h3>अपने माल की सूची<span class="en">Commodities</span></h3>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp/commodities</span></div>
+            <a href="images/web/commodities.jpeg" target="_blank" rel="noopener"><img src="images/web/commodities.jpeg" alt="Commodities list" loading="lazy" decoding="async"></a></div>
+          <figcaption>Commodities — आपके चालू किए हुए अनाज/माल</figcaption>
+        </figure>
+        <ol class="steps">
+          <li><code class="lbl">Add Commodity</code> दबाकर <code class="lbl">Search the master catalog</code> में नाम/कोड खोजें और <code class="lbl">Activate</code> करें।</li>
+          <li>कोई अलग नाम रखना हो तो <code class="lbl">Rename</code> से <b>Display Name</b> सेट करें।</li>
+          <li>न चाहिए तो <code class="lbl">Deactivate</code> (सिर्फ़ Owner), दोबारा चाहिए तो <code class="lbl">Reactivate</code>।</li>
+        </ol>
+        <div class="who"><span class="lab">माल संभालना</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span><span style="font-size:.8rem;color:var(--ink-faint);">— Deactivate सिर्फ़ Owner</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- W9: REPORTS -->
+  <section id="w-reports">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-seal num">9</div>
+        <div>
+          <h2>Reports &amp; Exports — मुनाफ़ा और डेटा निकालें<span class="en">Reports</span></h2>
+          <p class="why">हर truck का नफ़ा/नुक़सान एक जगह, और सारे रजिस्टर एक click में Excel/CSV में।</p>
+        </div>
+      </div>
+      <div class="task">
+        <h3>Per-truck मुनाफ़ा और register export</h3>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp/reports</span></div>
+            <a href="images/web/reports.jpeg" target="_blank" rel="noopener"><img src="images/web/reports.jpeg" alt="Reports: per-truck P/L and register exports" loading="lazy" decoding="async"></a></div>
+          <figcaption>Reports &amp; Exports — Per-Truck Profit / Loss और Register Exports</figcaption>
+        </figure>
+        <ol class="steps">
+          <li><b>Per-Truck Profit / Loss</b> में ऊपर कुल <code class="lbl">Total Revenue</code>, <code class="lbl">Vendor Cost</code>, <code class="lbl">Freight</code>, <code class="lbl">Commission</code> और बड़ा <code class="lbl">Net P/L</code>; नीचे हर truck की पंक्ति।</li>
+          <li>ताज़ा करना हो तो <code class="lbl">↻ Refresh</code>। यह सिर्फ़ <b>accepted Vendor→Seller</b> सौदों पर बनता है।</li>
+          <li><b>Register Exports</b> से <code class="lbl">Deals register (CSV)</code>, <code class="lbl">Dispatches register (CSV)</code>, <code class="lbl">Settlements register (CSV)</code> निकालें। (party statement Ledger screen से निकलता है।)</li>
+        </ol>
+        <div class="who"><span class="lab">Truck P/L देख सकते हैं</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- W10: AUDIT TRAIL -->
+  <section id="w-audit">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-seal num">10</div>
+        <div>
+          <h2>Audit Trail — किसने क्या किया<span class="en">Audit Trail</span></h2>
+          <p class="why">app में हुआ हर काम, तारीख़ और नाम के साथ। किसी झगड़े/शक की स्थिति में पूरा रिकॉर्ड यहीं मिलता है।</p>
+        </div>
+      </div>
+      <div class="task">
+        <h3>इतिहास खोजें और छाँटें</h3>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp/activity</span></div>
+            <a href="images/web/activity.jpeg" target="_blank" rel="noopener"><img src="images/web/activity.jpeg" alt="Audit Trail activity feed" loading="lazy" decoding="async"></a></div>
+          <figcaption>Audit Trail — filter chips, Critical only, और नीचे Prev/Next</figcaption>
+        </figure>
+        <ol class="steps">
+          <li>chips से छाँटें: <code class="lbl">All</code> · <code class="lbl">Deals</code> · <code class="lbl">Dispatches</code> · <code class="lbl">Settlements</code> · <code class="lbl">Payments</code> · <code class="lbl">Parties</code> · <code class="lbl">Staff</code>।</li>
+          <li>सिर्फ़ ज़रूरी बदलाव देखने हों तो <code class="lbl">Critical only</code> पर टिक करें।</li>
+          <li>हर पंक्ति में काम का ब्योरा, किसने किया (नाम + role) और कब। किसी पंक्ति पर click करके सीधे उस entry तक पहुँचें।</li>
+          <li>नीचे <code class="lbl">← Prev</code> / <code class="lbl">Next →</code> से पन्ने बदलें।</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- W11: TEAM & SETTINGS -->
+  <section id="w-admin">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-seal num">11</div>
+        <div>
+          <h2>Team &amp; Settings — टीम और company<span class="en">Team · Settings</span></h2>
+          <p class="why">staff को उनके काम भर का access दें, और company की जानकारी/bank/subscription यहीं से संभालें।</p>
+        </div>
+      </div>
+
+      <div class="task">
+        <h3>staff बुलाएँ और role दें<span class="en">Team</span></h3>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp/team</span></div>
+            <a href="images/web/team.jpeg" target="_blank" rel="noopener"><img src="images/web/team.jpeg" alt="Team members and invitations" loading="lazy" decoding="async"></a></div>
+          <figcaption>Team — Members, उनका Role बदलें, और Pending Invitations</figcaption>
+        </figure>
+        <ol class="steps">
+          <li><code class="lbl">Invite Member</code> दबाएँ → <code class="lbl">Mobile Number</code>, <code class="lbl">Full Name</code> और <code class="lbl">Role</code> भरकर <code class="lbl">Send Invitation</code>।</li>
+          <li>बना हुआ <b>invite code/link</b> <code class="lbl">Copy</code> करके उसे भेज दें — यह <b>सिर्फ़ एक बार</b> दिखता है।</li>
+          <li>Members की सूची में किसी का <b>Role</b> सीधे drop-down से बदलें, या <code class="lbl">Remove</code> से हटाएँ (Owner को नहीं)।</li>
+          <li>बिना स्वीकारे न्योते <b>Pending Invitations</b> में दिखते हैं — वहाँ से <code class="lbl">Cancel</code> कर सकते हैं।</li>
+        </ol>
+        <div class="who"><span class="lab">टीम संभालना</span><span class="rolechip">सिर्फ़ Owner</span></div>
+      </div>
+
+      <div class="task">
+        <h3>company की जानकारी<span class="en">Settings</span></h3>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp/settings</span></div>
+            <a href="images/web/settings.jpeg" target="_blank" rel="noopener"><img src="images/web/settings.jpeg" alt="Settings: company profile, bank, subscription" loading="lazy" decoding="async"></a></div>
+          <figcaption>Settings — Company Profile, Bank Accounts, Subscription और Profile Status</figcaption>
+        </figure>
+        <ol class="steps">
+          <li><b>Company Profile</b> में नाम, GST, पता, District/State/Pincode भरें और <code class="lbl">Save Changes</code>।</li>
+          <li><b>Company Bank Accounts</b> में <code class="lbl">Add</code> से खाते जोड़ें।</li>
+          <li><b>Subscription</b> में plan और इस्तेमाल दिखता है; बढ़ाने के लिए <code class="lbl">Contact Sales to Upgrade</code>।</li>
+          <li><b>Profile Status</b> <code class="lbl">Complete</code> रखें — GST/पता/pincode भरे होंगे तभी Bill of Supply के PDF सही छपते हैं।</li>
+        </ol>
+        <div class="who"><span class="lab">company profile बदलना</span><span class="rolechip">सिर्फ़ Owner</span></div>
+      </div>
+
+      <div class="task">
+        <h3>6 Roles — किसे क्या access<span class="en">Permission Matrix (web)</span></h3>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>काम</th><th>कौन कर सकता है</th></tr></thead>
+            <tbody>
+              <tr><td>Party / Commodity जोड़ना-बदलना</td><td>Owner, Trade Manager</td></tr>
+              <tr><td>Deal बनाना</td><td>Owner, Trade Manager, Data Entry</td></tr>
+              <tr><td>Deal बंद करना (Close)</td><td>सिर्फ़ Owner</td></tr>
+              <tr><td>Dispatch बनाना/चलाना</td><td>Owner, Trade Manager, Dispatch Clerk, Data Entry</td></tr>
+              <tr><td>Received weight / Dispatch रद्द</td><td>Owner, Trade Manager</td></tr>
+              <tr><td>Settlement — Accept/Dispute/Revise</td><td>Owner, Trade Manager</td></tr>
+              <tr><td>Payment / Freight दर्ज</td><td>Owner, Accountant</td></tr>
+              <tr><td>Ledger देखना</td><td>Owner, Trade Manager, Accountant</td></tr>
+              <tr><td>Team / Company Settings</td><td>सिर्फ़ Owner</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="tip"><b>नोट:</b> access की असली रोक-टोक backend पर है — जिसका जो काम नहीं, उसे वह button दिखता ही नहीं। यही roles मोबाइल ऐप में भी लागू होते हैं।</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- W-BETA -->
+  <section id="w-beta">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-seal">🧪</div>
+        <div>
+          <h2>वेब पोर्टल — कुछ ज़रूरी बातें<span class="en">Good to know</span></h2>
+          <p class="why">यह beta है। आपका इस्तेमाल और सुझाव ही इसे बेहतर बनाएँगे।</p>
+        </div>
+      </div>
+      <div class="task">
+        <ul style="margin:6px 0 0; padding-left:18px; color:var(--ink-soft);">
+          <li>वेब और मोबाइल <b>एक ही खाते और एक ही data</b> पर चलते हैं — एक जगह किया काम दूसरी जगह तुरंत दिखता है।</li>
+          <li>बेहतर अनुभव के लिए <b>Chrome/Edge</b> जैसा नया browser और बड़ी screen इस्तेमाल करें।</li>
+          <li>top का बड़ा <b>search box</b> अभी दिखावे का है — असली search हर screen के अपने box में।</li>
+          <li><b>Subscription upgrade</b> अभी self-service नहीं — <code class="lbl">Upgrade</code>/<code class="lbl">Contact Sales</code> बस mail खोलता है।</li>
+          <li>दिक़्क़त बताते समय लिखें: <b>कौन-सी screen, कौन-सा button, क्या हुआ बनाम क्या होना चाहिए था</b>, आपका <b>role</b>, और हो सके तो <b>screenshot</b>।</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /view-web -->
 
 </main>
 
