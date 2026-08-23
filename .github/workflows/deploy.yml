@@ -1,0 +1,111 @@
+# rtnp-website (documentation) → docs.rtnp.in / docs.staging.rtnp.in
+# Pure static — one env-agnostic image (no API URL), so the SAME image is
+# promoted staging→prod (tag = git SHA).
+#   push main   → build → deploy STAGING
+#   push tag v* → deploy PRODUCTION (reuses the tagged commit's image)
+#   workflow_dispatch → manual (re)deploy of an existing tag (rollback)
+
+name: Deploy (docs)
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      environment: { type: choice, options: [staging, production] }
+      image_tag: { description: 'Existing tag to redeploy (blank = build)', required: false }
+
+concurrency:
+  group: deploy-docs-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  IMAGE: ghcr.io/rice-trading/rtnp-website    # GHCR owner must be lowercase
+  SERVICE: docs
+  TAGVAR: DOCS_TAG
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      env: ${{ steps.p.outputs.env }}
+      envf: ${{ steps.p.outputs.envf }}
+      domain: ${{ steps.p.outputs.domain }}
+      tag: ${{ steps.p.outputs.tag }}
+    steps:
+      - id: p
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then ENV="${{ inputs.environment }}"
+          elif [ "${{ startsWith(github.ref, 'refs/tags/v') }}" = "true" ]; then ENV="production"
+          else ENV="staging"; fi
+          echo "env=$ENV" >> "$GITHUB_OUTPUT"
+          if [ "$ENV" = "production" ]; then
+            echo "envf=prod"                       >> "$GITHUB_OUTPUT"
+            echo "domain=https://docs.rtnp.in"     >> "$GITHUB_OUTPUT"
+          else
+            echo "envf=staging"                           >> "$GITHUB_OUTPUT"
+            echo "domain=https://docs.staging.rtnp.in"    >> "$GITHUB_OUTPUT"
+          fi
+          TAG="${{ inputs.image_tag }}"
+          [ -z "$TAG" ] && TAG="${{ github.sha }}"   # env-agnostic image → same SHA both envs
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+
+  build:
+    needs: setup
+    # Build only when the image doesn't already exist: on main push (staging).
+    # On a tag, the commit was already built+pushed from main, so skip and reuse.
+    if: ${{ inputs.image_tag == '' && github.event_name == 'push' && !startsWith(github.ref, 'refs/tags/v') }}
+    runs-on: ubuntu-latest
+    permissions: { contents: read, packages: write }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-qemu-action@v3
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - uses: docker/build-push-action@v6
+        with:
+          context: .
+          platforms: linux/arm64
+          push: true
+          tags: |
+            ${{ env.IMAGE }}:${{ needs.setup.outputs.tag }}
+            ${{ env.IMAGE }}:${{ needs.setup.outputs.env }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  deploy:
+    needs: [setup, build]
+    if: ${{ always() && needs.build.result != 'failure' }}
+    runs-on: ubuntu-latest
+    environment: ${{ needs.setup.outputs.env }}
+    steps:
+      - uses: appleboy/ssh-action@v1
+        env:
+          TAG: ${{ needs.setup.outputs.tag }}
+          ENVF: ${{ needs.setup.outputs.envf }}
+          SERVICE: ${{ env.SERVICE }}
+          TAGVAR: ${{ env.TAGVAR }}
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          envs: TAG,ENVF,SERVICE,TAGVAR
+          script: |
+            set -e
+            cd ~/rtnp-infra && git pull --ff-only
+            sed -i "s/^${TAGVAR}=.*/${TAGVAR}=${TAG}/" ".env.${ENVF}"
+            COMPOSE="docker compose --env-file .env.${ENVF} -f docker-compose.yml -f docker-compose.${ENVF}.yml"
+            $COMPOSE pull "$SERVICE"
+            $COMPOSE up -d "$SERVICE"
+      - name: Health gate
+        run: |
+          for i in $(seq 1 15); do
+            code=$(curl -s -o /dev/null -w '%{http_code}' "${{ needs.setup.outputs.domain }}")
+            [ "$code" = "200" ] && exit 0 || sleep 5
+          done
+          echo "docs did not return 200 at ${{ needs.setup.outputs.domain }}"; exit 1
