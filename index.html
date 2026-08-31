@@ -1084,8 +1084,24 @@
         <ol class="steps">
           <li>ऊपर से <code class="lbl">View Ledger</code> (पूरा खाता), <code class="lbl">Record Payment</code>, या <code class="lbl">Edit</code>।</li>
           <li><b>Bank Accounts</b> में <code class="lbl">Add</code> से खाता जोड़ें; किसी को <code class="lbl">Set primary</code> या <code class="lbl">Remove</code> करें।</li>
-          <li>बंद/चालू करने के लिए <code class="lbl">Deactivate Party</code> / <code class="lbl">Reactivate Party</code> — बंद करने पर पुराना ledger सुरक्षित रहता है, बस pickers में नहीं दिखेगी।</li>
+          <li>बंद/चालू करने के लिए <code class="lbl">Deactivate Party</code> / <code class="lbl">Reactivate Party</code> — बंद करने पर पुराना ledger और पुराने deal/dispatch पूरी तरह सुरक्षित रहते हैं, बस वह party अब <b>किसी नए deal या dispatch में नहीं चुनी जा सकती</b> (नीचे देखें)।</li>
         </ol>
+      </div>
+
+      <div class="task">
+        <h3>बंद party से नया deal/dispatch नहीं बनता<span class="en">Inactive parties are blocked from new transactions</span></h3>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp/parties</span></div>
+            <a href="images/web/party-inactive.jpeg" target="_blank" rel="noopener"><img src="images/web/party-inactive.jpeg" alt="Parties list filtered to Transporters, showing one party marked inactive" loading="lazy" decoding="async"></a></div>
+          <figcaption>Parties list में नाम के आगे "· inactive" — यहाँ "Raju Transport" बंद है</figcaption>
+        </figure>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp/dispatches/new</span></div>
+            <a href="images/web/dispatch-inactive-party-blocked.jpeg" target="_blank" rel="noopener"><img src="images/web/dispatch-inactive-party-blocked.jpeg" alt="New Dispatch form: searching the inactive transporter's name in the Transporter picker returns No parties found" loading="lazy" decoding="async"></a></div>
+          <figcaption>New Dispatch में उसी बंद "Raju" को <code class="lbl">Transporter</code> में खोजने पर — <code class="lbl">No parties found</code></figcaption>
+        </figure>
+        <p style="margin:0 0 6px; color:var(--ink-soft);">यही नियम हर picker पर लागू होता है — Deal के <code class="lbl">Vendor</code>/<code class="lbl">Buyer</code>/<code class="lbl">Broker</code> और Dispatch के <code class="lbl">Transporter</code>/<code class="lbl">Clearance Party</code> सब में, बंद party की जगह सिर्फ़ चालू parties दिखती हैं।</p>
+        <div class="app-does"><span class="k">✓ App खुद</span> बंद party को हर नए deal/dispatch के picker से हटा देता है <i>और</i> बनाते समय दोबारा जाँच लेता है — यानी सीधे API से भी कोई बंद party को नए सौदे में नहीं जोड़ सकता। पुराना outstanding और ledger इतिहास पूरी तरह वैसा ही दिखता रहता है।</div>
       </div>
     </div>
   </section>
@@ -1111,9 +1127,44 @@
         <ol class="steps">
           <li>ऊपर <code class="lbl">Total on hand</code> (कुल स्टॉक, quintal में) और अनाज-वार।</li>
           <li>नीचे हर गोदाम में कौन-सा अनाज कितना।</li>
-          <li>नया गोदाम जोड़ने के लिए <code class="lbl">Add Godown</code> → <code class="lbl">Name</code> और <code class="lbl">Location</code>।</li>
+        </ol>
+      </div>
+
+      <div class="task">
+        <h3>नया गोदाम — शुरुआती स्टॉक के साथ<span class="en">Add Godown · Opening Grain Stock</span></h3>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp/inventory</span></div>
+            <a href="images/web/inventory-add-godown.jpeg" target="_blank" rel="noopener"><img src="images/web/inventory-add-godown.jpeg" alt="Add Godown form with an Opening Grain Stock row filled in" loading="lazy" decoding="async"></a></div>
+          <figcaption>Add Godown — Name, Location और (चाहें तो) Opening Grain Stock की एक या कई पंक्तियाँ</figcaption>
+        </figure>
+        <ol class="steps">
+          <li>ऊपर <code class="lbl">Add Godown</code> दबाएँ।</li>
+          <li><code class="lbl">Name</code> (ज़रूरी) और चाहें तो <code class="lbl">Location</code> भरें।</li>
+          <li>पुराना गोदाम है और उसमें पहले से माल पड़ा है? <b>Opening Grain Stock</b> में <code class="lbl">Add Grain</code> दबाकर अनाज खोजें-चुनें और <code class="lbl">Qty (Q)</code> भरें — ज़रूरत हो तो कई अनाज की पंक्तियाँ जोड़ें। नए/खाली गोदाम के लिए यह हिस्सा खाली छोड़ दें।</li>
+          <li><code class="lbl">Add</code> दबाएँ — गोदाम अपने शुरुआती स्टॉक के साथ फ़ौरन Inventory में दिख जाता है।</li>
         </ol>
         <div class="who"><span class="lab">गोदाम जोड़ना</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span></div>
+      </div>
+
+      <div class="task">
+        <h3>गोदाम बंद/चालू करना<span class="en">Deactivate · Reactivate Godown</span></h3>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp/inventory</span></div>
+            <a href="images/web/inventory-status.jpeg" target="_blank" rel="noopener"><img src="images/web/inventory-status.jpeg" alt="Inventory list with two inactive godowns showing Reactivate and two active godowns showing Deactivate" loading="lazy" decoding="async"></a></div>
+          <figcaption>हर गोदाम कार्ड के नीचे — चालू में <code class="lbl">Deactivate</code>, बंद में <code class="lbl">Reactivate</code>, और नाम के आगे "· inactive"</figcaption>
+        </figure>
+        <figure class="webshot">
+          <div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">rtnp/inventory</span></div>
+            <a href="images/web/inventory-reactivate-confirm.jpeg" target="_blank" rel="noopener"><img src="images/web/inventory-reactivate-confirm.jpeg" alt="Reactivate this godown confirmation dialog" loading="lazy" decoding="async"></a></div>
+          <figcaption>दबाने पर पक्का करने के लिए पूछता है, ताकि ग़लती से बंद/चालू न हो जाए</figcaption>
+        </figure>
+        <ol class="steps">
+          <li>गोदाम कार्ड के नीचे <code class="lbl">Deactivate</code> या <code class="lbl">Reactivate</code> दबाएँ, फिर पक्का करें।</li>
+          <li><b>बंद करने के लिए गोदाम खाली होना ज़रूरी है</b> — माल पड़ा हो तो <code class="lbl">Deactivate</code> बटन धूसर (disabled) रहेगा; पहले वह माल दूसरे गोदाम में dispatch करें या निकाल दें।</li>
+          <li>बंद गोदाम का पुराना रिकॉर्ड (पिछला स्टॉक इतिहास) सुरक्षित रहता है — बस नए dispatch के गोदाम picker में अब नहीं दिखेगा।</li>
+        </ol>
+        <div class="app-does"><span class="k">✓ App खुद</span> बंद गोदाम को हर नए dispatch की <code class="lbl">Godown</code> सूची से हटा देता है, ताकि कोई ग़लती से बंद गोदाम में/से माल न भेज दे।</div>
+        <div class="who"><span class="lab">बंद/चालू करना</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span></div>
       </div>
 
       <div class="task">
