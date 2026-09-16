@@ -1,0 +1,493 @@
+<!--
+  RTNP web-portal documentation — HINDI content.
+  This file is ONLY content. The shell (index.html + docs/app.js) provides the
+  chrome and builds the sidebar from the <section> tags below.
+  Contract for every language file:
+    • #doc-meta            – chrome strings for this language (data-ui-*).
+    • header.doc-hero      – the page hero.
+    • section[id]          – one per topic; carries:
+          data-nav      = sidebar label (this language)
+          data-nav-en   = small English label (optional)
+          data-group    = sidebar group heading (this language)
+    • Image <img src> paths (docs/img/…) are SHARED — keep them identical across languages.
+    • footer.docfoot       – page footer.
+-->
+<div id="doc-meta" hidden
+     data-ui-menu="विषय-सूची"
+     data-ui-switch="भाषा बदलें"
+     data-ui-title="RTNP वेब पोर्टल गाइड"
+     data-ui-findhint="किसी भी विषय पर सीधे जाने के लिए नीचे से चुनें। पेज में शब्द खोजने के लिए Ctrl+F दबाएँ।"></div>
+
+<header class="doc-hero">
+  <div class="eyebrow">सम्पूर्ण उपयोगकर्ता गाइड · हिन्दी</div>
+  <h1>RTNP <span class="hl">वेब पोर्टल</span> — ऑफ़िस स्टाफ़ के लिए पूरी मदद</h1>
+  <p class="lede">यह गाइड कंप्यूटर/लैपटॉप पर चलने वाले RTNP वेब पोर्टल के हर हिस्से को समझाती है — लॉगिन से लेकर सौदे, ट्रक डिस्पैच, सेटलमेंट, खाता-बही, भुगतान, पार्टियाँ, स्टॉक, रिपोर्ट, टीम और सेटिंग्स तक। बाईं ओर दी गई <b>विषय-सूची</b> से किसी भी विषय पर सीधे पहुँचें।</p>
+</header>
+
+<!-- ============ INTRO ============ -->
+<section id="intro" data-nav="परिचय" data-nav-en="Overview" data-group="शुरुआत">
+  <div class="sec-head"><div class="sec-seal">i</div>
+    <div><h2>परिचय <span class="en">What RTNP is &amp; how work flows</span></h2>
+    <p class="why">RTNP एक अनाज-व्यापार (grain trading) प्लेटफ़ॉर्म है। मोबाइल ऐप आपकी फ़ील्ड टीम के लिए है; यह <b>वेब पोर्टल</b> ऑफ़िस स्टाफ़ के लिए है — एक ही डेस्क से पूरा व्यापार चलाने के लिए।</p></div>
+  </div>
+  <p>वेब पोर्टल और मोबाइल ऐप <b>एक ही खाते और एक ही डेटा</b> पर चलते हैं। जो आप वेब पर बदलते हैं वह मोबाइल पर भी दिखता है और इसके उल्टा भी। वेब पोर्टल की खास बातें: एक साथ ज़्यादा जानकारी स्क्रीन पर, CSV/PDF एक्सपोर्ट, और तेज़ डेटा-एंट्री।</p>
+  <h3 class="sub">काम का क्रम (Workflow)</h3>
+  <p>लगभग हर व्यापार इसी क्रम में चलता है। पोर्टल हर कदम को अगले कदम से जोड़ देता है:</p>
+  <div class="flow">
+    <span class="step">पार्टी</span><span class="arrow">→</span>
+    <span class="step">सौदा (Deal)</span><span class="arrow">→</span>
+    <span class="step">डिस्पैच</span><span class="arrow">→</span>
+    <span class="step">माल पहुँचा (Received)</span><span class="arrow">→</span>
+    <span class="step">सेटलमेंट</span><span class="arrow">→</span>
+    <span class="step">भुगतान</span>
+  </div>
+  <div class="callout"><p><strong>पहली बार इस्तेमाल कर रहे हैं?</strong> पहले <a href="#parties">पार्टियाँ</a> जोड़ें (वेंडर, राइस मिल आदि), फिर <a href="#deals">सौदा</a> बनाएँ, फिर उस सौदे पर <a href="#dispatches">डिस्पैच</a> दर्ज करें। बाकी कदम अपने-आप जुड़ते जाएँगे।</p></div>
+</section>
+
+<!-- ============ START / LOGIN ============ -->
+<section id="start" data-nav="लॉगिन व खाता" data-nav-en="Login &amp; account" data-group="शुरुआत">
+  <div class="sec-head"><div class="sec-seal">1</div>
+    <div><h2>लॉगिन व खाता <span class="en">Login, register, join, password, company</span></h2>
+    <p class="why">पोर्टल खोलने का पता: <code class="lbl">staging.rtnp.in</code> (डेमो) — असली इस्तेमाल में आपकी कंपनी का पता अलग हो सकता है।</p></div>
+  </div>
+  <div class="task">
+    <h4>साइन-इन करें <span class="en">Sign in</span></h4>
+    <ol class="steps">
+      <li><b>Mobile number</b> में अपना 10-अंकों का मोबाइल नंबर डालें।</li>
+      <li><b>Password</b> डालें। आँख वाले आइकन से पासवर्ड देख सकते हैं।</li>
+      <li><b>Keep me signed in</b> चुना रहने दें ताकि बार-बार लॉगिन न करना पड़े (अपने निजी कंप्यूटर पर ही)।</li>
+      <li><b>Sign In</b> दबाएँ।</li>
+    </ol>
+    <div class="app-does"><span class="k">ऐप अपने-आप</span> अगर आपका एक ही मोबाइल कई कंपनियों से जुड़ा है, तो लॉगिन के बाद <b>“Choose a company”</b> स्क्रीन दिखेगी — वहाँ से कंपनी चुनें।</div>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/login</span></div><a href="docs/img/login.jpg" target="_blank"><img src="docs/img/login.jpg" alt="लॉगिन स्क्रीन"></a></div><figcaption>Sign in — मोबाइल नंबर व पासवर्ड</figcaption></figure>
+  </div>
+  <div class="task">
+    <h4>पासवर्ड भूल गए? <span class="en">Forgot password</span></h4>
+    <ol class="steps">
+      <li>लॉगिन स्क्रीन पर <b>Forgot password?</b> दबाएँ।</li>
+      <li>मोबाइल नंबर डालकर <b>Send OTP</b> दबाएँ।</li>
+      <li>OTP और नया पासवर्ड डालकर <b>Reset Password</b> दबाएँ।</li>
+    </ol>
+    <div class="tip"><b>पासवर्ड नियम:</b> कम-से-कम 8 अक्षर, जिनमें एक बड़ा अक्षर, एक छोटा अक्षर, एक अंक और एक विशेष चिह्न (जैसे @, #) ज़रूरी है।</div>
+  </div>
+  <div class="grid2">
+    <div class="task" style="margin-top:0">
+      <h4>नई कंपनी रजिस्टर करें <span class="en">Register</span></h4>
+      <p style="margin-top:6px; color:var(--txt-mid); font-size:.94rem">अगर आपकी कंपनी अभी RTNP पर नहीं है — लॉगिन पर <b>Register →</b> दबाएँ। कंपनी का नाम, प्रकार, स्थान, “आप ज़्यादातर क्या ट्रेड करते हैं”, मोबाइल व पासवर्ड भरें → OTP सत्यापित करें। आप <b>Owner</b> बन जाते हैं और एक शुरुआती कमोडिटी सूची अपने-आप चालू हो जाती है।</p>
+      <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/register</span></div><a href="docs/img/register.jpg" target="_blank"><img src="docs/img/register.jpg" alt="रजिस्टर स्क्रीन"></a></div></figure>
+    </div>
+    <div class="task" style="margin-top:0">
+      <h4>टीम में शामिल हों <span class="en">Join a team</span></h4>
+      <p style="margin-top:6px; color:var(--txt-mid); font-size:.94rem">अगर आपको कंपनी ने <b>invite code</b> भेजा है — लॉगिन पर <b>Enter invite code</b> दबाएँ, कोड पेस्ट करें। आपको कंपनी का नाम व आपकी भूमिका दिखेगी। पहले से खाता है तो पासवर्ड डालकर, वरना नाम + नया पासवर्ड बनाकर जुड़ जाएँ।</p>
+      <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/join</span></div><a href="docs/img/join.jpg" target="_blank"><img src="docs/img/join.jpg" alt="टीम में शामिल हों स्क्रीन"></a></div></figure>
+    </div>
+  </div>
+  <div class="tip"><b>कंपनी बदलना:</b> अगर आप एक से ज़्यादा कंपनियों में हैं, तो ऊपर दाईं ओर कंपनी के नाम (<b>Company Switcher</b>) पर क्लिक करके किसी भी समय दूसरी कंपनी पर जा सकते हैं। पूरा डेटा उसी कंपनी का दिखने लगेगा।</div>
+</section>
+
+<!-- ============ LAYOUT ============ -->
+<section id="layout" data-nav="पोर्टल का लेआउट" data-nav-en="Layout" data-group="शुरुआत">
+  <div class="sec-head"><div class="sec-seal">2</div>
+    <div><h2>पोर्टल का लेआउट <span class="en">Understanding the screen</span></h2>
+    <p class="why">हर स्क्रीन का ढाँचा एक जैसा है — एक बार समझ लें तो बाकी सब आसान हो जाता है।</p></div>
+  </div>
+  <ul class="plain">
+    <li><b>बायाँ मेन्यू (Sidebar):</b> पूरे पोर्टल का नक्शा — Dashboard, Deals, Dispatches, Settlements, Ledger, Payments, Parties, Inventory, Commodities, Reports, Audit Trail, Team, Settings। सबसे नीचे <b>Documentation</b> और <b>Log Out</b>।</li>
+    <li><b>ऊपर की पट्टी (Top bar):</b> बीच में खोज-बॉक्स, दाईं ओर <b>कंपनी स्विचर</b> और आपका नाम + भूमिका (उस पर क्लिक करने से Settings / Log Out मिलता है)।</li>
+    <li><b>बीच का हिस्सा:</b> चुनी हुई स्क्रीन की जानकारी — सूचियाँ, फ़ॉर्म और विवरण यहीं दिखते हैं।</li>
+  </ul>
+  <div class="tip"><b>ध्यान दें:</b> ऊपर का खोज-बॉक्स फ़िलहाल सजावट के लिए है। किसी सूची में खोजने के लिए उसी स्क्रीन के अपने <b>Search…</b> बॉक्स का इस्तेमाल करें (जैसे Deals में “Search deals, mills, commodities…”)।</div>
+  <h3 class="sub">मेन्यू में क्या-क्या है</h3>
+  <div class="navmap">
+    <div class="nav"><div class="nm">Dashboard</div><div class="ds">एक नज़र में पूरा हिसाब</div></div>
+    <div class="nav"><div class="nm">Deals</div><div class="ds">खरीद/बिक्री के सौदे</div></div>
+    <div class="nav"><div class="nm">Dispatches</div><div class="ds">ट्रकों की आवाजाही</div></div>
+    <div class="nav"><div class="nm">Settlements</div><div class="ds">क्लेम, विवाद, अंतिम रकम</div></div>
+    <div class="nav"><div class="nm">Ledger</div><div class="ds">पार्टी-वार खाता-बही</div></div>
+    <div class="nav"><div class="nm">Payments</div><div class="ds">लेन-देन दर्ज करना</div></div>
+    <div class="nav"><div class="nm">Parties</div><div class="ds">मिल, वेंडर, ट्रांसपोर्टर आदि</div></div>
+    <div class="nav"><div class="nm">Inventory</div><div class="ds">गोदाम का स्टॉक</div></div>
+    <div class="nav"><div class="nm">Commodities</div><div class="ds">आपकी कमोडिटी सूची</div></div>
+    <div class="nav"><div class="nm">Reports</div><div class="ds">P/L व एक्सपोर्ट</div></div>
+    <div class="nav"><div class="nm">Audit Trail</div><div class="ds">सारी गतिविधि का इतिहास</div></div>
+    <div class="nav"><div class="nm">Team</div><div class="ds">स्टाफ़ व आमंत्रण</div></div>
+    <div class="nav"><div class="nm">Settings</div><div class="ds">कंपनी प्रोफ़ाइल व बैंक</div></div>
+  </div>
+  <div class="tip">आपकी <b>भूमिका (role)</b> के अनुसार कुछ मेन्यू या बटन छिपे हो सकते हैं। पूरी सूची <a href="#roles">भूमिकाएँ व अनुमतियाँ</a> में देखें।</div>
+</section>
+
+<!-- ============ DASHBOARD ============ -->
+<section id="dashboard" data-nav="डैशबोर्ड" data-nav-en="Dashboard" data-group="शुरुआत">
+  <div class="sec-head"><div class="sec-seal">3</div>
+    <div><h2>डैशबोर्ड <span class="en">Dashboard</span></h2>
+    <p class="why">लॉगिन के बाद पहली स्क्रीन — कंपनी की सेहत एक नज़र में।</p></div>
+  </div>
+  <ul class="plain">
+    <li><b>चार मुख्य आँकड़े (KPI):</b> <b>Receivables</b> (आपको मिलने वाली रकम), <b>Payable</b> (आपको देनी रकम, साथ में कितने ट्रक बाकी), <b>Open Deals</b> (चालू सौदे), और <b>Pending Settlements</b> (बचे हुए सेटलमेंट)।</li>
+    <li><b>Free Plan बैनर:</b> दिखाता है कि इस महीने कितने लेन-देन इस्तेमाल हुए (जैसे “38 of 100”)। सीमा पास आने पर यह लाल हो जाता है। <b>Upgrade Plan</b> से sales टीम को ईमेल जाता है (पोर्टल से खुद अपग्रेड नहीं होता)।</li>
+    <li><b>Today’s Activity:</b> आज की गतिविधि; हर पंक्ति पर क्लिक करके सीधे उस सौदे/डिस्पैच/पार्टी पर जा सकते हैं।</li>
+    <li><b>Quick Actions:</b> झटपट काम — New Deal, New Dispatch, Record Payment, View Ledger।</li>
+    <li><b>This Month:</b> इस महीने का Settled, Payments और Cap used %।</li>
+  </ul>
+  <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/dashboard</span></div><a href="docs/img/dashboard.jpg" target="_blank"><img src="docs/img/dashboard.jpg" alt="डैशबोर्ड"></a></div><figcaption>डैशबोर्ड — आँकड़े, Quick Actions और This Month</figcaption></figure>
+  <div class="app-does"><span class="k">ऐप अपने-आप</span> Receivables/Payable जैसे आँकड़े हर कुछ सेकंड में ताज़ा होते रहते हैं। Receivables/Payable केवल उन्हीं को दिखते हैं जिनके पास खाता-बही देखने की अनुमति है।</div>
+</section>
+
+<!-- ============ DEALS ============ -->
+<section id="deals" data-nav="सौदे" data-nav-en="Deals" data-group="मुख्य कार्य">
+  <div class="sec-head"><div class="sec-seal">4</div>
+    <div><h2>सौदे <span class="en">Deals</span></h2>
+    <p class="why">हर व्यापार यहीं से शुरू होता है — किससे, कौन-सी कमोडिटी, किस भाव पर, कितने ट्रक।</p></div>
+  </div>
+  <div class="task">
+    <h4>सौदों की सूची देखें <span class="en">Deal Register</span></h4>
+    <p style="margin-top:6px">बाएँ मेन्यू से <b>Deals</b> खोलें। ऊपर <b>Period</b> (समय-सीमा) और स्थिति के चिप्स — <b>All / Open / Partially Fulfilled / Completed / Closed</b> — से सूची छाँटें। हर पंक्ति में सौदा नंबर, पार्टी/कमोडिटी, दिशा (<span class="pill open">Buy</span>/<span class="pill partial">Sell</span>), स्थिति, ट्रेड (Domestic/Export), भाड़ा कौन देगा, भाव और प्रगति दिखती है।</p>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/deals</span></div><a href="docs/img/deals.jpg" target="_blank"><img src="docs/img/deals.jpg" alt="सौदों की सूची"></a></div></figure>
+  </div>
+  <div class="task">
+    <h4>नया सौदा बनाएँ <span class="en">New Deal</span></h4>
+    <ol class="steps">
+      <li>ऊपर दाईं ओर <b>New Deal</b> दबाएँ।</li>
+      <li><b>Deal Type</b> चुनें — <b>Buy</b> (आप खरीद रहे हैं, वेंडर से) या <b>Sell</b> (आप बेच रहे हैं, मिल/ट्रेडर को)।</li>
+      <li><b>Deal Date</b>, <b>Trade Type</b> (Domestic/Export), और <b>Freight Paid By</b> चुनें — <b>Self</b> (भाड़ा आप देंगे) या <b>Counterparty</b> (दूसरा पक्ष देगा)।</li>
+      <li><b>पार्टी</b> खोजें (Buy में वेंडर, Sell में मिल/ट्रेडर)। सूची में न हो तो <b>+ Add new</b> से तुरंत जोड़ें।</li>
+      <li><b>Commodity</b> खोजें, <b>Agreed Rate (₹/Quintal)</b> और <b>Planned Trucks</b> (−/+ या 1/2/5/10/20 प्रीसेट) डालें।</li>
+      <li>चाहें तो <b>Add a broker</b> चुनकर ब्रोकर व कमीशन जोड़ें, और <b>Notes</b> लिखें।</li>
+      <li><b>Review Deal</b> दबाएँ — एक सारांश दिखेगा; जाँच कर <b>पुष्टि</b> करने पर ही सौदा बनता है।</li>
+    </ol>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/deals/new</span></div><a href="docs/img/deal-new.jpg" target="_blank"><img src="docs/img/deal-new.jpg" alt="नया सौदा फ़ॉर्म"></a></div></figure>
+    <div class="tip">सूची/खोज में केवल <b>सक्रिय (active)</b> पार्टियाँ दिखती हैं। निष्क्रिय पार्टी को पहले <a href="#parties">फिर से सक्रिय</a> करना होगा।</div>
+    <div class="who"><span class="lab">कौन कर सकता है</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span><span class="rolechip">Data Entry</span></div>
+  </div>
+  <div class="task">
+    <h4>सौदे का विवरण, प्रगति व बंद करना <span class="en">Deal detail · Close · Delete</span></h4>
+    <p style="margin-top:6px">किसी पंक्ति पर क्लिक करके विवरण खोलें। यहाँ सौदे की जानकारी, <b>Progress</b> (कितने ट्रक भेजे/बचे), उसके सभी <b>Dispatches</b> और <b>Activity</b> दिखती है।</p>
+    <ul class="plain">
+      <li><b>New Dispatch</b> — इसी सौदे पर नया ट्रक दर्ज करें (सौदा Open/Partially होने पर)।</li>
+      <li><b>Close Deal</b> — सौदा बंद करें। यह <b>एक-तरफ़ा</b> है (दोबारा नहीं खुलता) और उसके बाद नए डिस्पैच नहीं जुड़ते। केवल <b>Owner</b>।</li>
+      <li><b>Delete Deal</b> — गलती से बना सौदा मिटाएँ; यह तभी काम करता है जब उस पर कोई डिस्पैच न हुआ हो।</li>
+    </ul>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/deals/…</span></div><a href="docs/img/deal-detail.jpg" target="_blank"><img src="docs/img/deal-detail.jpg" alt="सौदे का विवरण"></a></div><figcaption>सौदे का विवरण — Progress, Dispatches व Activity</figcaption></figure>
+    <div class="who"><span class="lab">बंद/डिलीट</span><span class="rolechip">Close: सिर्फ़ Owner</span><span class="rolechip">Delete: Owner, Trade Manager</span></div>
+  </div>
+</section>
+
+<!-- ============ DISPATCHES ============ -->
+<section id="dispatches" data-nav="डिस्पैच" data-nav-en="Dispatches" data-group="मुख्य कार्य">
+  <div class="sec-head"><div class="sec-seal">5</div>
+    <div><h2>डिस्पैच <span class="en">Dispatches</span></h2>
+    <p class="why">हर ट्रक की आवाजाही — कहाँ से चला, किधर गया, कितना वज़न, कितना भाड़ा।</p></div>
+  </div>
+  <div class="task">
+    <h4>डिस्पैच सूची <span class="en">Dispatches list</span></h4>
+    <p style="margin-top:6px"><b>Dispatches</b> मेन्यू खोलें। स्थिति-चिप्स — <b>All / Created / In Transit / Received / Settlement Pending / Settled</b> — से छाँटें। हर पंक्ति में डिस्पैच नंबर, गाड़ी नंबर, पार्टी, ट्रांसपोर्टर, स्थिति, वज़न और तारीख।</p>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/dispatches</span></div><a href="docs/img/dispatches.jpg" target="_blank"><img src="docs/img/dispatches.jpg" alt="डिस्पैच सूची"></a></div></figure>
+  </div>
+  <div class="task">
+    <h4>नया डिस्पैच बनाएँ <span class="en">New Dispatch</span></h4>
+    <ol class="steps">
+      <li><b>New Dispatch</b> दबाएँ। ऊपर <b>Source</b> (कहाँ से) और <b>Destination</b> (किधर) चुनें।</li>
+      <li>मान्य रास्ते: <b>Vendor → Seller</b>, <b>Vendor → Godown</b>, या <b>Godown → Seller</b>। (Godown → Godown मान्य नहीं है।)</li>
+      <li>संबंधित <b>Buy deal</b> / <b>Sell deal</b> या <b>Godown</b> चुनें।</li>
+      <li><b>Truck Number</b> डालें — रूप <code class="lbl">AA00AA0000</code> (जैसे BR02AB1234)।</li>
+      <li><b>Transporter</b> चुनें (जब भाड़ा आप देते हैं), <b>Weight (KG)</b>, <b>Number of Bags</b> डालें।</li>
+      <li><b>Agreed Freight (₹/Quintal)</b> और चाहें तो <b>Advance Paid</b> डालें; नीचे रकम शब्दों में भी दिखती है।</li>
+      <li><b>Challan / E-way Number</b> व <b>Remarks</b> डालकर <b>Review</b> करें और पुष्टि करें।</li>
+    </ol>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/dispatches/new</span></div><a href="docs/img/dispatch-new.jpg" target="_blank"><img src="docs/img/dispatch-new.jpg" alt="नया डिस्पैच फ़ॉर्म"></a></div></figure>
+    <div class="app-does"><span class="k">ऐप अपने-आप</span> भाड़ा = दर × क्विंटल (क्विंटल नीचे की ओर पूर्णांकित होते हैं)। <b>Advance</b> कुल भाड़े से ज़्यादा नहीं हो सकता। बिक्री-डिस्पैच पर <b>Bill of Supply</b> PDF अपने-आप बन जाती है।</div>
+    <div class="warn"><b>FOR / Counterparty भाड़ा:</b> अगर सौदे में भाड़ा दूसरा पक्ष देता है, तो ट्रांसपोर्टर/भाड़ा फ़ील्ड नहीं दिखते — “transport arranged &amp; paid by the buyer/vendor” का नोट आ जाता है और पोर्टल कोई भाड़ा नहीं गिनता।</div>
+    <div class="who"><span class="lab">कौन कर सकता है</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span><span class="rolechip">Dispatch Clerk</span><span class="rolechip">Data Entry</span></div>
+  </div>
+  <div class="task">
+    <h4>डिस्पैच का विवरण व कार्रवाइयाँ <span class="en">Dispatch detail</span></h4>
+    <p style="margin-top:6px">किसी डिस्पैच पर क्लिक करें। यहाँ यात्रा (Dispatched → In Transit → Received → Settled), <b>Traceability</b> (कहाँ से/किधर), वज़न (भेजा/प्राप्त/कमी), <b>Freight</b> कार्ड और <b>Documents</b> मिलते हैं।</p>
+    <ul class="plain">
+      <li><b>Mark In Transit</b> — ट्रक चल पड़ा (Created से)।</li>
+      <li><b>Record Received Weight</b> — मिल पर पहुँचा वज़न दर्ज करें; कमी (shortage) अपने-आप दिखती है।</li>
+      <li><b>Pay Freight</b> — बचे भाड़े का भुगतान दर्ज करें (रकम, तरीका, बैंक खाता/चेक नंबर)।</li>
+      <li><b>Create Settlement</b> — माल पहुँचने के बाद सेटलमेंट शुरू करें।</li>
+      <li><b>Edit</b> / <b>Cancel Dispatch</b> — केवल Created/In Transit तक।</li>
+      <li><b>Documents</b> — Bill of Supply, Inward Advice, Vendor Bill, Settlement Note — नई टैब में PDF खुलती है।</li>
+    </ul>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/dispatches/…</span></div><a href="docs/img/dispatch-detail.jpg" target="_blank"><img src="docs/img/dispatch-detail.jpg" alt="डिस्पैच विवरण"></a></div><figcaption>डिस्पैच विवरण — Journey, Freight, Actions व Documents</figcaption></figure>
+    <div class="warn"><b>कमी (Shortage):</b> भेजे और प्राप्त वज़न का अंतर, यदि कंपनी की तय <a href="#settings">शॉर्टेज सीमा</a> से ज़्यादा हो, तो वह ट्रांसपोर्टर के भाड़े से काट लिया जाता है।</div>
+    <div class="who"><span class="lab">कौन कर सकता है</span><span class="rolechip">In Transit/Received/Cancel: Owner, Trade Manager</span><span class="rolechip">Pay Freight: +Accountant</span></div>
+  </div>
+</section>
+
+<!-- ============ SETTLEMENTS ============ -->
+<section id="settlements" data-nav="सेटलमेंट" data-nav-en="Settlements" data-group="मुख्य कार्य">
+  <div class="sec-head"><div class="sec-seal">6</div>
+    <div><h2>सेटलमेंट <span class="en">Settlements</span></h2>
+    <p class="why">माल पहुँचने के बाद अंतिम हिसाब — क्वालिटी क्लेम, कटौती, अंतिम भाव व रकम।</p></div>
+  </div>
+  <div class="task">
+    <h4>सेटलमेंट बनाएँ <span class="en">Create Settlement</span></h4>
+    <ol class="steps">
+      <li>किसी <b>Received</b> डिस्पैच पर <b>Create Settlement</b> दबाएँ।</li>
+      <li><b>Final Weight</b> पहले से भरा (और लॉक) होता है। <b>Accepted Qty</b> बदलें अगर मिल ने कम माल स्वीकारा।</li>
+      <li><b>Final Rate</b> देखें/बदलें। यदि यह सौदे के भाव से अलग है तो <b>Rate Change Reason</b> देना ज़रूरी है।</li>
+      <li><b>Quality Claims</b> जोड़ें (जैसे नमी/टूटन) — ये रकम घटाते हैं, लाल रंग में दिखते हैं।</li>
+      <li><b>Financial Deductions</b> जोड़ें (उतराई/तौल/अन्य)।</li>
+      <li>Vendor→Seller में <b>“Claim passed to vendor”</b> तय करें (कितना क्लेम वेंडर से वसूलना है)।</li>
+      <li>दाईं ओर <b>Settlement Summary</b> में अंतिम रकम देखकर <b>Create Settlement</b> दबाएँ।</li>
+    </ol>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/dispatches/…/settle</span></div><a href="docs/img/create-settlement.jpg" target="_blank"><img src="docs/img/create-settlement.jpg" alt="सेटलमेंट बनाएँ"></a></div></figure>
+    <div class="who"><span class="lab">कौन कर सकता है</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span></div>
+  </div>
+  <div class="task">
+    <h4>सेटलमेंट का विवरण — स्वीकारें / विवाद / संशोधन <span class="en">Accept · Dispute · Revise</span></h4>
+    <p style="margin-top:6px">विवरण में क्लेम, कटौती, <b>Vendor (Purchase) Side</b>, <b>Round History</b>, और सारांश में <b>Final Amount</b> व <b>Net P/L (per truck)</b> दिखते हैं।</p>
+    <ul class="plain">
+      <li><b>Accept</b> — अंतिम रूप दें। इससे मिल की खाता-बही अपडेट होती है, ब्रोकर कमीशन जुड़ता है और डिस्पैच <span class="pill closed">Settled</span> हो जाता है। यह अंतिम है।</li>
+      <li><b>Dispute</b> — असहमति दर्ज करें (कम-से-कम 10 अक्षरों का कारण)।</li>
+      <li><b>Revise</b> — विवादित सेटलमेंट को नए दौर में संशोधित करें।</li>
+    </ul>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/settlements/…</span></div><a href="docs/img/settlement-detail.jpg" target="_blank"><img src="docs/img/settlement-detail.jpg" alt="सेटलमेंट विवरण"></a></div><figcaption>सेटलमेंट विवरण — Claims, Deductions, Summary व Net P/L</figcaption></figure>
+    <div class="app-does"><span class="k">ऐप अपने-आप</span> मोल-भाव <b>अधिकतम 3 दौर</b> तक चलता है: Draft → Dispute → Revise → Accept। हर दौर का इतिहास सुरक्षित रहता है।</div>
+    <div class="tip">सूची स्क्रीन (<code class="lbl">Settlements</code>) में सभी सेटलमेंट स्थिति व दौर के साथ दिखते हैं — पर नया सेटलमेंट हमेशा किसी <b>Received डिस्पैच</b> से ही बनता है।</div>
+  </div>
+  <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/settlements</span></div><a href="docs/img/settlements.jpg" target="_blank"><img src="docs/img/settlements.jpg" alt="सेटलमेंट सूची"></a></div><figcaption>सेटलमेंट सूची — स्थिति, दौर व अंतिम रकम</figcaption></figure>
+</section>
+
+<!-- ============ LEDGER ============ -->
+<section id="ledger" data-nav="खाता-बही" data-nav-en="Ledger" data-group="मुख्य कार्य">
+  <div class="sec-head"><div class="sec-seal">7</div>
+    <div><h2>खाता-बही <span class="en">Ledger</span></h2>
+    <p class="why">हर पार्टी का पूरा हिसाब — कितना बकाया, कब क्या लेन-देन हुआ।</p></div>
+  </div>
+  <p><b>Ledger</b> मेन्यू में बाएँ पार्टियों की सूची (बकाया के साथ) और दाएँ चुनी पार्टी का स्टेटमेंट होता है — <b>Opening</b>, कुल <b>Debit/Credit</b>, और <b>Closing</b>, फिर तारीख-वार लेन-देन व चलता-बैलेंस।</p>
+  <ul class="plain">
+    <li><b>Period</b> से समय-सीमा बदलें (All time / This Month / Last 3 Months)।</li>
+    <li><b>Export CSV</b> से मौजूदा स्टेटमेंट डाउनलोड करें।</li>
+    <li><b>Record Payment</b> से सीधे भुगतान दर्ज करने जाएँ।</li>
+  </ul>
+  <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/ledger</span></div><a href="docs/img/ledger.jpg" target="_blank"><img src="docs/img/ledger.jpg" alt="खाता-बही"></a></div><figcaption>खाता-बही — बाएँ पार्टियाँ, दाएँ स्टेटमेंट</figcaption></figure>
+  <div class="who"><span class="lab">कौन देख सकता है</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span><span class="rolechip">Accountant</span></div>
+</section>
+
+<!-- ============ PAYMENTS ============ -->
+<section id="payments" data-nav="भुगतान" data-nav-en="Payments" data-group="मुख्य कार्य">
+  <div class="sec-head"><div class="sec-seal">8</div>
+    <div><h2>भुगतान <span class="en">Payments</span></h2>
+    <p class="why">किसी पार्टी से पैसा मिला या दिया — यहाँ दर्ज करें।</p></div>
+  </div>
+  <div class="task">
+    <h4>लेन-देन दर्ज करें <span class="en">Record Transaction</span></h4>
+    <ol class="steps">
+      <li><b>Transaction Type</b> चुनें — <b>Money Received</b> (पैसा मिला) या <b>Money Paid</b> (पैसा दिया)।</li>
+      <li><b>Ledger Party</b> खोजें (जिसका खाता प्रभावित होगा) — ऊपर उसका बकाया दिखता है।</li>
+      <li><b>Amount</b> व <b>Date</b> डालें (रकम शब्दों में भी दिखेगी)।</li>
+      <li><b>Payment Mode</b> चुनें — Cash / NEFT / RTGS / IMPS / Cheque / UPI / Other।</li>
+      <li>बैंक-तरीका हो तो <b>बैंक खाता</b> चुनें, और चेक/UTR नंबर डालें।</li>
+      <li><b>Review Transaction</b> दबाकर पुष्टि करें — फिर उस पार्टी की खाता-बही खुल जाती है।</li>
+    </ol>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/payments</span></div><a href="docs/img/payments.jpg" target="_blank"><img src="docs/img/payments.jpg" alt="लेन-देन दर्ज करें"></a></div></figure>
+    <div class="tip">बैंक-आधारित भुगतान के लिए पहले <a href="#settings">Settings</a> में कंपनी का बैंक खाता जोड़ना ज़रूरी है, वरना “Received Into / Paid From” में विकल्प नहीं मिलेगा।</div>
+    <div class="who"><span class="lab">कौन कर सकता है</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span><span class="rolechip">Accountant</span></div>
+  </div>
+</section>
+
+<!-- ============ PARTIES ============ -->
+<section id="parties" data-nav="पार्टियाँ" data-nav-en="Parties" data-group="पार्टियाँ व स्टॉक">
+  <div class="sec-head"><div class="sec-seal">9</div>
+    <div><h2>पार्टियाँ <span class="en">Parties</span></h2>
+    <p class="why">मिल, वेंडर, ट्रांसपोर्टर, ब्रोकर, ट्रेडर, क्लियरेंस पार्टी — सबका एक जगह प्रबंधन।</p></div>
+  </div>
+  <div class="task">
+    <h4>पार्टियों की सूची <span class="en">Parties list</span></h4>
+    <p style="margin-top:6px"><b>Parties</b> मेन्यू में प्रकार-चिप्स (All / Mills / Vendors / Transporters / Brokers / Traders / Clearance) से छाँटें। हर पंक्ति में नाम, प्रकार, मोबाइल, स्थान और <b>Outstanding</b> (बकाया) दिखता है।</p>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/parties</span></div><a href="docs/img/parties.jpg" target="_blank"><img src="docs/img/parties.jpg" alt="पार्टियों की सूची"></a></div></figure>
+  </div>
+  <div class="task">
+    <h4>नई पार्टी जोड़ें <span class="en">Add Party</span></h4>
+    <ol class="steps">
+      <li><b>Add Party</b> दबाएँ। <b>Party Type</b> चुनें और <b>Mobile</b> (10-अंक) व <b>Party Name</b> डालें।</li>
+      <li>स्थान (देश/राज्य/ज़िला — पहले से India/Bihar), <b>Address</b>, <b>GST</b>, <b>Notes</b> भरें।</li>
+      <li>पुराना बकाया हो तो <b>Opening Balance</b> में रकम, तारीख और दिशा (<b>They owe you</b> / <b>You owe them</b>) डालें — वरना खाली छोड़ दें (शून्य से शुरू)।</li>
+      <li><b>Review</b> करके सहेजें।</li>
+    </ol>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/parties/new</span></div><a href="docs/img/party-new.jpg" target="_blank"><img src="docs/img/party-new.jpg" alt="नई पार्टी फ़ॉर्म"></a></div></figure>
+    <div class="who"><span class="lab">कौन कर सकता है</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span></div>
+  </div>
+  <div class="task">
+    <h4>पार्टी का विवरण, बैंक, निष्क्रिय व डिलीट <span class="en">Party detail</span></h4>
+    <p style="margin-top:6px">किसी पार्टी पर क्लिक करें। यहाँ से आप <b>New Deal</b>, <b>Sale/Buy Register</b>, <b>View Ledger</b>, <b>Record Payment</b>, <b>Edit</b> कर सकते हैं, बैंक खाते जोड़/हटा सकते हैं, और:</p>
+    <ul class="plain">
+      <li><b>Deactivate Party</b> — पार्टी को छिपाएँ (नए लेन-देन में नहीं दिखेगी), पर इतिहास बना रहता है। बाद में <b>Reactivate</b> कर सकते हैं।</li>
+      <li><b>Delete Party</b> — स्थायी रूप से मिटाएँ; यह तभी होता है जब पार्टी किसी सौदे/डिस्पैच/भुगतान में इस्तेमाल न हुई हो। वरना उसे केवल निष्क्रिय किया जा सकता है।</li>
+    </ul>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/parties/…</span></div><a href="docs/img/party-detail.jpg" target="_blank"><img src="docs/img/party-detail.jpg" alt="पार्टी विवरण"></a></div></figure>
+    <div class="warn"><b>निष्क्रिय पार्टी:</b> Deactivate की गई पार्टी सौदे/डिस्पैच के किसी भी चयन-बॉक्स में नहीं दिखती। दोबारा इस्तेमाल के लिए उसे पहले Reactivate करें।</div>
+  </div>
+  <div class="task">
+    <h4>पार्टियाँ एक साथ आयात करें <span class="en">Import Parties (CSV)</span></h4>
+    <ol class="steps">
+      <li><b>Parties → Import</b> खोलें। <b>Download CSV template</b> से नमूना फ़ाइल लें और भरें (एक पंक्ति = एक पार्टी)।</li>
+      <li><b>Choose file</b> से फ़ाइल चुनकर <b>Validate</b> दबाएँ — यह सिर्फ़ जाँच है, कुछ बनता नहीं।</li>
+      <li>पूर्वावलोकन देखें: कुल पंक्तियाँ, तैयार, त्रुटियाँ, डुप्लिकेट। हर पंक्ति की स्थिति (VALID/DUPLICATE/ERROR) दिखती है।</li>
+      <li>सही होने पर <b>Commit Import</b> दबाएँ — तब पार्टियाँ बनती हैं; अंत में Created/Skipped/Failed का सारांश मिलता है।</li>
+    </ol>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/parties/import</span></div><a href="docs/img/party-import.jpg" target="_blank"><img src="docs/img/party-import.jpg" alt="पार्टियाँ आयात"></a></div></figure>
+    <div class="tip"><b>डुप्लिकेट</b> का मतलब है कि वह मोबाइल नंबर पहले से किसी पार्टी का है। चाहें तो “कोई डुप्लिकेट मिलने पर पूरा आयात रोकें” विकल्प चुन सकते हैं।</div>
+  </div>
+  <div class="task">
+    <h4>सेल/बाय रजिस्टर <span class="en">Sale / Buy Register</span></h4>
+    <p style="margin-top:6px">पार्टी विवरण से <b>Sale Register</b> (मिल/ट्रेडर के लिए) या <b>Buy Register</b> (वेंडर के लिए) खोलें — यह डायरी की तरह हर डिस्पैच और भुगतान को क्रम से दिखाता है, साथ में क्लेम/कटौती (लाल में) और चलता-बैलेंस। ऊपर <b>PDF</b> व <b>CSV</b> से एक्सपोर्ट करें।</p>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/parties/…/sale-register</span></div><a href="docs/img/sale-register.jpg" target="_blank"><img src="docs/img/sale-register.jpg" alt="सेल रजिस्टर"></a></div><figcaption>सेल रजिस्टर — डिस्पैच + भुगतान का पूरा ब्योरा (≈ = अनुमानित)</figcaption></figure>
+    <div class="who"><span class="lab">कौन देख सकता है</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span><span class="rolechip">Accountant</span></div>
+  </div>
+</section>
+
+<!-- ============ INVENTORY ============ -->
+<section id="inventory" data-nav="इन्वेंटरी व गोदाम" data-nav-en="Inventory" data-group="पार्टियाँ व स्टॉक">
+  <div class="sec-head"><div class="sec-seal">10</div>
+    <div><h2>इन्वेंटरी व गोदाम <span class="en">Inventory &amp; Godowns</span></h2>
+    <p class="why">किस गोदाम में कौन-सा अनाज कितना पड़ा है।</p></div>
+  </div>
+  <p><b>Inventory</b> मेन्यू में ऊपर <b>Total on hand</b> (कुल स्टॉक क्विंटल में) और कमोडिटी-वार जानकारी, नीचे हर गोदाम का कार्ड (नाम, स्थान, कुल और कमोडिटी-वार मात्रा) दिखता है।</p>
+  <div class="task">
+    <h4>नया गोदाम जोड़ें <span class="en">Add Godown</span></h4>
+    <ol class="steps">
+      <li><b>Add Godown</b> दबाएँ। <b>Name</b> व <b>Location</b> डालें।</li>
+      <li><b>Opening Grain Stock</b> में <b>Add Grain</b> से कमोडिटी व मात्रा (Qty) जोड़ें (हर पंक्ति की मात्रा 0 से ज़्यादा होनी चाहिए)।</li>
+      <li>सहेजें।</li>
+    </ol>
+    <div class="warn"><b>Deactivate:</b> गोदाम तभी निष्क्रिय होता है जब वह पूरी तरह खाली हो — पहले उसका सारा स्टॉक निकालें। निष्क्रिय गोदाम डिस्पैच के चयन में नहीं दिखता।</div>
+    <div class="who"><span class="lab">कौन कर सकता है</span><span class="rolechip">केवल Owner</span></div>
+  </div>
+  <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/inventory</span></div><a href="docs/img/inventory.jpg" target="_blank"><img src="docs/img/inventory.jpg" alt="इन्वेंटरी"></a></div><figcaption>इन्वेंटरी — कुल स्टॉक व गोदाम-वार कार्ड</figcaption></figure>
+</section>
+
+<!-- ============ COMMODITIES ============ -->
+<section id="commodities" data-nav="कमोडिटी" data-nav-en="Commodities" data-group="पार्टियाँ व स्टॉक">
+  <div class="sec-head"><div class="sec-seal">11</div>
+    <div><h2>कमोडिटी <span class="en">Commodities</span></h2>
+    <p class="why">आपकी कंपनी जो अनाज/उत्पाद ट्रेड करती है, उनकी सूची।</p></div>
+  </div>
+  <p>तालिका में हर कमोडिटी का <b>Display Name</b>, Canonical नाम, Code, Type और HSN दिखता है।</p>
+  <ul class="plain">
+    <li><b>Add Commodity</b> — मास्टर सूची में खोजकर किसी कमोडिटी को <b>Activate</b> करें।</li>
+    <li><b>Rename</b> — अपनी पसंद का प्रदर्शन-नाम रखें (खाली करने पर मूल नाम लौट आता है)।</li>
+    <li><b>Deactivate / Reactivate</b> — कमोडिटी को छिपाएँ/लौटाएँ (Deactivate केवल Owner)।</li>
+  </ul>
+  <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/commodities</span></div><a href="docs/img/commodities.jpg" target="_blank"><img src="docs/img/commodities.jpg" alt="कमोडिटी सूची"></a></div></figure>
+  <div class="who"><span class="lab">कौन कर सकता है</span><span class="rolechip">Add/Rename: Owner, Trade Manager</span><span class="rolechip">Deactivate: केवल Owner</span></div>
+</section>
+
+<!-- ============ REPORTS ============ -->
+<section id="reports" data-nav="रिपोर्ट व एक्सपोर्ट" data-nav-en="Reports" data-group="रिपोर्ट व रिकॉर्ड">
+  <div class="sec-head"><div class="sec-seal">12</div>
+    <div><h2>रिपोर्ट व एक्सपोर्ट <span class="en">Reports &amp; Exports</span></h2>
+    <p class="why">मुनाफ़ा-नुकसान और हिसाब की फ़ाइलें — CSV व PDF में।</p></div>
+  </div>
+  <p>ऊपर <b>Period</b> (This Month / This Quarter / Financial Year / Custom) चुनें — यह P/L और नीचे के सभी एक्सपोर्ट पर लागू होता है।</p>
+  <div class="grid2">
+    <div class="mini"><h4>Per-Truck Profit / Loss</h4><p>हर ट्रक का Revenue, Vendor Cost, Freight, Commission और <b>Net P/L</b>। ऊपर कुल आँकड़े; <b>Refresh / CSV / PDF</b> उपलब्ध। इसमें केवल <b>स्वीकृत Vendor→Seller</b> सौदे गिने जाते हैं।</p></div>
+    <div class="mini"><h4>Register Exports</h4><p><b>Deals</b>, <b>Dispatches</b>, <b>Settlements</b> और <b>GST outward-supply</b> रजिस्टर — हर एक CSV व PDF में। GST रजिस्टर पूरी फ़ाइलिंग-फ़ाइल है (पंक्तियाँ कटती नहीं)।</p></div>
+    <div class="mini"><h4>Sale / Buy Register</h4><p>किसी मिल/ट्रेडर का <b>Sale Register</b> या वेंडर का <b>Buy Register</b> चुनकर CSV/PDF लें।</p></div>
+    <div class="mini"><h4>पार्टी स्टेटमेंट</h4><p>किसी पार्टी की खाता-बही का CSV सीधे <a href="#ledger">Ledger</a> स्क्रीन से मिलता है।</p></div>
+  </div>
+  <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/reports</span></div><a href="docs/img/reports.jpg" target="_blank"><img src="docs/img/reports.jpg" alt="रिपोर्ट व एक्सपोर्ट"></a></div><figcaption>रिपोर्ट — Per-Truck P/L व रजिस्टर एक्सपोर्ट</figcaption></figure>
+  <div class="tip">PDF/CSV नई टैब में खुलती या डाउनलोड होती है। बड़ी फ़ाइल में कुछ पल लग सकते हैं।</div>
+</section>
+
+<!-- ============ AUDIT ============ -->
+<section id="audit" data-nav="ऑडिट ट्रेल" data-nav-en="Audit Trail" data-group="रिपोर्ट व रिकॉर्ड">
+  <div class="sec-head"><div class="sec-seal">13</div>
+    <div><h2>ऑडिट ट्रेल <span class="en">Audit Trail</span></h2>
+    <p class="why">किसने, कब, क्या किया — विवाद सुलझाने और भरोसे के लिए पूरा इतिहास।</p></div>
+  </div>
+  <p><b>Audit Trail</b> मेन्यू में फ़िल्टर-चिप्स (All / Deals / Dispatches / Settlements / Payments / Parties / Staff), <b>Critical only</b> टॉगल और <b>Period</b> से छाँटें। हर पंक्ति में सारांश, संबंधित रिकॉर्ड, करने वाले का नाम+भूमिका, समय और रकम दिखती है; पंक्ति पर क्लिक करके उस रिकॉर्ड पर जाएँ। नीचे <b>Prev / Next</b> से पन्ने बदलें।</p>
+  <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/activity</span></div><a href="docs/img/audit.jpg" target="_blank"><img src="docs/img/audit.jpg" alt="ऑडिट ट्रेल"></a></div></figure>
+  <div class="tip"><b>Dispatch Clerk</b> को यहाँ केवल Deals व Dispatches की गतिविधि दिखती है।</div>
+</section>
+
+<!-- ============ TEAM ============ -->
+<section id="team" data-nav="टीम" data-nav-en="Team" data-group="प्रशासन">
+  <div class="sec-head"><div class="sec-seal">14</div>
+    <div><h2>टीम <span class="en">Team</span></h2>
+    <p class="why">स्टाफ़ जोड़ें, उनकी भूमिका तय करें, आमंत्रण प्रबंधित करें।</p></div>
+  </div>
+  <div class="task">
+    <h4>नया सदस्य आमंत्रित करें <span class="en">Invite Member</span></h4>
+    <ol class="steps">
+      <li><b>Invite Member</b> दबाएँ। सदस्य का <b>Mobile</b>, <b>Full Name</b> (वैकल्पिक) और <b>Role</b> चुनें।</li>
+      <li>एक <b>invite code</b> बनता है जो सिर्फ़ एक बार दिखता है — <b>Copy</b> करके सदस्य को भेजें।</li>
+      <li>सदस्य <a href="#start">Join a team</a> से वह कोड डालकर जुड़ जाता है।</li>
+    </ol>
+    <p><b>Members</b> तालिका में नाम, मोबाइल, भूमिका, स्थिति और अंतिम लॉगिन दिखता है। Owner किसी भी गैर-Owner सदस्य की <b>भूमिका बदल</b> सकता है या उसे <b>Remove</b> कर सकता है (इतिहास बना रहता है)। <b>Pending Invitations</b> में लंबित आमंत्रण <b>Cancel</b> कर सकते हैं।</p>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/team</span></div><a href="docs/img/team.jpg" target="_blank"><img src="docs/img/team.jpg" alt="टीम"></a></div></figure>
+    <div class="who"><span class="lab">कौन कर सकता है</span><span class="rolechip">Invite/Remove/Role: केवल Owner</span><span class="rolechip">सूची देखना: Owner, Trade Manager</span></div>
+  </div>
+</section>
+
+<!-- ============ SETTINGS ============ -->
+<section id="settings" data-nav="सेटिंग्स" data-nav-en="Settings" data-group="प्रशासन">
+  <div class="sec-head"><div class="sec-seal">15</div>
+    <div><h2>सेटिंग्स <span class="en">Settings</span></h2>
+    <p class="why">कंपनी की प्रोफ़ाइल, बैंक खाते, बिल की छपाई और आपका पासवर्ड।</p></div>
+  </div>
+  <ul class="plain">
+    <li><b>Company Profile:</b> कंपनी का नाम, GST, पता, ज़िला/राज्य/पिनकोड। <b>Transport Shortage Allowance (kg)</b> — इतनी कमी तक ट्रांसपोर्टर पर कटौती नहीं होती; इससे ज़्यादा कमी भाड़े से कटती है (नए डिस्पैच पर लागू)। संपादन केवल Owner।</li>
+    <li><b>Company Bank Accounts:</b> बैंक खाते जोड़ें/प्राइमरी सेट करें/हटाएँ — भुगतान व बिल में इन्हीं का उपयोग होता है।</li>
+    <li><b>Bill of Supply:</b> तय करें कि बिल पर <b>बैंक विवरण</b> और <b>अधिकृत हस्ताक्षर</b> छपें या नहीं; हस्ताक्षर की छवि (PNG/JPEG, 1 MB से कम) अपलोड करें।</li>
+    <li><b>Subscription:</b> प्लान, इस्तेमाल हुए लेन-देन/सीमा; अपग्रेड के लिए <b>Contact Sales</b> (ईमेल)।</li>
+    <li><b>Profile Status:</b> सही बिल के लिए GST + पता + पिनकोड ज़रूरी — अधूरा हो तो यहाँ चेतावनी दिखती है।</li>
+    <li><b>Change Password:</b> पुराना + नया पासवर्ड डालकर बदलें (नियम वही; सभी कंपनियों में लागू)।</li>
+  </ul>
+  <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/settings</span></div><a href="docs/img/settings.jpg" target="_blank"><img src="docs/img/settings.jpg" alt="सेटिंग्स"></a></div></figure>
+</section>
+
+<!-- ============ ROLES ============ -->
+<section id="roles" data-nav="भूमिकाएँ व अनुमतियाँ" data-nav-en="Roles" data-group="प्रशासन">
+  <div class="sec-head"><div class="sec-seal">16</div>
+    <div><h2>भूमिकाएँ व अनुमतियाँ <span class="en">Roles &amp; Permissions</span></h2>
+    <p class="why">हर सदस्य की भूमिका तय करती है कि वह क्या देख/कर सकता है।</p></div>
+  </div>
+  <p>छह भूमिकाएँ हैं: <b>Owner</b>, <b>Trade Manager</b>, <b>Dispatch Clerk</b>, <b>Accountant</b>, <b>Data Entry</b>। नीचे मुख्य कामों के लिए किसके पास अधिकार है:</p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>काम</th><th>Owner</th><th>Trade Mgr</th><th>Dispatch Clerk</th><th>Accountant</th><th>Data Entry</th></tr></thead>
+      <tbody>
+        <tr><td>सौदा बनाना</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">—</td><td class="no">—</td><td class="ok">✓</td></tr>
+        <tr><td>सौदा बंद करना</td><td class="ok">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+        <tr><td>डिस्पैच बनाना / In Transit</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">—</td><td class="ok">✓</td></tr>
+        <tr><td>प्राप्त वज़न / डिस्पैच रद्द</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+        <tr><td>सेटलमेंट (बनाना/स्वीकार/विवाद)</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+        <tr><td>भुगतान / भाड़ा दर्ज</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">—</td><td class="ok">✓</td><td class="no">—</td></tr>
+        <tr><td>खाता-बही देखना</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">—</td><td class="ok">✓</td><td class="no">—</td></tr>
+        <tr><td>पार्टी प्रबंधन</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+        <tr><td>गोदाम प्रबंधन</td><td class="ok">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+        <tr><td>स्टाफ़ प्रबंधन</td><td class="ok">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+        <tr><td>कंपनी प्रोफ़ाइल संपादन</td><td class="ok">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tip">अगर कोई मेन्यू या बटन आपको नहीं दिख रहा, तो शायद आपकी भूमिका को उसकी अनुमति नहीं है — Owner से कहें कि Team में आपकी भूमिका बदल दें।</div>
+</section>
+
+<!-- ============ RULES / FAQ ============ -->
+<section id="rules" data-nav="ज़रूरी नियम व सामान्य सवाल" data-nav-en="Rules &amp; FAQ" data-group="मदद">
+  <div class="sec-head"><div class="sec-seal">?</div>
+    <div><h2>ज़रूरी नियम व सामान्य सवाल <span class="en">Key rules &amp; FAQ</span></h2>
+    <p class="why">कुछ बातें जो हर उपयोगकर्ता को पता होनी चाहिए।</p></div>
+  </div>
+  <div class="grid2">
+    <div class="mini"><h4>निष्क्रिय पार्टी/गोदाम</h4><p>Deactivate किए गए किसी भी नए लेन-देन के चयन में नहीं दिखते, पर उनका पुराना इतिहास व खाता-बही सुरक्षित रहता है।</p></div>
+    <div class="mini"><h4>भाड़ा (Freight)</h4><p>भाड़ा प्रति-क्विंटल पर गिना जाता है (क्विंटल नीचे की ओर पूर्णांकित)। Advance कुल भाड़े से ज़्यादा नहीं। FOR/Counterparty सौदों में कोई भाड़ा नहीं गिना जाता।</p></div>
+    <div class="mini"><h4>कमी (Shortage)</h4><p>भेजे और प्राप्त वज़न का अंतर, कंपनी की तय सीमा से ज़्यादा हो तो ट्रांसपोर्टर के भाड़े से कट जाता है।</p></div>
+    <div class="mini"><h4>सेटलमेंट के दौर</h4><p>मोल-भाव अधिकतम 3 दौर तक: Draft → Dispute → Revise → Accept। Accept अंतिम है और खाता-बही अपडेट कर देता है।</p></div>
+    <div class="mini"><h4>लेन-देन सीमा (Cap)</h4><p>फ़्री/सीमित प्लान पर महीने की एक सीमा होती है (डैशबोर्ड व Settings में दिखती है)। अपग्रेड के लिए sales से संपर्क करें।</p></div>
+    <div class="mini"><h4>रकम शब्दों में</h4><p>Advance, भुगतान और Opening Balance जैसे रकम-बॉक्स के नीचे रकम अपने-आप शब्दों में (लाख/करोड़) दिखती है — गलती पकड़ने में मदद।</p></div>
+    <div class="mini"><h4>PDF दस्तावेज़</h4><p>Bill of Supply, Inward Advice, Settlement Note, Vendor Bill व रिपोर्ट PDF नई टैब में खुलती हैं।</p></div>
+    <div class="mini"><h4>एक खाता, कई कंपनियाँ</h4><p>ऊपर के <b>Company Switcher</b> से कंपनी बदलें। वेब व मोबाइल एक ही खाता व डेटा साझा करते हैं।</p></div>
+  </div>
+  <div class="callout"><p><strong>कुछ गड़बड़ लगे?</strong> यह बीटा सॉफ़्टवेयर है। कोई त्रुटि दिखे तो स्क्रीन का स्क्रीनशॉट लेकर, आप क्या कर रहे थे यह बताते हुए, अपनी टीम/एडमिन को भेजें ताकि जल्दी ठीक किया जा सके।</p></div>
+</section>
+
+<footer class="docfoot">
+  <p><span class="mark">RTNP</span> · वेब पोर्टल उपयोगकर्ता गाइड · हिन्दी</p>
+  <p>यह गाइड ऑफ़िस स्टाफ़ के लिए है। फ़ील्ड टीम के लिए मोबाइल ऐप की अलग गाइड उपलब्ध है।</p>
+</footer>
