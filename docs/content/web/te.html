@@ -1,0 +1,485 @@
+<!--
+  RTNP web-portal documentation — TELUGU content.
+  Same contract as hi.html: section ids and docs/img/ paths are SHARED — do not change them.
+  Style rule: everyday spoken Telugu; keep commonly-used English words (UI labels,
+  Deals/Dispatch/Settlement/Ledger/Payment/Sign In, roles, etc.) in English.
+-->
+<div id="doc-meta" hidden
+     data-ui-menu="విషయసూచిక"
+     data-ui-switch="భాష మార్చండి"
+     data-ui-title="RTNP వెబ్ పోర్టల్ గైడ్"
+     data-ui-findhint="ఏ విషయానికైనా నేరుగా వెళ్లడానికి కింద నుంచి ఎంచుకోండి. పేజీలో పదం వెతకడానికి Ctrl+F నొక్కండి."></div>
+
+<header class="doc-hero">
+  <div class="eyebrow">పూర్తి యూజర్ గైడ్ · తెలుగు</div>
+  <h1>RTNP <span class="hl">వెబ్ పోర్టల్</span> — ఆఫీస్ స్టాఫ్ కోసం పూర్తి సహాయం</h1>
+  <p class="lede">ఈ గైడ్ కంప్యూటర్/ల్యాప్‌టాప్‌లో నడిచే RTNP వెబ్ పోర్టల్‌లోని ప్రతి భాగాన్ని వివరిస్తుంది — login నుంచి deals, ట్రక్ dispatch, settlement, ఖాతా (ledger), payments, parties, స్టాక్, reports, team, settings వరకు. ఎడమ వైపు ఉన్న <b>విషయసూచిక</b> నుంచి ఏ విషయానికైనా నేరుగా వెళ్లండి.</p>
+</header>
+
+<!-- ============ INTRO ============ -->
+<section id="intro" data-nav="పరిచయం" data-nav-en="Overview" data-group="మొదలు">
+  <div class="sec-head"><div class="sec-seal">i</div>
+    <div><h2>పరిచయం <span class="en">What RTNP is &amp; how work flows</span></h2>
+    <p class="why">RTNP ఒక ధాన్యం వ్యాపారం (grain trading) platform. మొబైల్ app మీ ఫీల్డ్ టీమ్ కోసం; ఈ <b>వెబ్ పోర్టల్</b> ఆఫీస్ స్టాఫ్ కోసం — ఒకే డెస్క్ నుంచి మొత్తం వ్యాపారం నడపడానికి.</p></div>
+  </div>
+  <p>వెబ్ పోర్టల్ మరియు మొబైల్ app <b>ఒకే account, ఒకే data</b> మీద నడుస్తాయి. మీరు వెబ్‌లో మార్చినది మొబైల్‌లో కూడా కనిపిస్తుంది, అలాగే మొబైల్‌లో మార్చినది వెబ్‌లో కూడా కనిపిస్తుంది. వెబ్ పోర్టల్ ప్రత్యేకతలు: ఒకేసారి ఎక్కువ సమాచారం screen మీద, CSV/PDF export, మరియు వేగంగా data entry.</p>
+  <h3 class="sub">పని జరిగే వరుస (Workflow)</h3>
+  <p>దాదాపు ప్రతి వ్యాపారం ఇదే వరుసలో జరుగుతుంది. పోర్టల్ ప్రతి అడుగును తర్వాతి అడుగుతో కలుపుతుంది:</p>
+  <div class="flow">
+    <span class="step">Party</span><span class="arrow">→</span>
+    <span class="step">Deal</span><span class="arrow">→</span>
+    <span class="step">Dispatch</span><span class="arrow">→</span>
+    <span class="step">సరుకు వచ్చింది (Received)</span><span class="arrow">→</span>
+    <span class="step">Settlement</span><span class="arrow">→</span>
+    <span class="step">Payment</span>
+  </div>
+  <div class="callout"><p><strong>మొదటిసారి వాడుతున్నారా?</strong> ముందుగా <a href="#parties">parties</a> add చేయండి (vendor, rice mill మొదలైనవి), తర్వాత <a href="#deals">deal</a> పెట్టండి, ఆ deal మీద <a href="#dispatches">dispatch</a> నమోదు చేయండి. మిగతా అడుగులు వాటంతట అవే కలిసిపోతాయి.</p></div>
+</section>
+
+<!-- ============ START / LOGIN ============ -->
+<section id="start" data-nav="లాగిన్ &amp; ఖాతా" data-nav-en="Login &amp; account" data-group="మొదలు">
+  <div class="sec-head"><div class="sec-seal">1</div>
+    <div><h2>లాగిన్ &amp; ఖాతా <span class="en">Login, register, join, password, company</span></h2>
+    <p class="why">పోర్టల్ తెరిచే address: <code class="lbl">staging.rtnp.in</code> (demo) — నిజంగా వాడేటప్పుడు మీ కంపెనీ address వేరుగా ఉండొచ్చు.</p></div>
+  </div>
+  <div class="task">
+    <h4>Sign in అవ్వండి <span class="en">Sign in</span></h4>
+    <ol class="steps">
+      <li><b>Mobile number</b>లో మీ 10-అంకెల mobile number టైప్ చేయండి.</li>
+      <li><b>Password</b> టైప్ చేయండి. కంటి icon నొక్కి password చూడొచ్చు.</li>
+      <li><b>Keep me signed in</b> select చేసి ఉంచండి, అప్పుడు మళ్లీ మళ్లీ login అవ్వాల్సిన అవసరం ఉండదు (మీ సొంత కంప్యూటర్‌లో మాత్రమే).</li>
+      <li><b>Sign In</b> నొక్కండి.</li>
+    </ol>
+    <div class="app-does"><span class="k">App దానంతట అదే</span> మీ ఒకే mobile number చాలా కంపెనీలతో కలిసి ఉంటే, login తర్వాత <b>“Choose a company”</b> screen కనిపిస్తుంది — అక్కడ నుంచి కంపెనీ ఎంచుకోండి.</div>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/login</span></div><a href="docs/img/login.jpg" target="_blank"><img src="docs/img/login.jpg" alt="login screen"></a></div><figcaption>Sign in — mobile number మరియు password</figcaption></figure>
+  </div>
+  <div class="task">
+    <h4>Password మర్చిపోయారా? <span class="en">Forgot password</span></h4>
+    <ol class="steps">
+      <li>Login screen మీద <b>Forgot password?</b> నొక్కండి.</li>
+      <li>Mobile number టైప్ చేసి <b>Send OTP</b> నొక్కండి.</li>
+      <li>OTP మరియు కొత్త password టైప్ చేసి <b>Reset Password</b> నొక్కండి.</li>
+    </ol>
+    <div class="tip"><b>Password rules:</b> కనీసం 8 అక్షరాలు, అందులో ఒక పెద్ద అక్షరం (capital), ఒక చిన్న అక్షరం, ఒక అంకె, మరియు ఒక special గుర్తు (@, # లాంటివి) తప్పనిసరి.</div>
+  </div>
+  <div class="grid2">
+    <div class="task" style="margin-top:0">
+      <h4>కొత్త కంపెనీ register చేయండి <span class="en">Register</span></h4>
+      <p style="margin-top:6px; color:var(--txt-mid); font-size:.94rem">మీ కంపెనీ ఇంకా RTNPలో లేకపోతే — login మీద <b>Register →</b> నొక్కండి. కంపెనీ పేరు, రకం, ప్రాంతం, “మీరు ఎక్కువగా ఏమి trade చేస్తారు”, mobile, password నింపండి → OTP verify చేయండి. మీరు <b>Owner</b> అవుతారు మరియు ఒక మొదటి commodity list దానంతట అదే చాలూ అవుతుంది.</p>
+      <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/register</span></div><a href="docs/img/register.jpg" target="_blank"><img src="docs/img/register.jpg" alt="register screen"></a></div></figure>
+    </div>
+    <div class="task" style="margin-top:0">
+      <h4>Team‌లో చేరండి <span class="en">Join a team</span></h4>
+      <p style="margin-top:6px; color:var(--txt-mid); font-size:.94rem">కంపెనీ మీకు <b>invite code</b> పంపితే — login మీద <b>Enter invite code</b> నొక్కి, code paste చేయండి. మీకు కంపెనీ పేరు మరియు మీ role కనిపిస్తాయి. అప్పటికే account ఉంటే password టైప్ చేసి, లేకపోతే పేరు + కొత్త password పెట్టి చేరిపోండి.</p>
+      <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/join</span></div><a href="docs/img/join.jpg" target="_blank"><img src="docs/img/join.jpg" alt="join a team screen"></a></div></figure>
+    </div>
+  </div>
+  <div class="tip"><b>కంపెనీ మార్చడం:</b> మీరు ఒకటి కంటే ఎక్కువ కంపెనీలలో ఉంటే, పైన కుడి వైపు కంపెనీ పేరు (<b>Company Switcher</b>) మీద click చేసి ఎప్పుడైనా వేరే కంపెనీకి వెళ్లొచ్చు. అప్పుడు మొత్తం data ఆ కంపెనీది కనిపిస్తుంది.</div>
+</section>
+
+<!-- ============ LAYOUT ============ -->
+<section id="layout" data-nav="పోర్టల్ లేఅవుట్" data-nav-en="Layout" data-group="మొదలు">
+  <div class="sec-head"><div class="sec-seal">2</div>
+    <div><h2>పోర్టల్ లేఅవుట్ <span class="en">Understanding the screen</span></h2>
+    <p class="why">ప్రతి screen ఒకే విధంగా ఉంటుంది — ఒకసారి అర్థం చేసుకుంటే మిగతావన్నీ తేలిక.</p></div>
+  </div>
+  <ul class="plain">
+    <li><b>ఎడమ menu (Sidebar):</b> మొత్తం పోర్టల్ map — Dashboard, Deals, Dispatches, Settlements, Ledger, Payments, Parties, Inventory, Commodities, Reports, Audit Trail, Team, Settings. కింద <b>Documentation</b> మరియు <b>Log Out</b>.</li>
+    <li><b>పైన పట్టీ (Top bar):</b> మధ్యలో search box, కుడి వైపు <b>Company Switcher</b> మరియు మీ పేరు + role (దాని మీద click చేస్తే Settings / Log Out వస్తుంది).</li>
+    <li><b>మధ్య భాగం:</b> ఎంచుకున్న screen సమాచారం — lists, forms, వివరాలు ఇక్కడే కనిపిస్తాయి.</li>
+  </ul>
+  <div class="tip"><b>గమనిక:</b> పైన ఉన్న search box ప్రస్తుతం చూపు కోసం మాత్రమే. ఒక list‌లో వెతకడానికి ఆ screen‌లోని సొంత <b>Search…</b> box వాడండి (ఉదా. Deals‌లో “Search deals, mills, commodities…”).</div>
+  <h3 class="sub">Menu‌లో ఏమేమి ఉంటాయి</h3>
+  <div class="navmap">
+    <div class="nav"><div class="nm">Dashboard</div><div class="ds">ఒక్క చూపులో మొత్తం లెక్క</div></div>
+    <div class="nav"><div class="nm">Deals</div><div class="ds">కొనుగోలు/అమ్మకం deals</div></div>
+    <div class="nav"><div class="nm">Dispatches</div><div class="ds">ట్రక్‌ల రాకపోకలు</div></div>
+    <div class="nav"><div class="nm">Settlements</div><div class="ds">claims, disputes, చివరి మొత్తం</div></div>
+    <div class="nav"><div class="nm">Ledger</div><div class="ds">party వారీ ఖాతా</div></div>
+    <div class="nav"><div class="nm">Payments</div><div class="ds">లావాదేవీ నమోదు</div></div>
+    <div class="nav"><div class="nm">Parties</div><div class="ds">mill, vendor, transporter మొదలైనవి</div></div>
+    <div class="nav"><div class="nm">Inventory</div><div class="ds">గోడౌన్ స్టాక్</div></div>
+    <div class="nav"><div class="nm">Commodities</div><div class="ds">మీ commodity list</div></div>
+    <div class="nav"><div class="nm">Reports</div><div class="ds">P/L మరియు export</div></div>
+    <div class="nav"><div class="nm">Audit Trail</div><div class="ds">అన్ని పనుల చరిత్ర</div></div>
+    <div class="nav"><div class="nm">Team</div><div class="ds">staff మరియు invites</div></div>
+    <div class="nav"><div class="nm">Settings</div><div class="ds">కంపెనీ profile మరియు bank</div></div>
+  </div>
+  <div class="tip">మీ <b>role</b> బట్టి కొన్ని menu లేదా buttons కనిపించకపోవచ్చు. పూర్తి list <a href="#roles">Roles &amp; అనుమతులు</a>లో చూడండి.</div>
+</section>
+
+<!-- ============ DASHBOARD ============ -->
+<section id="dashboard" data-nav="Dashboard" data-nav-en="Dashboard" data-group="మొదలు">
+  <div class="sec-head"><div class="sec-seal">3</div>
+    <div><h2>Dashboard <span class="en">Dashboard</span></h2>
+    <p class="why">Login తర్వాత మొదటి screen — కంపెనీ పరిస్థితి ఒక్క చూపులో.</p></div>
+  </div>
+  <ul class="plain">
+    <li><b>నాలుగు ముఖ్య figures (KPI):</b> <b>Receivables</b> (మీకు రావాల్సిన డబ్బు), <b>Payable</b> (మీరు ఇవ్వాల్సిన డబ్బు, ఎన్ని ట్రక్‌లు మిగిలాయో కూడా), <b>Open Deals</b> (నడుస్తున్న deals), మరియు <b>Pending Settlements</b> (మిగిలిన settlements).</li>
+    <li><b>Free Plan banner:</b> ఈ నెల ఎన్ని లావాదేవీలు వాడారో చూపిస్తుంది (ఉదా. “38 of 100”). limit దగ్గర పడితే ఇది ఎరుపు అవుతుంది. <b>Upgrade Plan</b> నొక్కితే sales team‌కు email వెళ్తుంది (పోర్టల్ నుంచి సొంతంగా upgrade కాదు).</li>
+    <li><b>Today’s Activity:</b> ఈ రోజు జరిగినవి; ప్రతి line మీద click చేసి నేరుగా ఆ deal/dispatch/party‌కి వెళ్లొచ్చు.</li>
+    <li><b>Quick Actions:</b> త్వరగా చేసే పనులు — New Deal, New Dispatch, Record Payment, View Ledger.</li>
+    <li><b>This Month:</b> ఈ నెల Settled, Payments మరియు Cap used %.</li>
+  </ul>
+  <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/dashboard</span></div><a href="docs/img/dashboard.jpg" target="_blank"><img src="docs/img/dashboard.jpg" alt="dashboard"></a></div><figcaption>Dashboard — figures, Quick Actions మరియు This Month</figcaption></figure>
+  <div class="app-does"><span class="k">App దానంతట అదే</span> Receivables/Payable లాంటి figures ప్రతి కొన్ని seconds‌కి refresh అవుతూ ఉంటాయి. Receivables/Payable ఖాతా చూసే అనుమతి ఉన్నవారికి మాత్రమే కనిపిస్తాయి.</div>
+</section>
+
+<!-- ============ DEALS ============ -->
+<section id="deals" data-nav="Deals" data-nav-en="Deals" data-group="ముఖ్యమైన పనులు">
+  <div class="sec-head"><div class="sec-seal">4</div>
+    <div><h2>Deals <span class="en">Deals</span></h2>
+    <p class="why">ప్రతి వ్యాపారం ఇక్కడి నుంచే మొదలవుతుంది — ఎవరితో, ఏ commodity, ఏ rate‌కి, ఎన్ని ట్రక్‌లు.</p></div>
+  </div>
+  <div class="task">
+    <h4>Deals list చూడండి <span class="en">Deal Register</span></h4>
+    <p style="margin-top:6px">ఎడమ menu నుంచి <b>Deals</b> తెరవండి. పైన <b>Period</b> (సమయ పరిధి) మరియు status chips — <b>All / Open / Partially Fulfilled / Completed / Closed</b> — తో list వడకట్టండి. ప్రతి line‌లో deal number, party/commodity, దిశ (<span class="pill open">Buy</span>/<span class="pill partial">Sell</span>), status, trade (Domestic/Export), freight ఎవరు ఇస్తారు, rate మరియు progress కనిపిస్తాయి.</p>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/deals</span></div><a href="docs/img/deals.jpg" target="_blank"><img src="docs/img/deals.jpg" alt="deals list"></a></div></figure>
+  </div>
+  <div class="task">
+    <h4>కొత్త Deal పెట్టండి <span class="en">New Deal</span></h4>
+    <ol class="steps">
+      <li>పైన కుడి వైపు <b>New Deal</b> నొక్కండి.</li>
+      <li><b>Deal Type</b> ఎంచుకోండి — <b>Buy</b> (మీరు కొంటున్నారు, vendor నుంచి) లేదా <b>Sell</b> (మీరు అమ్ముతున్నారు, mill/trader‌కి).</li>
+      <li><b>Deal Date</b>, <b>Trade Type</b> (Domestic/Export), మరియు <b>Freight Paid By</b> ఎంచుకోండి — <b>Self</b> (freight మీరు ఇస్తారు) లేదా <b>Counterparty</b> (అవతలి పక్షం ఇస్తుంది).</li>
+      <li><b>Party</b> వెతకండి (Buy‌లో vendor, Sell‌లో mill/trader). list‌లో లేకపోతే <b>+ Add new</b> తో వెంటనే add చేయండి.</li>
+      <li><b>Commodity</b> వెతకండి, <b>Agreed Rate (₹/Quintal)</b> మరియు <b>Planned Trucks</b> (−/+ లేదా 1/2/5/10/20 preset) పెట్టండి.</li>
+      <li>కావాలంటే <b>Add a broker</b> select చేసి broker మరియు commission add చేయండి, మరియు <b>Notes</b> రాయండి.</li>
+      <li><b>Review Deal</b> నొక్కండి — ఒక summary కనిపిస్తుంది; చూసి <b>confirm</b> చేస్తేనే deal తయారవుతుంది.</li>
+    </ol>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/deals/new</span></div><a href="docs/img/deal-new.jpg" target="_blank"><img src="docs/img/deal-new.jpg" alt="new deal form"></a></div></figure>
+    <div class="tip">list/search‌లో <b>active</b> parties మాత్రమే కనిపిస్తాయి. inactive party‌ని ముందు <a href="#parties">మళ్లీ active</a> చేయాలి.</div>
+    <div class="who"><span class="lab">ఎవరు చేయగలరు</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span><span class="rolechip">Data Entry</span></div>
+  </div>
+  <div class="task">
+    <h4>Deal వివరాలు, progress మరియు close చేయడం <span class="en">Deal detail · Close · Delete</span></h4>
+    <p style="margin-top:6px">ఏదైనా line మీద click చేసి వివరాలు తెరవండి. ఇక్కడ deal సమాచారం, <b>Progress</b> (ఎన్ని ట్రక్‌లు పంపారు/మిగిలాయి), దాని అన్ని <b>Dispatches</b> మరియు <b>Activity</b> కనిపిస్తాయి.</p>
+    <ul class="plain">
+      <li><b>New Dispatch</b> — ఇదే deal మీద కొత్త ట్రక్ నమోదు చేయండి (deal Open/Partially ఉన్నప్పుడు).</li>
+      <li><b>Close Deal</b> — deal close చేయండి. ఇది <b>ఒకవైపే</b> (మళ్లీ తెరుచుకోదు) మరియు ఆ తర్వాత కొత్త dispatch కలవదు. <b>Owner</b> మాత్రమే.</li>
+      <li><b>Delete Deal</b> — పొరపాటున పెట్టిన deal‌ను తీసేయండి; దాని మీద ఏ dispatch జరగనప్పుడు మాత్రమే ఇది పని చేస్తుంది.</li>
+    </ul>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/deals/…</span></div><a href="docs/img/deal-detail.jpg" target="_blank"><img src="docs/img/deal-detail.jpg" alt="deal detail"></a></div><figcaption>Deal వివరాలు — Progress, Dispatches మరియు Activity</figcaption></figure>
+    <div class="who"><span class="lab">Close/Delete</span><span class="rolechip">Close: Owner మాత్రమే</span><span class="rolechip">Delete: Owner, Trade Manager</span></div>
+  </div>
+</section>
+
+<!-- ============ DISPATCHES ============ -->
+<section id="dispatches" data-nav="Dispatches" data-nav-en="Dispatches" data-group="ముఖ్యమైన పనులు">
+  <div class="sec-head"><div class="sec-seal">5</div>
+    <div><h2>Dispatches <span class="en">Dispatches</span></h2>
+    <p class="why">ప్రతి ట్రక్ రాకపోక — ఎక్కడి నుంచి బయలుదేరింది, ఎటు వెళ్లింది, ఎంత బరువు, ఎంత freight.</p></div>
+  </div>
+  <div class="task">
+    <h4>Dispatches list <span class="en">Dispatches list</span></h4>
+    <p style="margin-top:6px"><b>Dispatches</b> menu తెరవండి. status chips — <b>All / Created / In Transit / Received / Settlement Pending / Settled</b> — తో వడకట్టండి. ప్రతి line‌లో dispatch number, vehicle number, party, transporter, status, బరువు మరియు తేదీ.</p>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/dispatches</span></div><a href="docs/img/dispatches.jpg" target="_blank"><img src="docs/img/dispatches.jpg" alt="dispatches list"></a></div></figure>
+  </div>
+  <div class="task">
+    <h4>కొత్త Dispatch పెట్టండి <span class="en">New Dispatch</span></h4>
+    <ol class="steps">
+      <li><b>New Dispatch</b> నొక్కండి. పైన <b>Source</b> (ఎక్కడి నుంచి) మరియు <b>Destination</b> (ఎటు) ఎంచుకోండి.</li>
+      <li>సరైన దారులు: <b>Vendor → Seller</b>, <b>Vendor → Godown</b>, లేదా <b>Godown → Seller</b>. (Godown → Godown కుదరదు.)</li>
+      <li>సంబంధిత <b>Buy deal</b> / <b>Sell deal</b> లేదా <b>Godown</b> ఎంచుకోండి.</li>
+      <li><b>Truck Number</b> టైప్ చేయండి — రూపం <code class="lbl">AA00AA0000</code> (ఉదా. BR02AB1234).</li>
+      <li><b>Transporter</b> ఎంచుకోండి (freight మీరు ఇచ్చేటప్పుడు), <b>Weight (KG)</b>, <b>Number of Bags</b> పెట్టండి.</li>
+      <li><b>Agreed Freight (₹/Quintal)</b> మరియు కావాలంటే <b>Advance Paid</b> పెట్టండి; కింద మొత్తం అక్షరాలలో కూడా కనిపిస్తుంది.</li>
+      <li><b>Challan / E-way Number</b> మరియు <b>Remarks</b> పెట్టి <b>Review</b> చేసి confirm చేయండి.</li>
+    </ol>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/dispatches/new</span></div><a href="docs/img/dispatch-new.jpg" target="_blank"><img src="docs/img/dispatch-new.jpg" alt="new dispatch form"></a></div></figure>
+    <div class="app-does"><span class="k">App దానంతట అదే</span> freight = rate × quintals (quintals కింది వైపు round అవుతాయి). <b>Advance</b> మొత్తం freight కంటే ఎక్కువ ఉండకూడదు. అమ్మకం dispatch మీద <b>Bill of Supply</b> PDF దానంతట అదే తయారవుతుంది.</div>
+    <div class="warn"><b>FOR / Counterparty freight:</b> deal‌లో freight అవతలి పక్షం ఇస్తే, transporter/freight fields కనిపించవు — “transport arranged &amp; paid by the buyer/vendor” అని note వస్తుంది మరియు పోర్టల్ ఏ freight లెక్కించదు.</div>
+    <div class="who"><span class="lab">ఎవరు చేయగలరు</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span><span class="rolechip">Dispatch Clerk</span><span class="rolechip">Data Entry</span></div>
+  </div>
+  <div class="task">
+    <h4>Dispatch వివరాలు మరియు చర్యలు <span class="en">Dispatch detail</span></h4>
+    <p style="margin-top:6px">ఏదైనా dispatch మీద click చేయండి. ఇక్కడ ప్రయాణం (Dispatched → In Transit → Received → Settled), <b>Traceability</b> (ఎక్కడి నుంచి/ఎటు), బరువు (పంపింది/వచ్చింది/తగ్గుదల), <b>Freight</b> card మరియు <b>Documents</b> ఉంటాయి.</p>
+    <ul class="plain">
+      <li><b>Mark In Transit</b> — ట్రక్ బయలుదేరింది (Created నుంచి).</li>
+      <li><b>Record Received Weight</b> — mill దగ్గర వచ్చిన బరువు నమోదు చేయండి; తగ్గుదల (shortage) దానంతట అదే కనిపిస్తుంది.</li>
+      <li><b>Pay Freight</b> — మిగిలిన freight payment నమోదు చేయండి (మొత్తం, విధానం, bank account/cheque number).</li>
+      <li><b>Create Settlement</b> — సరుకు వచ్చాక settlement మొదలుపెట్టండి.</li>
+      <li><b>Edit</b> / <b>Cancel Dispatch</b> — Created/In Transit వరకు మాత్రమే.</li>
+      <li><b>Documents</b> — Bill of Supply, Inward Advice, Vendor Bill, Settlement Note — కొత్త tab‌లో PDF తెరుచుకుంటుంది.</li>
+    </ul>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/dispatches/…</span></div><a href="docs/img/dispatch-detail.jpg" target="_blank"><img src="docs/img/dispatch-detail.jpg" alt="dispatch detail"></a></div><figcaption>Dispatch వివరాలు — Journey, Freight, Actions మరియు Documents</figcaption></figure>
+    <div class="warn"><b>తగ్గుదల (Shortage):</b> పంపిన మరియు వచ్చిన బరువుల తేడా, కంపెనీ పెట్టిన <a href="#settings">shortage limit</a> కంటే ఎక్కువ అయితే, అది transporter freight నుంచి తీసేయబడుతుంది.</div>
+    <div class="who"><span class="lab">ఎవరు చేయగలరు</span><span class="rolechip">In Transit/Received/Cancel: Owner, Trade Manager</span><span class="rolechip">Pay Freight: +Accountant</span></div>
+  </div>
+</section>
+
+<!-- ============ SETTLEMENTS ============ -->
+<section id="settlements" data-nav="Settlements" data-nav-en="Settlements" data-group="ముఖ్యమైన పనులు">
+  <div class="sec-head"><div class="sec-seal">6</div>
+    <div><h2>Settlements <span class="en">Settlements</span></h2>
+    <p class="why">సరుకు వచ్చాక చివరి లెక్క — quality claims, deductions, చివరి rate మరియు మొత్తం.</p></div>
+  </div>
+  <div class="task">
+    <h4>Settlement పెట్టండి <span class="en">Create Settlement</span></h4>
+    <ol class="steps">
+      <li>ఏదైనా <b>Received</b> dispatch మీద <b>Create Settlement</b> నొక్కండి.</li>
+      <li><b>Final Weight</b> ముందే నింపి (lock చేసి) ఉంటుంది. mill తక్కువ సరుకు తీసుకుంటే <b>Accepted Qty</b> మార్చండి.</li>
+      <li><b>Final Rate</b> చూడండి/మార్చండి. ఇది deal rate కంటే వేరుగా ఉంటే <b>Rate Change Reason</b> ఇవ్వడం తప్పనిసరి.</li>
+      <li><b>Quality Claims</b> add చేయండి (ఉదా. moisture/broken) — ఇవి మొత్తం తగ్గిస్తాయి, ఎరుపు రంగులో కనిపిస్తాయి.</li>
+      <li><b>Financial Deductions</b> add చేయండి (unloading/weighing/ఇతర).</li>
+      <li>Vendor→Seller‌లో <b>“Claim passed to vendor”</b> నిర్ణయించండి (ఎంత claim vendor నుంచి వసూలు చేయాలి).</li>
+      <li>కుడి వైపు <b>Settlement Summary</b>లో చివరి మొత్తం చూసి <b>Create Settlement</b> నొక్కండి.</li>
+    </ol>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/dispatches/…/settle</span></div><a href="docs/img/create-settlement.jpg" target="_blank"><img src="docs/img/create-settlement.jpg" alt="create settlement"></a></div></figure>
+    <div class="who"><span class="lab">ఎవరు చేయగలరు</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span></div>
+  </div>
+  <div class="task">
+    <h4>Settlement వివరాలు — Accept / Dispute / Revise <span class="en">Accept · Dispute · Revise</span></h4>
+    <p style="margin-top:6px">వివరాలలో claims, deductions, <b>Vendor (Purchase) Side</b>, <b>Round History</b>, మరియు summary‌లో <b>Final Amount</b> మరియు <b>Net P/L (per truck)</b> కనిపిస్తాయి.</p>
+    <ul class="plain">
+      <li><b>Accept</b> — చివరిగా ఖరారు చేయండి. దీంతో mill ఖాతా update అవుతుంది, broker commission కలుస్తుంది మరియు dispatch <span class="pill closed">Settled</span> అవుతుంది. ఇది చివరిది.</li>
+      <li><b>Dispute</b> — విభేదం నమోదు చేయండి (కనీసం 10 అక్షరాల కారణం).</li>
+      <li><b>Revise</b> — dispute అయిన settlement‌ను కొత్త round‌లో సవరించండి.</li>
+    </ul>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/settlements/…</span></div><a href="docs/img/settlement-detail.jpg" target="_blank"><img src="docs/img/settlement-detail.jpg" alt="settlement detail"></a></div><figcaption>Settlement వివరాలు — Claims, Deductions, Summary మరియు Net P/L</figcaption></figure>
+    <div class="app-does"><span class="k">App దానంతట అదే</span> బేరం <b>ఎక్కువలో ఎక్కువ 3 rounds</b> వరకు జరుగుతుంది: Draft → Dispute → Revise → Accept. ప్రతి round చరిత్ర భద్రంగా ఉంటుంది.</div>
+    <div class="tip">list screen (<code class="lbl">Settlements</code>)లో అన్ని settlements status మరియు round‌తో కనిపిస్తాయి — కానీ కొత్త settlement ఎప్పుడూ ఒక <b>Received dispatch</b> నుంచే తయారవుతుంది.</div>
+  </div>
+  <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/settlements</span></div><a href="docs/img/settlements.jpg" target="_blank"><img src="docs/img/settlements.jpg" alt="settlements list"></a></div><figcaption>Settlements list — status, round మరియు చివరి మొత్తం</figcaption></figure>
+</section>
+
+<!-- ============ LEDGER ============ -->
+<section id="ledger" data-nav="Ledger (ఖాతా)" data-nav-en="Ledger" data-group="ముఖ్యమైన పనులు">
+  <div class="sec-head"><div class="sec-seal">7</div>
+    <div><h2>Ledger — ఖాతా <span class="en">Ledger</span></h2>
+    <p class="why">ప్రతి party పూర్తి లెక్క — ఎంత బాకీ, ఎప్పుడు ఏ లావాదేవీ జరిగింది.</p></div>
+  </div>
+  <p><b>Ledger</b> menu‌లో ఎడమ వైపు parties list (బాకీతో సహా) మరియు కుడి వైపు ఎంచుకున్న party statement ఉంటాయి — <b>Opening</b>, మొత్తం <b>Debit/Credit</b>, మరియు <b>Closing</b>, తర్వాత తేదీ వారీ లావాదేవీలు మరియు running balance.</p>
+  <ul class="plain">
+    <li><b>Period</b> తో సమయ పరిధి మార్చండి (All time / This Month / Last 3 Months).</li>
+    <li><b>Export CSV</b> తో ప్రస్తుత statement download చేయండి.</li>
+    <li><b>Record Payment</b> తో నేరుగా payment నమోదు చేయడానికి వెళ్లండి.</li>
+  </ul>
+  <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/ledger</span></div><a href="docs/img/ledger.jpg" target="_blank"><img src="docs/img/ledger.jpg" alt="ledger"></a></div><figcaption>Ledger — ఎడమ వైపు parties, కుడి వైపు statement</figcaption></figure>
+  <div class="who"><span class="lab">ఎవరు చూడగలరు</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span><span class="rolechip">Accountant</span></div>
+</section>
+
+<!-- ============ PAYMENTS ============ -->
+<section id="payments" data-nav="Payments" data-nav-en="Payments" data-group="ముఖ్యమైన పనులు">
+  <div class="sec-head"><div class="sec-seal">8</div>
+    <div><h2>Payments <span class="en">Payments</span></h2>
+    <p class="why">ఏదైనా party నుంచి డబ్బు వచ్చినా, ఇచ్చినా — ఇక్కడ నమోదు చేయండి.</p></div>
+  </div>
+  <div class="task">
+    <h4>లావాదేవీ నమోదు చేయండి <span class="en">Record Transaction</span></h4>
+    <ol class="steps">
+      <li><b>Transaction Type</b> ఎంచుకోండి — <b>Money Received</b> (డబ్బు వచ్చింది) లేదా <b>Money Paid</b> (డబ్బు ఇచ్చారు).</li>
+      <li><b>Ledger Party</b> వెతకండి (ఎవరి ఖాతా మారుతుందో) — పైన వారి బాకీ కనిపిస్తుంది.</li>
+      <li><b>Amount</b> మరియు <b>Date</b> పెట్టండి (మొత్తం అక్షరాలలో కూడా కనిపిస్తుంది).</li>
+      <li><b>Payment Mode</b> ఎంచుకోండి — Cash / NEFT / RTGS / IMPS / Cheque / UPI / Other.</li>
+      <li>bank విధానం అయితే <b>bank account</b> ఎంచుకోండి, మరియు cheque/UTR number పెట్టండి.</li>
+      <li><b>Review Transaction</b> నొక్కి confirm చేయండి — తర్వాత ఆ party ఖాతా తెరుచుకుంటుంది.</li>
+    </ol>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/payments</span></div><a href="docs/img/payments.jpg" target="_blank"><img src="docs/img/payments.jpg" alt="record transaction"></a></div></figure>
+    <div class="tip">bank ద్వారా payment కోసం ముందు <a href="#settings">Settings</a>లో కంపెనీ bank account add చేయడం తప్పనిసరి, లేకపోతే “Received Into / Paid From”లో option రాదు.</div>
+    <div class="who"><span class="lab">ఎవరు చేయగలరు</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span><span class="rolechip">Accountant</span></div>
+  </div>
+</section>
+
+<!-- ============ PARTIES ============ -->
+<section id="parties" data-nav="Parties" data-nav-en="Parties" data-group="పార్టీలు &amp; స్టాక్">
+  <div class="sec-head"><div class="sec-seal">9</div>
+    <div><h2>Parties <span class="en">Parties</span></h2>
+    <p class="why">mill, vendor, transporter, broker, trader, clearance party — అందరినీ ఒకే చోట నిర్వహించండి.</p></div>
+  </div>
+  <div class="task">
+    <h4>Parties list <span class="en">Parties list</span></h4>
+    <p style="margin-top:6px"><b>Parties</b> menu‌లో రకం chips (All / Mills / Vendors / Transporters / Brokers / Traders / Clearance) తో వడకట్టండి. ప్రతి line‌లో పేరు, రకం, mobile, ప్రాంతం మరియు <b>Outstanding</b> (బాకీ) కనిపిస్తాయి.</p>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/parties</span></div><a href="docs/img/parties.jpg" target="_blank"><img src="docs/img/parties.jpg" alt="parties list"></a></div></figure>
+  </div>
+  <div class="task">
+    <h4>కొత్త Party add చేయండి <span class="en">Add Party</span></h4>
+    <ol class="steps">
+      <li><b>Add Party</b> నొక్కండి. <b>Party Type</b> ఎంచుకుని <b>Mobile</b> (10-అంకెలు) మరియు <b>Party Name</b> పెట్టండి.</li>
+      <li>ప్రాంతం (దేశం/రాష్ట్రం/జిల్లా — ముందే India/Bihar), <b>Address</b>, <b>GST</b>, <b>Notes</b> నింపండి.</li>
+      <li>పాత బాకీ ఉంటే <b>Opening Balance</b>లో మొత్తం, తేదీ మరియు దిశ (<b>They owe you</b> / <b>You owe them</b>) పెట్టండి — లేకపోతే ఖాళీగా వదిలేయండి (సున్నా నుంచి మొదలు).</li>
+      <li><b>Review</b> చేసి save చేయండి.</li>
+    </ol>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/parties/new</span></div><a href="docs/img/party-new.jpg" target="_blank"><img src="docs/img/party-new.jpg" alt="new party form"></a></div></figure>
+    <div class="who"><span class="lab">ఎవరు చేయగలరు</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span></div>
+  </div>
+  <div class="task">
+    <h4>Party వివరాలు, bank, deactivate మరియు delete <span class="en">Party detail</span></h4>
+    <p style="margin-top:6px">ఏదైనా party మీద click చేయండి. ఇక్కడి నుంచి మీరు <b>New Deal</b>, <b>Sale/Buy Register</b>, <b>View Ledger</b>, <b>Record Payment</b>, <b>Edit</b> చేయొచ్చు, bank accounts add/తీసేయొచ్చు, మరియు:</p>
+    <ul class="plain">
+      <li><b>Deactivate Party</b> — party‌ని దాచండి (కొత్త లావాదేవీలలో కనిపించదు), కానీ చరిత్ర ఉంటుంది. తర్వాత <b>Reactivate</b> చేయొచ్చు.</li>
+      <li><b>Delete Party</b> — శాశ్వతంగా తీసేయండి; party ఏ deal/dispatch/payment‌లో వాడనప్పుడు మాత్రమే ఇది జరుగుతుంది. లేకపోతే దాన్ని deactivate మాత్రమే చేయగలరు.</li>
+    </ul>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/parties/…</span></div><a href="docs/img/party-detail.jpg" target="_blank"><img src="docs/img/party-detail.jpg" alt="party detail"></a></div></figure>
+    <div class="warn"><b>Inactive party:</b> deactivate చేసిన party deal/dispatch ఏ selection box‌లోనూ కనిపించదు. మళ్లీ వాడటానికి ముందు దాన్ని Reactivate చేయండి.</div>
+  </div>
+  <div class="task">
+    <h4>Parties‌ని ఒకేసారి import చేయండి <span class="en">Import Parties (CSV)</span></h4>
+    <ol class="steps">
+      <li><b>Parties → Import</b> తెరవండి. <b>Download CSV template</b> తో నమూనా file తీసుకుని నింపండి (ఒక line = ఒక party).</li>
+      <li><b>Choose file</b> తో file ఎంచుకుని <b>Validate</b> నొక్కండి — ఇది కేవలం పరిశీలన, ఏమీ తయారవదు.</li>
+      <li>preview చూడండి: మొత్తం lines, సిద్ధం, errors, duplicates. ప్రతి line status (VALID/DUPLICATE/ERROR) కనిపిస్తుంది.</li>
+      <li>సరిగా ఉంటే <b>Commit Import</b> నొక్కండి — అప్పుడు parties తయారవుతాయి; చివర Created/Skipped/Failed summary వస్తుంది.</li>
+    </ol>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/parties/import</span></div><a href="docs/img/party-import.jpg" target="_blank"><img src="docs/img/party-import.jpg" alt="import parties"></a></div></figure>
+    <div class="tip"><b>Duplicate</b> అంటే ఆ mobile number అప్పటికే ఒక party‌ది. కావాలంటే “ఏ duplicate దొరికినా మొత్తం import ఆపండి” option ఎంచుకోవచ్చు.</div>
+  </div>
+  <div class="task">
+    <h4>Sale/Buy Register <span class="en">Sale / Buy Register</span></h4>
+    <p style="margin-top:6px">Party వివరాల నుంచి <b>Sale Register</b> (mill/trader కోసం) లేదా <b>Buy Register</b> (vendor కోసం) తెరవండి — ఇది డైరీలా ప్రతి dispatch మరియు payment‌ను వరుసగా చూపిస్తుంది, claims/deductions (ఎరుపులో) మరియు running balance‌తో సహా. పైన <b>PDF</b> మరియు <b>CSV</b> తో export చేయండి.</p>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/parties/…/sale-register</span></div><a href="docs/img/sale-register.jpg" target="_blank"><img src="docs/img/sale-register.jpg" alt="sale register"></a></div><figcaption>Sale Register — dispatch + payment పూర్తి వివరాలు (≈ = అంచనా)</figcaption></figure>
+    <div class="who"><span class="lab">ఎవరు చూడగలరు</span><span class="rolechip">Owner</span><span class="rolechip">Trade Manager</span><span class="rolechip">Accountant</span></div>
+  </div>
+</section>
+
+<!-- ============ INVENTORY ============ -->
+<section id="inventory" data-nav="Inventory &amp; గోడౌన్" data-nav-en="Inventory" data-group="పార్టీలు &amp; స్టాక్">
+  <div class="sec-head"><div class="sec-seal">10</div>
+    <div><h2>Inventory &amp; గోడౌన్ <span class="en">Inventory &amp; Godowns</span></h2>
+    <p class="why">ఏ గోడౌన్‌లో ఏ ధాన్యం ఎంత ఉందో.</p></div>
+  </div>
+  <p><b>Inventory</b> menu‌లో పైన <b>Total on hand</b> (మొత్తం స్టాక్ quintals‌లో) మరియు commodity వారీ సమాచారం, కింద ప్రతి గోడౌన్ card (పేరు, ప్రాంతం, మొత్తం మరియు commodity వారీ పరిమాణం) కనిపిస్తుంది.</p>
+  <div class="task">
+    <h4>కొత్త గోడౌన్ add చేయండి <span class="en">Add Godown</span></h4>
+    <ol class="steps">
+      <li><b>Add Godown</b> నొక్కండి. <b>Name</b> మరియు <b>Location</b> పెట్టండి.</li>
+      <li><b>Opening Grain Stock</b>లో <b>Add Grain</b> తో commodity మరియు పరిమాణం (Qty) add చేయండి (ప్రతి line పరిమాణం 0 కంటే ఎక్కువ ఉండాలి).</li>
+      <li>save చేయండి.</li>
+    </ol>
+    <div class="warn"><b>Deactivate:</b> గోడౌన్ పూర్తిగా ఖాళీ అయినప్పుడే deactivate అవుతుంది — ముందు దాని మొత్తం స్టాక్ తీసేయండి. inactive గోడౌన్ dispatch selection‌లో కనిపించదు.</div>
+    <div class="who"><span class="lab">ఎవరు చేయగలరు</span><span class="rolechip">Owner మాత్రమే</span></div>
+  </div>
+  <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/inventory</span></div><a href="docs/img/inventory.jpg" target="_blank"><img src="docs/img/inventory.jpg" alt="inventory"></a></div><figcaption>Inventory — మొత్తం స్టాక్ మరియు గోడౌన్ వారీ cards</figcaption></figure>
+</section>
+
+<!-- ============ COMMODITIES ============ -->
+<section id="commodities" data-nav="Commodities" data-nav-en="Commodities" data-group="పార్టీలు &amp; స్టాక్">
+  <div class="sec-head"><div class="sec-seal">11</div>
+    <div><h2>Commodities <span class="en">Commodities</span></h2>
+    <p class="why">మీ కంపెనీ trade చేసే ధాన్యాలు/సరుకుల list.</p></div>
+  </div>
+  <p>table‌లో ప్రతి commodity‌కి <b>Display Name</b>, Canonical పేరు, Code, Type మరియు HSN కనిపిస్తాయి.</p>
+  <ul class="plain">
+    <li><b>Add Commodity</b> — master list‌లో వెతికి ఒక commodity‌ని <b>Activate</b> చేయండి.</li>
+    <li><b>Rename</b> — మీకు నచ్చిన display పేరు పెట్టండి (ఖాళీ చేస్తే అసలు పేరు తిరిగి వస్తుంది).</li>
+    <li><b>Deactivate / Reactivate</b> — commodity‌ని దాచండి/తిరిగి తీసుకురండి (Deactivate Owner మాత్రమే).</li>
+  </ul>
+  <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/commodities</span></div><a href="docs/img/commodities.jpg" target="_blank"><img src="docs/img/commodities.jpg" alt="commodities list"></a></div></figure>
+  <div class="who"><span class="lab">ఎవరు చేయగలరు</span><span class="rolechip">Add/Rename: Owner, Trade Manager</span><span class="rolechip">Deactivate: Owner మాత్రమే</span></div>
+</section>
+
+<!-- ============ REPORTS ============ -->
+<section id="reports" data-nav="Reports &amp; Export" data-nav-en="Reports" data-group="రిపోర్ట్‌లు &amp; రికార్డులు">
+  <div class="sec-head"><div class="sec-seal">12</div>
+    <div><h2>Reports &amp; Export <span class="en">Reports &amp; Exports</span></h2>
+    <p class="why">లాభం-నష్టం మరియు లెక్కల files — CSV మరియు PDF‌లో.</p></div>
+  </div>
+  <p>పైన <b>Period</b> (This Month / This Quarter / Financial Year / Custom) ఎంచుకోండి — ఇది P/L మరియు కింది అన్ని exports మీద వర్తిస్తుంది.</p>
+  <div class="grid2">
+    <div class="mini"><h4>Per-Truck Profit / Loss</h4><p>ప్రతి ట్రక్ Revenue, Vendor Cost, Freight, Commission మరియు <b>Net P/L</b>. పైన మొత్తం figures; <b>Refresh / CSV / PDF</b> అందుబాటులో. ఇందులో <b>accept అయిన Vendor→Seller</b> deals మాత్రమే లెక్కించబడతాయి.</p></div>
+    <div class="mini"><h4>Register Exports</h4><p><b>Deals</b>, <b>Dispatches</b>, <b>Settlements</b> మరియు <b>GST outward-supply</b> register — ప్రతి ఒక్కటి CSV మరియు PDF‌లో. GST register పూర్తి filing file (lines cut అవ్వవు).</p></div>
+    <div class="mini"><h4>Sale / Buy Register</h4><p>ఏదైనా mill/trader <b>Sale Register</b> లేదా vendor <b>Buy Register</b> ఎంచుకుని CSV/PDF తీసుకోండి.</p></div>
+    <div class="mini"><h4>Party statement</h4><p>ఏదైనా party ఖాతా CSV నేరుగా <a href="#ledger">Ledger</a> screen నుంచి వస్తుంది.</p></div>
+  </div>
+  <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/reports</span></div><a href="docs/img/reports.jpg" target="_blank"><img src="docs/img/reports.jpg" alt="reports and exports"></a></div><figcaption>Reports — Per-Truck P/L మరియు register exports</figcaption></figure>
+  <div class="tip">PDF/CSV కొత్త tab‌లో తెరుచుకుంటుంది లేదా download అవుతుంది. పెద్ద file‌కి కొన్ని క్షణాలు పట్టొచ్చు.</div>
+</section>
+
+<!-- ============ AUDIT ============ -->
+<section id="audit" data-nav="Audit Trail" data-nav-en="Audit Trail" data-group="రిపోర్ట్‌లు &amp; రికార్డులు">
+  <div class="sec-head"><div class="sec-seal">13</div>
+    <div><h2>Audit Trail <span class="en">Audit Trail</span></h2>
+    <p class="why">ఎవరు, ఎప్పుడు, ఏమి చేశారు — disputes పరిష్కరించడానికి మరియు నమ్మకం కోసం పూర్తి చరిత్ర.</p></div>
+  </div>
+  <p><b>Audit Trail</b> menu‌లో filter chips (All / Deals / Dispatches / Settlements / Payments / Parties / Staff), <b>Critical only</b> toggle మరియు <b>Period</b> తో వడకట్టండి. ప్రతి line‌లో సారాంశం, సంబంధిత record, చేసిన వ్యక్తి పేరు + role, సమయం మరియు మొత్తం కనిపిస్తాయి; line మీద click చేసి ఆ record‌కి వెళ్లండి. కింద <b>Prev / Next</b> తో pages మార్చండి.</p>
+  <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/activity</span></div><a href="docs/img/audit.jpg" target="_blank"><img src="docs/img/audit.jpg" alt="audit trail"></a></div></figure>
+  <div class="tip"><b>Dispatch Clerk</b>‌కి ఇక్కడ Deals మరియు Dispatches activity మాత్రమే కనిపిస్తుంది.</div>
+</section>
+
+<!-- ============ TEAM ============ -->
+<section id="team" data-nav="Team" data-nav-en="Team" data-group="నిర్వహణ">
+  <div class="sec-head"><div class="sec-seal">14</div>
+    <div><h2>Team <span class="en">Team</span></h2>
+    <p class="why">staff‌ను add చేయండి, వారి role నిర్ణయించండి, invites నిర్వహించండి.</p></div>
+  </div>
+  <div class="task">
+    <h4>కొత్త సభ్యుడిని invite చేయండి <span class="en">Invite Member</span></h4>
+    <ol class="steps">
+      <li><b>Invite Member</b> నొక్కండి. సభ్యుడి <b>Mobile</b>, <b>Full Name</b> (ఐచ్ఛికం) మరియు <b>Role</b> ఎంచుకోండి.</li>
+      <li>ఒక <b>invite code</b> తయారవుతుంది, అది ఒక్కసారి మాత్రమే కనిపిస్తుంది — <b>Copy</b> చేసి సభ్యుడికి పంపండి.</li>
+      <li>సభ్యుడు <a href="#start">Join a team</a> నుంచి ఆ code పెట్టి చేరిపోతాడు.</li>
+    </ol>
+    <p><b>Members</b> table‌లో పేరు, mobile, role, status మరియు last login కనిపిస్తాయి. Owner ఏ non-Owner సభ్యుడి <b>role మార్చొచ్చు</b> లేదా అతన్ని <b>Remove</b> చేయొచ్చు (చరిత్ర ఉంటుంది). <b>Pending Invitations</b>లో పెండింగ్ invites <b>Cancel</b> చేయొచ్చు.</p>
+    <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/team</span></div><a href="docs/img/team.jpg" target="_blank"><img src="docs/img/team.jpg" alt="team"></a></div></figure>
+    <div class="who"><span class="lab">ఎవరు చేయగలరు</span><span class="rolechip">Invite/Remove/Role: Owner మాత్రమే</span><span class="rolechip">list చూడటం: Owner, Trade Manager</span></div>
+  </div>
+</section>
+
+<!-- ============ SETTINGS ============ -->
+<section id="settings" data-nav="Settings" data-nav-en="Settings" data-group="నిర్వహణ">
+  <div class="sec-head"><div class="sec-seal">15</div>
+    <div><h2>Settings <span class="en">Settings</span></h2>
+    <p class="why">కంపెనీ profile, bank accounts, bill printing మరియు మీ password.</p></div>
+  </div>
+  <ul class="plain">
+    <li><b>Company Profile:</b> కంపెనీ పేరు, GST, address, జిల్లా/రాష్ట్రం/pincode. <b>Transport Shortage Allowance (kg)</b> — ఇంత తగ్గుదల వరకు transporter మీద కోత ఉండదు; అంతకంటే ఎక్కువ తగ్గితే freight నుంచి తీసేయబడుతుంది (కొత్త dispatches మీద వర్తిస్తుంది). edit Owner మాత్రమే.</li>
+    <li><b>Company Bank Accounts:</b> bank accounts add చేయండి/primary set చేయండి/తీసేయండి — payments మరియు bills‌లో వీటినే వాడతారు.</li>
+    <li><b>Bill of Supply:</b> bill మీద <b>bank వివరాలు</b> మరియు <b>authorized signature</b> print అవ్వాలా వద్దా నిర్ణయించండి; signature image (PNG/JPEG, 1 MB కంటే తక్కువ) upload చేయండి.</li>
+    <li><b>Subscription:</b> plan, వాడిన లావాదేవీలు/limit; upgrade కోసం <b>Contact Sales</b> (email).</li>
+    <li><b>Profile Status:</b> సరైన bill కోసం GST + address + pincode తప్పనిసరి — అసంపూర్ణంగా ఉంటే ఇక్కడ warning కనిపిస్తుంది.</li>
+    <li><b>Change Password:</b> పాత + కొత్త password పెట్టి మార్చండి (rules అవే; అన్ని కంపెనీలలో వర్తిస్తుంది).</li>
+  </ul>
+  <figure class="webshot"><div class="browser"><div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="addr">staging.rtnp.in/settings</span></div><a href="docs/img/settings.jpg" target="_blank"><img src="docs/img/settings.jpg" alt="settings"></a></div></figure>
+</section>
+
+<!-- ============ ROLES ============ -->
+<section id="roles" data-nav="Roles &amp; అనుమతులు" data-nav-en="Roles" data-group="నిర్వహణ">
+  <div class="sec-head"><div class="sec-seal">16</div>
+    <div><h2>Roles &amp; అనుమతులు <span class="en">Roles &amp; Permissions</span></h2>
+    <p class="why">ప్రతి సభ్యుడి role అతను ఏమి చూడగలడు/చేయగలడో నిర్ణయిస్తుంది.</p></div>
+  </div>
+  <p>ఆరు roles ఉన్నాయి: <b>Owner</b>, <b>Trade Manager</b>, <b>Dispatch Clerk</b>, <b>Accountant</b>, <b>Data Entry</b>. కింద ముఖ్య పనులకు ఎవరికి అధికారం ఉందో:</p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>పని</th><th>Owner</th><th>Trade Mgr</th><th>Dispatch Clerk</th><th>Accountant</th><th>Data Entry</th></tr></thead>
+      <tbody>
+        <tr><td>Deal పెట్టడం</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">—</td><td class="no">—</td><td class="ok">✓</td></tr>
+        <tr><td>Deal close చేయడం</td><td class="ok">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+        <tr><td>Dispatch పెట్టడం / In Transit</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">—</td><td class="ok">✓</td></tr>
+        <tr><td>వచ్చిన బరువు / Dispatch cancel</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+        <tr><td>Settlement (పెట్టడం/Accept/Dispute)</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+        <tr><td>Payment / Freight నమోదు</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">—</td><td class="ok">✓</td><td class="no">—</td></tr>
+        <tr><td>Ledger (ఖాతా) చూడటం</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">—</td><td class="ok">✓</td><td class="no">—</td></tr>
+        <tr><td>Party management</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+        <tr><td>గోడౌన్ management</td><td class="ok">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+        <tr><td>Staff management</td><td class="ok">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+        <tr><td>Company profile edit</td><td class="ok">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tip">ఏదైనా menu లేదా button మీకు కనిపించకపోతే, బహుశా మీ role‌కి దాని అనుమతి లేదు — Owner‌ను Team‌లో మీ role మార్చమని అడగండి.</div>
+</section>
+
+<!-- ============ RULES / FAQ ============ -->
+<section id="rules" data-nav="నియమాలు &amp; సందేహాలు" data-nav-en="Rules &amp; FAQ" data-group="సహాయం">
+  <div class="sec-head"><div class="sec-seal">?</div>
+    <div><h2>ముఖ్య నియమాలు &amp; సందేహాలు <span class="en">Key rules &amp; FAQ</span></h2>
+    <p class="why">ప్రతి user‌కి తెలియాల్సిన కొన్ని విషయాలు.</p></div>
+  </div>
+  <div class="grid2">
+    <div class="mini"><h4>Inactive party/గోడౌన్</h4><p>deactivate చేసినవి ఏ కొత్త లావాదేవీ selection‌లో కనిపించవు, కానీ వాటి పాత చరిత్ర మరియు ఖాతా భద్రంగా ఉంటాయి.</p></div>
+    <div class="mini"><h4>Freight</h4><p>freight ప్రతి-quintal మీద లెక్కించబడుతుంది (quintals కింది వైపు round). Advance మొత్తం freight కంటే ఎక్కువ కాదు. FOR/Counterparty deals‌లో ఏ freight లెక్కించబడదు.</p></div>
+    <div class="mini"><h4>Shortage (తగ్గుదల)</h4><p>పంపిన మరియు వచ్చిన బరువుల తేడా, కంపెనీ limit కంటే ఎక్కువ అయితే transporter freight నుంచి తీసేయబడుతుంది.</p></div>
+    <div class="mini"><h4>Settlement rounds</h4><p>బేరం ఎక్కువలో ఎక్కువ 3 rounds: Draft → Dispute → Revise → Accept. Accept చివరిది మరియు ఖాతాను update చేస్తుంది.</p></div>
+    <div class="mini"><h4>లావాదేవీల limit (Cap)</h4><p>free/limited plan‌లో నెలకు ఒక limit ఉంటుంది (Dashboard మరియు Settings‌లో కనిపిస్తుంది). upgrade కోసం sales‌ను సంప్రదించండి.</p></div>
+    <div class="mini"><h4>మొత్తం అక్షరాలలో</h4><p>Advance, payment మరియు Opening Balance లాంటి amount box కింద మొత్తం దానంతట అదే అక్షరాలలో (లక్ష/కోటి) కనిపిస్తుంది — తప్పు పట్టుకోవడానికి సాయం.</p></div>
+    <div class="mini"><h4>PDF documents</h4><p>Bill of Supply, Inward Advice, Settlement Note, Vendor Bill మరియు report PDFs కొత్త tab‌లో తెరుచుకుంటాయి.</p></div>
+    <div class="mini"><h4>ఒక account, చాలా కంపెనీలు</h4><p>పైన ఉన్న <b>Company Switcher</b> తో కంపెనీ మార్చండి. వెబ్ మరియు మొబైల్ ఒకే account మరియు data పంచుకుంటాయి.</p></div>
+  </div>
+  <div class="callout"><p><strong>ఏదైనా తప్పు అనిపిస్తే?</strong> ఇది beta software. ఏదైనా error కనిపిస్తే screen screenshot తీసి, మీరు ఏమి చేస్తున్నారో చెబుతూ, మీ team/admin‌కి పంపండి, తద్వారా త్వరగా సరిచేయవచ్చు.</p></div>
+</section>
+
+<footer class="docfoot">
+  <p><span class="mark">RTNP</span> · వెబ్ పోర్టల్ యూజర్ గైడ్ · తెలుగు</p>
+  <p>ఈ గైడ్ ఆఫీస్ స్టాఫ్ కోసం. ఫీల్డ్ టీమ్ కోసం మొబైల్ app‌కి వేరే గైడ్ అందుబాటులో ఉంది.</p>
+</footer>
